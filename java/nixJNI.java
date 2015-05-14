@@ -18,7 +18,7 @@ public class nixJNI {
   public final static native long new_Block__SWIG_0();
   public final static native long new_Block__SWIG_1(long jarg1, Block jarg1_);
   public final static native boolean Block_hasSource__SWIG_0(long jarg1, Block jarg1_, String jarg2);
-  public final static native boolean Block_hasSource__SWIG_1(long jarg1, Block jarg1_, long jarg2, Source jarg2_);
+  public final static native boolean Block_hasSource__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_getSource__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native long Block_getSource__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_sourceCount(long jarg1, Block jarg1_);
@@ -29,9 +29,9 @@ public class nixJNI {
   public final static native long Block_findSources__SWIG_2(long jarg1, Block jarg1_);
   public final static native long Block_createSource(long jarg1, Block jarg1_, String jarg2, String jarg3);
   public final static native boolean Block_deleteSource__SWIG_0(long jarg1, Block jarg1_, String jarg2);
-  public final static native boolean Block_deleteSource__SWIG_1(long jarg1, Block jarg1_, long jarg2, Source jarg2_);
+  public final static native boolean Block_deleteSource__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native boolean Block_hasDataArray__SWIG_0(long jarg1, Block jarg1_, String jarg2);
-  public final static native boolean Block_hasDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2, DataArray jarg2_);
+  public final static native boolean Block_hasDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_getDataArray__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native long Block_getDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_dataArrays__SWIG_0(long jarg1, Block jarg1_, long jarg2);
@@ -39,7 +39,7 @@ public class nixJNI {
   public final static native long Block_dataArrayCount(long jarg1, Block jarg1_);
   public final static native long Block_createDataArray(long jarg1, Block jarg1_, String jarg2, String jarg3, long jarg4, long jarg5);
   public final static native boolean Block_deleteDataArray__SWIG_0(long jarg1, Block jarg1_, String jarg2);
-  public final static native boolean Block_deleteDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2, DataArray jarg2_);
+  public final static native boolean Block_deleteDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native boolean Block_hasTag__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native boolean Block_hasTag__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_getTag__SWIG_0(long jarg1, Block jarg1_, String jarg2);
@@ -57,7 +57,7 @@ public class nixJNI {
   public final static native long Block_multiTags__SWIG_0(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_multiTags__SWIG_1(long jarg1, Block jarg1_);
   public final static native long Block_multiTagCount(long jarg1, Block jarg1_);
-  public final static native long Block_createMultiTag(long jarg1, Block jarg1_, String jarg2, String jarg3, long jarg4, DataArray jarg4_);
+  public final static native long Block_createMultiTag(long jarg1, Block jarg1_, String jarg2, String jarg3, long jarg4);
   public final static native boolean Block_deleteMultiTag__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native boolean Block_deleteMultiTag__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native void delete_Block(long jarg1);
