@@ -61,50 +61,52 @@ typedef long long int          ndssize_t;
 	Ignores
 */
 namespace nix {
-	// Block back-end constructors
+
+	// Back-end constructors
 	%ignore Block::Block(const std::shared_ptr<base::IBlock> &);
 	%ignore Block::Block(std::shared_ptr<base::IBlock> &&);
-
-	// DataArray back-end constructors
 	%ignore DataArray::DataArray(const std::shared_ptr<base::IDataArray> &);
 	%ignore DataArray::DataArray(std::shared_ptr<base::IDataArray> &&);
-
-	// SampledDimension back-end constructors
 	%ignore SampledDimension::SampledDimension(const std::shared_ptr<base::ISampledDimension> &);
-	%ignore SampledDimension::SampledDimension(std::shared_ptr<base::ISampledDimension> &&);
-
-	// SetDimension back-end constructors
+	%ignore SampledDimension::SampledDimension(std::shared_ptr<base::ISampledDimension> &&);	
 	%ignore SetDimension::SetDimension(const std::shared_ptr<base::ISetDimension> &);
 	%ignore SetDimension::SetDimension(std::shared_ptr<base::ISetDimension> &&);
-
-	// RangeDimension back-end constructors
 	%ignore RangeDimension::RangeDimension(const std::shared_ptr<base::IRangeDimension> &);
 	%ignore RangeDimension::RangeDimension(std::shared_ptr<base::IRangeDimension> &&);
-
-	// Dimension back-end constructors
 	%ignore Dimension::Dimension(const std::shared_ptr<base::IDimension> &);
 	%ignore Dimension::Dimension(std::shared_ptr<base::IDimension> &&);
-
-	// File back-end constructors
 	%ignore File::File(const std::shared_ptr<base::IFile> &);
 	%ignore File::File(std::shared_ptr<base::IFile> &&);
-
-	// Property back-end constructors
 	%ignore Property::Property(const std::shared_ptr<base::IProperty> &);
 	%ignore Property::Property(std::shared_ptr<base::IProperty> &&);
-
-	// Feature back-end constructors
 	%ignore Feature::Feature(const std::shared_ptr<base::IFeature> &);
 	%ignore Feature::Feature(std::shared_ptr<base::IFeature> &&);
-
-	// Section back-end constructors
 	%ignore Section::Section(const std::shared_ptr<base::ISection> &);
 	%ignore Section::Section(std::shared_ptr<base::ISection> &&);
-
-	// Source back-end constructors
 	%ignore Source::Source(const std::shared_ptr<base::ISource> &);
 	%ignore Source::Source(std::shared_ptr<base::ISource> &&);
+
+	// Operators
+	%ignore Block::operator= ;	
+	%ignore DataArray::operator= ;
+	%ignore SampledDimension::operator= ;
+	%ignore SampledDimension::operator[] ;
+	%ignore SetDimension::operator= ;
+	%ignore RangeDimension::operator= ;
+	%ignore RangeDimension::operator[] ;
+	%ignore Dimension::operator= ;
+	%ignore File::operator= ;
+	%ignore Property::operator= ;
+	%ignore Feature::operator= ;
+	%ignore Section::operator= ;
+	%ignore Source::operator= ;
+	%ignore Value::operator= ;
 }
+
+// Ignore operators
+%ignore operator<< ;
+%ignore operator== ;
+%ignore operator!= ;
 
 /*
 	Templates
