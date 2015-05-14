@@ -37,7 +37,7 @@ public class nixJNI {
   public final static native long Block_dataArrays__SWIG_0(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_dataArrays__SWIG_1(long jarg1, Block jarg1_);
   public final static native long Block_dataArrayCount(long jarg1, Block jarg1_);
-  public final static native long Block_createDataArray(long jarg1, Block jarg1_, String jarg2, String jarg3, long jarg4, long jarg5);
+  public final static native long Block_createDataArray(long jarg1, Block jarg1_, String jarg2, String jarg3, int jarg4, long jarg5);
   public final static native boolean Block_deleteDataArray__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native boolean Block_deleteDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native boolean Block_hasTag__SWIG_0(long jarg1, Block jarg1_, String jarg2);
@@ -93,6 +93,10 @@ public class nixJNI {
   public final static native long DataArray_dataType(long jarg1, DataArray jarg1_);
   public final static native void DataArray_appendData(long jarg1, DataArray jarg1_, long jarg2, long jarg3, long jarg4, long jarg5);
   public final static native void delete_DataArray(long jarg1);
+  public final static native int DataType_Nothing_get();
+  public final static native long data_type_to_size(int jarg1);
+  public final static native String data_type_to_string(int jarg1);
+  public final static native int string_to_data_type(String jarg1);
   public final static native long new_SampledDimension__SWIG_0();
   public final static native long new_SampledDimension__SWIG_1(long jarg1, SampledDimension jarg1_);
   public final static native long SampledDimension_index(long jarg1, SampledDimension jarg1_);
@@ -200,7 +204,7 @@ public class nixJNI {
   public final static native void Property_mapping__SWIG_0(long jarg1, Property jarg1_, String jarg2);
   public final static native long Property_mapping__SWIG_1(long jarg1, Property jarg1_);
   public final static native void Property_mapping__SWIG_2(long jarg1, Property jarg1_, long jarg2);
-  public final static native long Property_dataType(long jarg1, Property jarg1_);
+  public final static native int Property_dataType(long jarg1, Property jarg1_);
   public final static native void Property_unit__SWIG_0(long jarg1, Property jarg1_, String jarg2);
   public final static native long Property_unit__SWIG_1(long jarg1, Property jarg1_);
   public final static native void Property_unit__SWIG_2(long jarg1, Property jarg1_, long jarg2);
@@ -257,7 +261,7 @@ public class nixJNI {
   public final static native long Section_properties__SWIG_0(long jarg1, Section jarg1_, long jarg2);
   public final static native long Section_properties__SWIG_1(long jarg1, Section jarg1_);
   public final static native long Section_inheritedProperties(long jarg1, Section jarg1_);
-  public final static native long Section_createProperty__SWIG_0(long jarg1, Section jarg1_, String jarg2, long jarg3);
+  public final static native long Section_createProperty__SWIG_0(long jarg1, Section jarg1_, String jarg2, int jarg3);
   public final static native long Section_createProperty__SWIG_1(long jarg1, Section jarg1_, String jarg2, long jarg3);
   public final static native long Section_createProperty__SWIG_2(long jarg1, Section jarg1_, String jarg2, long jarg3);
   public final static native boolean Section_deleteProperty__SWIG_0(long jarg1, Section jarg1_, String jarg2);
@@ -309,8 +313,8 @@ public class nixJNI {
   public final static native void Value_get__SWIG_6(long jarg1, Value jarg1_, long jarg2);
   public final static native void Value_get__SWIG_7(long jarg1, Value jarg1_, long jarg2);
   public final static native void Value_get__SWIG_8(long jarg1, Value jarg1_, long jarg2);
-  public final static native long Value_type(long jarg1, Value jarg1_);
+  public final static native int Value_type(long jarg1, Value jarg1_);
   public final static native void Value_swap(long jarg1, Value jarg1_, long jarg2, Value jarg2_);
-  public final static native boolean Value_supports_type(long jarg1);
+  public final static native boolean Value_supports_type(int jarg1);
   public final static native void swap(long jarg1, Value jarg1_, long jarg2, Value jarg2_);
 }

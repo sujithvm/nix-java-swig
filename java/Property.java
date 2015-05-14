@@ -70,8 +70,8 @@ public class Property {
     nixJNI.Property_mapping__SWIG_2(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(t));
   }
 
-  public SWIGTYPE_p_DataType dataType() {
-    return new SWIGTYPE_p_DataType(nixJNI.Property_dataType(swigCPtr, this), true);
+  public DataType dataType() {
+    return DataType.swigToEnum(nixJNI.Property_dataType(swigCPtr, this));
   }
 
   public void unit(String unit) {

@@ -735,14 +735,13 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1dataArrayCount(JNIEnv *jenv, jclass 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1createDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jlong jarg4, jlong jarg5) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1createDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jint jarg4, jlong jarg5) {
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
   std::string *arg2 = 0 ;
   std::string *arg3 = 0 ;
   nix::DataType arg4 ;
   NDSize *arg5 = 0 ;
-  nix::DataType *argp4 ;
   DataArray result;
   
   (void)jenv;
@@ -767,12 +766,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1createDataArray(JNIEnv *jenv, jclass
   std::string arg3_str(arg3_pstr);
   arg3 = &arg3_str;
   jenv->ReleaseStringUTFChars(jarg3, arg3_pstr); 
-  argp4 = *(nix::DataType **)&jarg4; 
-  if (!argp4) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null nix::DataType");
-    return 0;
-  }
-  arg4 = *argp4; 
+  arg4 = (nix::DataType)jarg4; 
   arg5 = *(NDSize **)&jarg5;
   if (!arg5) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "NDSize const & reference is null");
@@ -1877,6 +1871,68 @@ SWIGEXPORT void JNICALL Java_nixJNI_delete_1DataArray(JNIEnv *jenv, jclass jcls,
   (void)jcls;
   arg1 = *(nix::DataArray **)&jarg1; 
   delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_nixJNI_DataType_1Nothing_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  nix::DataType result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (nix::DataType)nix::DataType::Nothing;
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_data_1type_1to_1size(JNIEnv *jenv, jclass jcls, jint jarg1) {
+  jlong jresult = 0 ;
+  nix::DataType arg1 ;
+  size_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (nix::DataType)jarg1; 
+  result = nix::data_type_to_size(arg1);
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_nixJNI_data_1type_1to_1string(JNIEnv *jenv, jclass jcls, jint jarg1) {
+  jstring jresult = 0 ;
+  nix::DataType arg1 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (nix::DataType)jarg1; 
+  result = nix::data_type_to_string(arg1);
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_nixJNI_string_1to_1data_1type(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jint jresult = 0 ;
+  std::string *arg1 = 0 ;
+  nix::DataType result;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  std::string arg1_str(arg1_pstr);
+  arg1 = &arg1_str;
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (nix::DataType)nix::string_to_data_type((std::string const &)*arg1);
+  jresult = (jint)result; 
+  return jresult;
 }
 
 
@@ -3733,17 +3789,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_Property_1mapping_1_1SWIG_12(JNIEnv *jenv, j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_Property_1dataType(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_nixJNI_Property_1dataType(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   nix::Property *arg1 = (nix::Property *) 0 ;
-  DataType result;
+  nix::DataType result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Property **)&jarg1; 
-  result = ((nix::Property const *)arg1)->dataType();
-  *(DataType **)&jresult = new DataType((const DataType &)result); 
+  result = (nix::DataType)((nix::Property const *)arg1)->dataType();
+  jresult = (jint)result; 
   return jresult;
 }
 
@@ -4770,11 +4826,12 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1inheritedProperties(JNIEnv *jenv, 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1createProperty_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jlong jarg3) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1createProperty_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3) {
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
   std::string *arg2 = 0 ;
-  DataType *arg3 = 0 ;
+  nix::DataType *arg3 = 0 ;
+  nix::DataType temp3 ;
   nix::Property result;
   
   (void)jenv;
@@ -4790,12 +4847,9 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1createProperty_1_1SWIG_10(JNIEnv *
   std::string arg2_str(arg2_pstr);
   arg2 = &arg2_str;
   jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
-  arg3 = *(DataType **)&jarg3;
-  if (!arg3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "DataType const & reference is null");
-    return 0;
-  } 
-  result = (arg1)->createProperty((std::string const &)*arg2,(DataType const &)*arg3);
+  temp3 = (nix::DataType)jarg3; 
+  arg3 = &temp3; 
+  result = (arg1)->createProperty((std::string const &)*arg2,(nix::DataType const &)*arg3);
   *(nix::Property **)&jresult = new nix::Property((const nix::Property &)result); 
   return jresult;
 }
@@ -5752,17 +5806,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_18(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_Value_1type(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jint JNICALL Java_nixJNI_Value_1type(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
   nix::Value *arg1 = (nix::Value *) 0 ;
-  DataType result;
+  nix::DataType result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  result = ((nix::Value const *)arg1)->type();
-  *(DataType **)&jresult = new DataType((const DataType &)result); 
+  result = (nix::DataType)((nix::Value const *)arg1)->type();
+  jresult = (jint)result; 
   return jresult;
 }
 
@@ -5785,20 +5839,14 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1swap(JNIEnv *jenv, jclass jcls, jlong
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_nixJNI_Value_1supports_1type(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jboolean JNICALL Java_nixJNI_Value_1supports_1type(JNIEnv *jenv, jclass jcls, jint jarg1) {
   jboolean jresult = 0 ;
-  DataType arg1 ;
-  DataType *argp1 ;
+  nix::DataType arg1 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
-  argp1 = *(DataType **)&jarg1; 
-  if (!argp1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null DataType");
-    return 0;
-  }
-  arg1 = *argp1; 
+  arg1 = (nix::DataType)jarg1; 
   result = (bool)nix::Value::supports_type(arg1);
   jresult = (jboolean)result; 
   return jresult;

@@ -150,16 +150,16 @@ public class Value {
     nixJNI.Value_get__SWIG_8(swigCPtr, this, SWIGTYPE_p_std__string.getCPtr(value));
   }
 
-  public SWIGTYPE_p_DataType type() {
-    return new SWIGTYPE_p_DataType(nixJNI.Value_type(swigCPtr, this), true);
+  public DataType type() {
+    return DataType.swigToEnum(nixJNI.Value_type(swigCPtr, this));
   }
 
   public void swap(Value other) {
     nixJNI.Value_swap(swigCPtr, this, Value.getCPtr(other), other);
   }
 
-  public static boolean supports_type(SWIGTYPE_p_DataType dtype) {
-    return nixJNI.Value_supports_type(SWIGTYPE_p_DataType.getCPtr(dtype));
+  public static boolean supports_type(DataType dtype) {
+    return nixJNI.Value_supports_type(dtype.swigValue());
   }
 
 }

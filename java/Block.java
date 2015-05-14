@@ -122,8 +122,8 @@ public class Block {
     return nixJNI.Block_dataArrayCount(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_DataArray createDataArray(String name, String type, SWIGTYPE_p_nix__DataType data_type, SWIGTYPE_p_NDSize shape) {
-    return new SWIGTYPE_p_DataArray(nixJNI.Block_createDataArray(swigCPtr, this, name, type, SWIGTYPE_p_nix__DataType.getCPtr(data_type), SWIGTYPE_p_NDSize.getCPtr(shape)), true);
+  public SWIGTYPE_p_DataArray createDataArray(String name, String type, DataType data_type, SWIGTYPE_p_NDSize shape) {
+    return new SWIGTYPE_p_DataArray(nixJNI.Block_createDataArray(swigCPtr, this, name, type, data_type.swigValue(), SWIGTYPE_p_NDSize.getCPtr(shape)), true);
   }
 
   public boolean deleteDataArray(String name_or_id) {

@@ -182,8 +182,8 @@ public class Section {
     return new SWIGTYPE_p_std__vectorT_nix__Property_t(nixJNI.Section_inheritedProperties(swigCPtr, this), true);
   }
 
-  public Property createProperty(String name, SWIGTYPE_p_DataType dtype) {
-    return new Property(nixJNI.Section_createProperty__SWIG_0(swigCPtr, this, name, SWIGTYPE_p_DataType.getCPtr(dtype)), true);
+  public Property createProperty(String name, DataType dtype) {
+    return new Property(nixJNI.Section_createProperty__SWIG_0(swigCPtr, this, name, dtype.swigValue()), true);
   }
 
   public Property createProperty(String name, SWIGTYPE_p_Value value) {

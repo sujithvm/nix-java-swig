@@ -156,6 +156,7 @@ typedef long long int ndssize_t;
 
 %include <nix/Block.hpp>
 %include <nix/DataArray.hpp>
+%include <nix/DataType.hpp>
 %include <nix/Dimensions.hpp>
 %include <nix/File.hpp>
 %include <nix/Property.hpp>
