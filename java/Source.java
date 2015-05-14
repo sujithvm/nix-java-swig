@@ -58,8 +58,8 @@ public class Source {
     return new Source(nixJNI.Source_getSource__SWIG_1(swigCPtr, this, index), true);
   }
 
-  public SWIGTYPE_p_ndsize_t sourceCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.Source_sourceCount(swigCPtr, this), true);
+  public long sourceCount() {
+    return nixJNI.Source_sourceCount(swigCPtr, this);
   }
 
   public SWIGTYPE_p_std__vectorT_nix__Source_t sources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter) {

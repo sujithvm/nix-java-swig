@@ -45,9 +45,6 @@
 
 using namespace nix;
 
-typedef unsigned long long int ndsize_t;
-typedef long long int          ndssize_t;
-
 %}
 
 
@@ -127,6 +124,14 @@ namespace nix {
 
 // wrap time_t to long
 typedef long long time_t;
+
+// wrap ndsize_t, ndssize_t to long
+// Note : 
+//       Actual definition : typedef unsigned long long int ndsize_t;
+//       Used here         : typedef long long int ndsize_t;
+//       Reason            : SWIG converts 'unsigned long long int' types to java.util.BigInteger
+typedef long long int ndsize_t;
+typedef long long int ndssize_t;
 
 
 

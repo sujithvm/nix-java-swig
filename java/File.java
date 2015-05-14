@@ -54,8 +54,8 @@ public class File {
     return new File(nixJNI.File_open__SWIG_2(name), true);
   }
 
-  public SWIGTYPE_p_ndsize_t blockCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.File_blockCount(swigCPtr, this), true);
+  public long blockCount() {
+    return nixJNI.File_blockCount(swigCPtr, this);
   }
 
   public boolean hasBlock(String name_or_id) {
@@ -110,8 +110,8 @@ public class File {
     return new SWIGTYPE_p_Section(nixJNI.File_getSection__SWIG_1(swigCPtr, this, index), true);
   }
 
-  public SWIGTYPE_p_ndsize_t sectionCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.File_sectionCount(swigCPtr, this), true);
+  public long sectionCount() {
+    return nixJNI.File_sectionCount(swigCPtr, this);
   }
 
   public SWIGTYPE_p_std__vectorT_Section_t sections(SWIGTYPE_p_util__FilterT_Section_t__type filter) {

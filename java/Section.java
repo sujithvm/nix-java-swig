@@ -90,8 +90,8 @@ public class Section {
     return new Section(nixJNI.Section_parent(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_ndsize_t sectionCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.Section_sectionCount(swigCPtr, this), true);
+  public long sectionCount() {
+    return nixJNI.Section_sectionCount(swigCPtr, this);
   }
 
   public boolean hasSection(String name_or_id) {
@@ -150,8 +150,8 @@ public class Section {
     return nixJNI.Section_deleteSection__SWIG_1(swigCPtr, this, Section.getCPtr(section), section);
   }
 
-  public SWIGTYPE_p_ndsize_t propertyCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.Section_propertyCount(swigCPtr, this), true);
+  public long propertyCount() {
+    return nixJNI.Section_propertyCount(swigCPtr, this);
   }
 
   public boolean hasProperty(String name_or_id) {

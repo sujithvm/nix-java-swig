@@ -246,9 +246,6 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 
 using namespace nix;
 
-typedef unsigned long long int ndsize_t;
-typedef long long int          ndssize_t;
-
 
 
 #include <string>
@@ -417,8 +414,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1sourceCount(JNIEnv *jenv, jclass jcl
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Block **)&jarg1; 
-  result = ((nix::Block const *)arg1)->sourceCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::Block const *)arg1)->sourceCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -732,8 +729,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1dataArrayCount(JNIEnv *jenv, jclass 
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Block **)&jarg1; 
-  result = ((nix::Block const *)arg1)->dataArrayCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::Block const *)arg1)->dataArrayCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -966,8 +963,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1tagCount(JNIEnv *jenv, jclass jcls, 
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Block **)&jarg1; 
-  result = ((nix::Block const *)arg1)->tagCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::Block const *)arg1)->tagCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -1192,8 +1189,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1multiTagCount(JNIEnv *jenv, jclass j
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Block **)&jarg1; 
-  result = ((nix::Block const *)arg1)->multiTagCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::Block const *)arg1)->multiTagCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -2899,8 +2896,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1blockCount(JNIEnv *jenv, jclass jcls,
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::File **)&jarg1; 
-  result = ((nix::File const *)arg1)->blockCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::File const *)arg1)->blockCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -3209,8 +3206,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1sectionCount(JNIEnv *jenv, jclass jcl
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::File **)&jarg1; 
-  result = ((nix::File const *)arg1)->sectionCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::File const *)arg1)->sectionCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -3826,8 +3823,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Property_1valueCount(JNIEnv *jenv, jclass j
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Property **)&jarg1; 
-  result = ((nix::Property const *)arg1)->valueCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::Property const *)arg1)->valueCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -4310,8 +4307,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1sectionCount(JNIEnv *jenv, jclass 
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Section **)&jarg1; 
-  result = ((nix::Section const *)arg1)->sectionCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::Section const *)arg1)->sectionCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -4627,8 +4624,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1propertyCount(JNIEnv *jenv, jclass
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Section **)&jarg1; 
-  result = ((nix::Section const *)arg1)->propertyCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::Section const *)arg1)->propertyCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -5052,8 +5049,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Source_1sourceCount(JNIEnv *jenv, jclass jc
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Source **)&jarg1; 
-  result = ((nix::Source const *)arg1)->sourceCount();
-  *(ndsize_t **)&jresult = new ndsize_t((const ndsize_t &)result); 
+  result = (ndsize_t)((nix::Source const *)arg1)->sourceCount();
+  jresult = (jlong)result; 
   return jresult;
 }
 

@@ -58,8 +58,8 @@ public class Block {
     return new SWIGTYPE_p_Source(nixJNI.Block_getSource__SWIG_1(swigCPtr, this, index), true);
   }
 
-  public SWIGTYPE_p_ndsize_t sourceCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.Block_sourceCount(swigCPtr, this), true);
+  public long sourceCount() {
+    return nixJNI.Block_sourceCount(swigCPtr, this);
   }
 
   public SWIGTYPE_p_std__vectorT_Source_t sources(SWIGTYPE_p_util__FilterT_Source_t__type filter) {
@@ -118,8 +118,8 @@ public class Block {
     return new SWIGTYPE_p_std__vectorT_DataArray_t(nixJNI.Block_dataArrays__SWIG_1(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_ndsize_t dataArrayCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.Block_dataArrayCount(swigCPtr, this), true);
+  public long dataArrayCount() {
+    return nixJNI.Block_dataArrayCount(swigCPtr, this);
   }
 
   public SWIGTYPE_p_DataArray createDataArray(String name, String type, SWIGTYPE_p_nix__DataType data_type, SWIGTYPE_p_NDSize shape) {
@@ -158,8 +158,8 @@ public class Block {
     return new SWIGTYPE_p_std__vectorT_Tag_t(nixJNI.Block_tags__SWIG_1(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_ndsize_t tagCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.Block_tagCount(swigCPtr, this), true);
+  public long tagCount() {
+    return nixJNI.Block_tagCount(swigCPtr, this);
   }
 
   public SWIGTYPE_p_Tag createTag(String name, String type, SWIGTYPE_p_std__vectorT_double_t position) {
@@ -198,8 +198,8 @@ public class Block {
     return new SWIGTYPE_p_std__vectorT_MultiTag_t(nixJNI.Block_multiTags__SWIG_1(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_ndsize_t multiTagCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.Block_multiTagCount(swigCPtr, this), true);
+  public long multiTagCount() {
+    return nixJNI.Block_multiTagCount(swigCPtr, this);
   }
 
   public SWIGTYPE_p_MultiTag createMultiTag(String name, String type, SWIGTYPE_p_DataArray positions) {

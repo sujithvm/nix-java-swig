@@ -90,8 +90,8 @@ public class Property {
     nixJNI.Property_deleteValues(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_ndsize_t valueCount() {
-    return new SWIGTYPE_p_ndsize_t(nixJNI.Property_valueCount(swigCPtr, this), true);
+  public long valueCount() {
+    return nixJNI.Property_valueCount(swigCPtr, this);
   }
 
   public void values(SWIGTYPE_p_std__vectorT_Value_t values) {
