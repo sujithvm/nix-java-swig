@@ -46,10 +46,6 @@ public class Section {
     this(nixJNI.new_Section__SWIG_2(Section.getCPtr(other), other), true);
   }
 
-  public Section(SWIGTYPE_p_std__shared_ptrT_nix__base__ISection_t p_impl) {
-    this(nixJNI.new_Section__SWIG_3(SWIGTYPE_p_std__shared_ptrT_nix__base__ISection_t.getCPtr(p_impl)), true);
-  }
-
   public void repository(String repository) {
     nixJNI.Section_repository__SWIG_0(swigCPtr, this, repository);
   }

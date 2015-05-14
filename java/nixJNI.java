@@ -157,7 +157,6 @@ public class nixJNI {
   public final static native void delete_Dimension(long jarg1);
   public final static native long new_File__SWIG_0();
   public final static native long new_File__SWIG_1(long jarg1, File jarg1_);
-  public final static native long new_File__SWIG_2(long jarg1);
   public final static native long File_open__SWIG_0(String jarg1, int jarg2, int jarg3);
   public final static native long File_open__SWIG_1(String jarg1, int jarg2);
   public final static native long File_open__SWIG_2(String jarg1);
@@ -200,7 +199,6 @@ public class nixJNI {
   public final static native void delete_File(long jarg1);
   public final static native long new_Property__SWIG_0();
   public final static native long new_Property__SWIG_1(long jarg1, Property jarg1_);
-  public final static native long new_Property__SWIG_2(long jarg1);
   public final static native String Property_name(long jarg1, Property jarg1_);
   public final static native void Property_definition__SWIG_0(long jarg1, Property jarg1_, String jarg2);
   public final static native long Property_definition__SWIG_1(long jarg1, Property jarg1_);
@@ -221,7 +219,6 @@ public class nixJNI {
   public final static native void delete_Property(long jarg1);
   public final static native long new_Feature__SWIG_0();
   public final static native long new_Feature__SWIG_1(long jarg1, Feature jarg1_);
-  public final static native long new_Feature__SWIG_2(long jarg1);
   public final static native void Feature_linkType__SWIG_0(long jarg1, Feature jarg1_, long jarg2);
   public final static native long Feature_linkType__SWIG_1(long jarg1, Feature jarg1_);
   public final static native void Feature_data__SWIG_0(long jarg1, Feature jarg1_, String jarg2);
@@ -232,7 +229,6 @@ public class nixJNI {
   public final static native long new_Section__SWIG_0();
   public final static native long new_Section__SWIG_1(long jarg1);
   public final static native long new_Section__SWIG_2(long jarg1, Section jarg1_);
-  public final static native long new_Section__SWIG_3(long jarg1);
   public final static native void Section_repository__SWIG_0(long jarg1, Section jarg1_, String jarg2);
   public final static native long Section_repository__SWIG_1(long jarg1, Section jarg1_);
   public final static native void Section_repository__SWIG_2(long jarg1, Section jarg1_, long jarg2);
@@ -275,7 +271,6 @@ public class nixJNI {
   public final static native void delete_Section(long jarg1);
   public final static native long new_Source__SWIG_0();
   public final static native long new_Source__SWIG_1(long jarg1, Source jarg1_);
-  public final static native long new_Source__SWIG_2(long jarg1);
   public final static native boolean Source_hasSource__SWIG_0(long jarg1, Source jarg1_, String jarg2);
   public final static native boolean Source_hasSource__SWIG_1(long jarg1, Source jarg1_, long jarg2, Source jarg2_);
   public final static native long Source_getSource__SWIG_0(long jarg1, Source jarg1_, String jarg2);

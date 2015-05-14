@@ -57,13 +57,48 @@ typedef long long int          ndssize_t;
 #define NIXAPI
 #define NOEXCEPT
 
+/*
+	Ignores
+*/
 namespace nix {
+	// File back-end constructors
+	%ignore File::File(const std::shared_ptr<base::IFile> &);
+	%ignore File::File(std::shared_ptr<base::IFile> &&);
+
+	// Property back-end constructors
+	%ignore Property::Property(const std::shared_ptr<base::IProperty> &);
+	%ignore Property::Property(std::shared_ptr<base::IProperty> &&);
+
+	// Feature back-end constructors
+	%ignore Feature::Feature(const std::shared_ptr<base::IFeature> &);
+	%ignore Feature::Feature(std::shared_ptr<base::IFeature> &&);
+
+	// Section back-end constructors
+	%ignore Section::Section(const std::shared_ptr<base::ISection> &);
+	%ignore Section::Section(std::shared_ptr<base::ISection> &&);
+
+	// Source back-end constructors
+	%ignore Source::Source(const std::shared_ptr<base::ISource> &);
+	%ignore Source::Source(std::shared_ptr<base::ISource> &&);
+}
+
+/*
+	Templates
+*/
+namespace nix {
+
+}
+
+/*
+	Extensions
+*/
+namespace nix {	
 	%extend nix::DataView {
 		DataView();
 	}  
 }
 
-
+// Build bindings for FileMode and Implementation in IFile but ignore base IFile
 %ignore nix::base::IFile;
 %include <nix/base/IFile.hpp>
 
@@ -75,5 +110,4 @@ namespace nix {
 %include <nix/Feature.hpp>
 %include <nix/Section.hpp>
 %include <nix/Source.hpp>
-%include <nix/Section.hpp>
 %include <nix/Value.hpp>

@@ -42,10 +42,6 @@ public class Feature {
     this(nixJNI.new_Feature__SWIG_1(Feature.getCPtr(other), other), true);
   }
 
-  public Feature(SWIGTYPE_p_std__shared_ptrT_nix__base__IFeature_t p_impl) {
-    this(nixJNI.new_Feature__SWIG_2(SWIGTYPE_p_std__shared_ptrT_nix__base__IFeature_t.getCPtr(p_impl)), true);
-  }
-
   public void linkType(SWIGTYPE_p_LinkType type) {
     nixJNI.Feature_linkType__SWIG_0(swigCPtr, this, SWIGTYPE_p_LinkType.getCPtr(type));
   }

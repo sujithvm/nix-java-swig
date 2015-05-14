@@ -42,10 +42,6 @@ public class File {
     this(nixJNI.new_File__SWIG_1(File.getCPtr(other), other), true);
   }
 
-  public File(SWIGTYPE_p_std__shared_ptrT_nix__base__IFile_t p_impl) {
-    this(nixJNI.new_File__SWIG_2(SWIGTYPE_p_std__shared_ptrT_nix__base__IFile_t.getCPtr(p_impl)), true);
-  }
-
   public static File open(String name, FileMode mode, Implementation impl) {
     return new File(nixJNI.File_open__SWIG_0(name, mode.swigValue(), impl.swigValue()), true);
   }

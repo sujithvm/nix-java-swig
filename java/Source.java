@@ -42,10 +42,6 @@ public class Source {
     this(nixJNI.new_Source__SWIG_1(Source.getCPtr(other), other), true);
   }
 
-  public Source(SWIGTYPE_p_std__shared_ptrT_nix__base__ISource_t p_impl) {
-    this(nixJNI.new_Source__SWIG_2(SWIGTYPE_p_std__shared_ptrT_nix__base__ISource_t.getCPtr(p_impl)), true);
-  }
-
   public boolean hasSource(String name_or_id) {
     return nixJNI.Source_hasSource__SWIG_0(swigCPtr, this, name_or_id);
   }

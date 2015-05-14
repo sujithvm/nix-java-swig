@@ -42,10 +42,6 @@ public class Property {
     this(nixJNI.new_Property__SWIG_1(Property.getCPtr(other), other), true);
   }
 
-  public Property(SWIGTYPE_p_std__shared_ptrT_nix__base__IProperty_t p_impl) {
-    this(nixJNI.new_Property__SWIG_2(SWIGTYPE_p_std__shared_ptrT_nix__base__IProperty_t.getCPtr(p_impl)), true);
-  }
-
   public String name() {
     return nixJNI.Property_name(swigCPtr, this);
   }

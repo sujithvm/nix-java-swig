@@ -2925,24 +2925,6 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1File_1_1SWIG_11(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1File_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::IFile > *arg1 = 0 ;
-  nix::File *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::IFile > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::IFile > const & reference is null");
-    return 0;
-  } 
-  result = (nix::File *)new nix::File((std::shared_ptr< nix::base::IFile > const &)*arg1);
-  *(nix::File **)&jresult = result; 
-  return jresult;
-}
-
-
 SWIGEXPORT jlong JNICALL Java_nixJNI_File_1open_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jint jarg3) {
   jlong jresult = 0 ;
   std::string *arg1 = 0 ;
@@ -3742,24 +3724,6 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Property_1_1SWIG_11(JNIEnv *jenv, jcla
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Property_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::IProperty > *arg1 = 0 ;
-  nix::Property *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::IProperty > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::IProperty > const & reference is null");
-    return 0;
-  } 
-  result = (nix::Property *)new nix::Property((std::shared_ptr< nix::base::IProperty > const &)*arg1);
-  *(nix::Property **)&jresult = result; 
-  return jresult;
-}
-
-
 SWIGEXPORT jstring JNICALL Java_nixJNI_Property_1name(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   nix::Property *arg1 = (nix::Property *) 0 ;
@@ -4095,24 +4059,6 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Feature_1_1SWIG_11(JNIEnv *jenv, jclas
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Feature_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::IFeature > *arg1 = 0 ;
-  nix::Feature *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::IFeature > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::IFeature > const & reference is null");
-    return 0;
-  } 
-  result = (nix::Feature *)new nix::Feature((std::shared_ptr< nix::base::IFeature > const &)*arg1);
-  *(nix::Feature **)&jresult = result; 
-  return jresult;
-}
-
-
 SWIGEXPORT void JNICALL Java_nixJNI_Feature_1linkType_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   nix::Feature *arg1 = (nix::Feature *) 0 ;
   LinkType arg2 ;
@@ -4277,24 +4223,6 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Section_1_1SWIG_12(JNIEnv *jenv, jclas
     return 0;
   } 
   result = (nix::Section *)new nix::Section((nix::Section const &)*arg1);
-  *(nix::Section **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Section_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::ISection > *arg1 = 0 ;
-  nix::Section *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::ISection > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::ISection > const & reference is null");
-    return 0;
-  } 
-  result = (nix::Section *)new nix::Section((std::shared_ptr< nix::base::ISection > const &)*arg1);
   *(nix::Section **)&jresult = result; 
   return jresult;
 }
@@ -5146,24 +5074,6 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Source_1_1SWIG_11(JNIEnv *jenv, jclass
     return 0;
   } 
   result = (nix::Source *)new nix::Source((nix::Source const &)*arg1);
-  *(nix::Source **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Source_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::ISource > *arg1 = 0 ;
-  nix::Source *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::ISource > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::ISource > const & reference is null");
-    return 0;
-  } 
-  result = (nix::Source *)new nix::Source((std::shared_ptr< nix::base::ISource > const &)*arg1);
   *(nix::Source **)&jresult = result; 
   return jresult;
 }
