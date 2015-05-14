@@ -98,56 +98,56 @@ public class File {
     return nixJNI.File_hasSection__SWIG_0(swigCPtr, this, name_or_id);
   }
 
-  public boolean hasSection(SWIGTYPE_p_Section section) {
-    return nixJNI.File_hasSection__SWIG_1(swigCPtr, this, SWIGTYPE_p_Section.getCPtr(section));
+  public boolean hasSection(Section section) {
+    return nixJNI.File_hasSection__SWIG_1(swigCPtr, this, Section.getCPtr(section), section);
   }
 
-  public SWIGTYPE_p_Section getSection(String name_or_id) {
-    return new SWIGTYPE_p_Section(nixJNI.File_getSection__SWIG_0(swigCPtr, this, name_or_id), true);
+  public Section getSection(String name_or_id) {
+    return new Section(nixJNI.File_getSection__SWIG_0(swigCPtr, this, name_or_id), true);
   }
 
-  public SWIGTYPE_p_Section getSection(long index) {
-    return new SWIGTYPE_p_Section(nixJNI.File_getSection__SWIG_1(swigCPtr, this, index), true);
+  public Section getSection(long index) {
+    return new Section(nixJNI.File_getSection__SWIG_1(swigCPtr, this, index), true);
   }
 
   public long sectionCount() {
     return nixJNI.File_sectionCount(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_std__vectorT_Section_t sections(SWIGTYPE_p_util__FilterT_Section_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_Section_t(nixJNI.File_sections__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_Section_t__type.getCPtr(filter)), true);
+  public SWIGTYPE_p_std__vectorT_nix__Section_t sections(SWIGTYPE_p_util__FilterT_nix__Section_t__type filter) {
+    return new SWIGTYPE_p_std__vectorT_nix__Section_t(nixJNI.File_sections__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Section_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Section_t sections() {
-    return new SWIGTYPE_p_std__vectorT_Section_t(nixJNI.File_sections__SWIG_1(swigCPtr, this), true);
+  public SWIGTYPE_p_std__vectorT_nix__Section_t sections() {
+    return new SWIGTYPE_p_std__vectorT_nix__Section_t(nixJNI.File_sections__SWIG_1(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Section_t findSections(SWIGTYPE_p_util__FilterT_Section_t__type filter, long max_depth) {
-    return new SWIGTYPE_p_std__vectorT_Section_t(nixJNI.File_findSections__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_Section_t__type.getCPtr(filter), max_depth), true);
+  public SWIGTYPE_p_std__vectorT_nix__Section_t findSections(SWIGTYPE_p_util__FilterT_nix__Section_t__type filter, long max_depth) {
+    return new SWIGTYPE_p_std__vectorT_nix__Section_t(nixJNI.File_findSections__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Section_t__type.getCPtr(filter), max_depth), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Section_t findSections(SWIGTYPE_p_util__FilterT_Section_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_Section_t(nixJNI.File_findSections__SWIG_1(swigCPtr, this, SWIGTYPE_p_util__FilterT_Section_t__type.getCPtr(filter)), true);
+  public SWIGTYPE_p_std__vectorT_nix__Section_t findSections(SWIGTYPE_p_util__FilterT_nix__Section_t__type filter) {
+    return new SWIGTYPE_p_std__vectorT_nix__Section_t(nixJNI.File_findSections__SWIG_1(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Section_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Section_t findSections(long max_depth) {
-    return new SWIGTYPE_p_std__vectorT_Section_t(nixJNI.File_findSections__SWIG_2(swigCPtr, this, max_depth), true);
+  public SWIGTYPE_p_std__vectorT_nix__Section_t findSections(long max_depth) {
+    return new SWIGTYPE_p_std__vectorT_nix__Section_t(nixJNI.File_findSections__SWIG_2(swigCPtr, this, max_depth), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Section_t findSections() {
-    return new SWIGTYPE_p_std__vectorT_Section_t(nixJNI.File_findSections__SWIG_3(swigCPtr, this), true);
+  public SWIGTYPE_p_std__vectorT_nix__Section_t findSections() {
+    return new SWIGTYPE_p_std__vectorT_nix__Section_t(nixJNI.File_findSections__SWIG_3(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_Section createSection(String name, String type) {
-    return new SWIGTYPE_p_Section(nixJNI.File_createSection(swigCPtr, this, name, type), true);
+  public Section createSection(String name, String type) {
+    return new Section(nixJNI.File_createSection(swigCPtr, this, name, type), true);
   }
 
   public boolean deleteSection(String name_or_id) {
     return nixJNI.File_deleteSection__SWIG_0(swigCPtr, this, name_or_id);
   }
 
-  public boolean deleteSection(SWIGTYPE_p_Section section) {
-    return nixJNI.File_deleteSection__SWIG_1(swigCPtr, this, SWIGTYPE_p_Section.getCPtr(section));
+  public boolean deleteSection(Section section) {
+    return nixJNI.File_deleteSection__SWIG_1(swigCPtr, this, Section.getCPtr(section), section);
   }
 
   public SWIGTYPE_p_std__vectorT_int_t version() {

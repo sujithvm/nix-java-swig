@@ -7,18 +7,18 @@
  * ----------------------------------------------------------------------------- */
 
 
-public class SWIGTYPE_p_std__vectorT_Dimension_t {
+public class SWIGTYPE_p_util__FilterT_nix__Dimension_t__type {
   private long swigCPtr;
 
-  protected SWIGTYPE_p_std__vectorT_Dimension_t(long cPtr, boolean futureUse) {
+  protected SWIGTYPE_p_util__FilterT_nix__Dimension_t__type(long cPtr, boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_std__vectorT_Dimension_t() {
+  protected SWIGTYPE_p_util__FilterT_nix__Dimension_t__type() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_std__vectorT_Dimension_t obj) {
+  protected static long getCPtr(SWIGTYPE_p_util__FilterT_nix__Dimension_t__type obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

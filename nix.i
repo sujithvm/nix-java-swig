@@ -154,13 +154,13 @@ typedef long long int ndssize_t;
 %ignore nix::base::IFeature;
 %include <nix/base/IFeature.hpp>
 
-%include <nix/Block.hpp>
-%include <nix/DataArray.hpp>
 %include <nix/DataType.hpp>
 %include <nix/Dimensions.hpp>
-%include <nix/File.hpp>
-%include <nix/Property.hpp>
-%include <nix/Feature.hpp>
-%include <nix/Section.hpp>
 %include <nix/Source.hpp>
+%include <nix/DataArray.hpp>
+%include <nix/Feature.hpp>
 %include <nix/Value.hpp>
+%include <nix/Property.hpp>
+%include <nix/Section.hpp>
+%include <nix/Block.hpp>
+%include <nix/File.hpp>

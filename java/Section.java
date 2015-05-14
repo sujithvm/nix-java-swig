@@ -186,12 +186,12 @@ public class Section {
     return new Property(nixJNI.Section_createProperty__SWIG_0(swigCPtr, this, name, dtype.swigValue()), true);
   }
 
-  public Property createProperty(String name, SWIGTYPE_p_Value value) {
-    return new Property(nixJNI.Section_createProperty__SWIG_1(swigCPtr, this, name, SWIGTYPE_p_Value.getCPtr(value)), true);
+  public Property createProperty(String name, Value value) {
+    return new Property(nixJNI.Section_createProperty__SWIG_1(swigCPtr, this, name, Value.getCPtr(value), value), true);
   }
 
-  public Property createProperty(String name, SWIGTYPE_p_std__vectorT_Value_t values) {
-    return new Property(nixJNI.Section_createProperty__SWIG_2(swigCPtr, this, name, SWIGTYPE_p_std__vectorT_Value_t.getCPtr(values)), true);
+  public Property createProperty(String name, SWIGTYPE_p_std__vectorT_nix__Value_t values) {
+    return new Property(nixJNI.Section_createProperty__SWIG_2(swigCPtr, this, name, SWIGTYPE_p_std__vectorT_nix__Value_t.getCPtr(values)), true);
   }
 
   public boolean deleteProperty(String name_or_id) {

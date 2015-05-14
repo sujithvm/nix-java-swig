@@ -90,56 +90,56 @@ public class DataArray {
     nixJNI.DataArray_polynomCoefficients__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
   }
 
-  public SWIGTYPE_p_std__vectorT_Dimension_t dimensions(SWIGTYPE_p_util__FilterT_Dimension_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_Dimension_t(nixJNI.DataArray_dimensions__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_Dimension_t__type.getCPtr(filter)), true);
+  public SWIGTYPE_p_std__vectorT_nix__Dimension_t dimensions(SWIGTYPE_p_util__FilterT_nix__Dimension_t__type filter) {
+    return new SWIGTYPE_p_std__vectorT_nix__Dimension_t(nixJNI.DataArray_dimensions__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Dimension_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Dimension_t dimensions() {
-    return new SWIGTYPE_p_std__vectorT_Dimension_t(nixJNI.DataArray_dimensions__SWIG_1(swigCPtr, this), true);
+  public SWIGTYPE_p_std__vectorT_nix__Dimension_t dimensions() {
+    return new SWIGTYPE_p_std__vectorT_nix__Dimension_t(nixJNI.DataArray_dimensions__SWIG_1(swigCPtr, this), true);
   }
 
   public long dimensionCount() {
     return nixJNI.DataArray_dimensionCount(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_Dimension getDimension(long id) {
-    return new SWIGTYPE_p_Dimension(nixJNI.DataArray_getDimension(swigCPtr, this, id), true);
+  public Dimension getDimension(long id) {
+    return new Dimension(nixJNI.DataArray_getDimension(swigCPtr, this, id), true);
   }
 
-  public SWIGTYPE_p_SetDimension appendSetDimension() {
-    return new SWIGTYPE_p_SetDimension(nixJNI.DataArray_appendSetDimension(swigCPtr, this), true);
+  public SetDimension appendSetDimension() {
+    return new SetDimension(nixJNI.DataArray_appendSetDimension(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_RangeDimension appendRangeDimension(SWIGTYPE_p_std__vectorT_double_t ticks) {
-    return new SWIGTYPE_p_RangeDimension(nixJNI.DataArray_appendRangeDimension(swigCPtr, this, SWIGTYPE_p_std__vectorT_double_t.getCPtr(ticks)), true);
+  public RangeDimension appendRangeDimension(SWIGTYPE_p_std__vectorT_double_t ticks) {
+    return new RangeDimension(nixJNI.DataArray_appendRangeDimension(swigCPtr, this, SWIGTYPE_p_std__vectorT_double_t.getCPtr(ticks)), true);
   }
 
-  public SWIGTYPE_p_SampledDimension appendSampledDimension(double sampling_interval) {
-    return new SWIGTYPE_p_SampledDimension(nixJNI.DataArray_appendSampledDimension(swigCPtr, this, sampling_interval), true);
+  public SampledDimension appendSampledDimension(double sampling_interval) {
+    return new SampledDimension(nixJNI.DataArray_appendSampledDimension(swigCPtr, this, sampling_interval), true);
   }
 
-  public SWIGTYPE_p_SetDimension createSetDimension(long id) {
-    return new SWIGTYPE_p_SetDimension(nixJNI.DataArray_createSetDimension(swigCPtr, this, id), true);
+  public SetDimension createSetDimension(long id) {
+    return new SetDimension(nixJNI.DataArray_createSetDimension(swigCPtr, this, id), true);
   }
 
-  public SWIGTYPE_p_RangeDimension createRangeDimension(long id, SWIGTYPE_p_std__vectorT_double_t ticks) {
-    return new SWIGTYPE_p_RangeDimension(nixJNI.DataArray_createRangeDimension(swigCPtr, this, id, SWIGTYPE_p_std__vectorT_double_t.getCPtr(ticks)), true);
+  public RangeDimension createRangeDimension(long id, SWIGTYPE_p_std__vectorT_double_t ticks) {
+    return new RangeDimension(nixJNI.DataArray_createRangeDimension(swigCPtr, this, id, SWIGTYPE_p_std__vectorT_double_t.getCPtr(ticks)), true);
   }
 
-  public SWIGTYPE_p_SampledDimension createSampledDimension(long id, double sampling_interval) {
-    return new SWIGTYPE_p_SampledDimension(nixJNI.DataArray_createSampledDimension(swigCPtr, this, id, sampling_interval), true);
+  public SampledDimension createSampledDimension(long id, double sampling_interval) {
+    return new SampledDimension(nixJNI.DataArray_createSampledDimension(swigCPtr, this, id, sampling_interval), true);
   }
 
   public boolean deleteDimension(long id) {
     return nixJNI.DataArray_deleteDimension(swigCPtr, this, id);
   }
 
-  public void getDataDirect(SWIGTYPE_p_DataType dtype, SWIGTYPE_p_void data, SWIGTYPE_p_NDSize count, SWIGTYPE_p_NDSize offset) {
-    nixJNI.DataArray_getDataDirect(swigCPtr, this, SWIGTYPE_p_DataType.getCPtr(dtype), SWIGTYPE_p_void.getCPtr(data), SWIGTYPE_p_NDSize.getCPtr(count), SWIGTYPE_p_NDSize.getCPtr(offset));
+  public void getDataDirect(DataType dtype, SWIGTYPE_p_void data, SWIGTYPE_p_NDSize count, SWIGTYPE_p_NDSize offset) {
+    nixJNI.DataArray_getDataDirect(swigCPtr, this, dtype.swigValue(), SWIGTYPE_p_void.getCPtr(data), SWIGTYPE_p_NDSize.getCPtr(count), SWIGTYPE_p_NDSize.getCPtr(offset));
   }
 
-  public void setDataDirect(SWIGTYPE_p_DataType dtype, SWIGTYPE_p_void data, SWIGTYPE_p_NDSize count, SWIGTYPE_p_NDSize offset) {
-    nixJNI.DataArray_setDataDirect(swigCPtr, this, SWIGTYPE_p_DataType.getCPtr(dtype), SWIGTYPE_p_void.getCPtr(data), SWIGTYPE_p_NDSize.getCPtr(count), SWIGTYPE_p_NDSize.getCPtr(offset));
+  public void setDataDirect(DataType dtype, SWIGTYPE_p_void data, SWIGTYPE_p_NDSize count, SWIGTYPE_p_NDSize offset) {
+    nixJNI.DataArray_setDataDirect(swigCPtr, this, dtype.swigValue(), SWIGTYPE_p_void.getCPtr(data), SWIGTYPE_p_NDSize.getCPtr(count), SWIGTYPE_p_NDSize.getCPtr(offset));
   }
 
   public SWIGTYPE_p_NDSize dataExtent() {
@@ -150,12 +150,12 @@ public class DataArray {
     nixJNI.DataArray_dataExtent__SWIG_1(swigCPtr, this, SWIGTYPE_p_NDSize.getCPtr(extent));
   }
 
-  public SWIGTYPE_p_DataType dataType() {
-    return new SWIGTYPE_p_DataType(nixJNI.DataArray_dataType(swigCPtr, this), true);
+  public DataType dataType() {
+    return DataType.swigToEnum(nixJNI.DataArray_dataType(swigCPtr, this));
   }
 
-  public void appendData(SWIGTYPE_p_DataType dtype, SWIGTYPE_p_void data, SWIGTYPE_p_NDSize count, long axis) {
-    nixJNI.DataArray_appendData(swigCPtr, this, SWIGTYPE_p_DataType.getCPtr(dtype), SWIGTYPE_p_void.getCPtr(data), SWIGTYPE_p_NDSize.getCPtr(count), axis);
+  public void appendData(DataType dtype, SWIGTYPE_p_void data, SWIGTYPE_p_NDSize count, long axis) {
+    nixJNI.DataArray_appendData(swigCPtr, this, dtype.swigValue(), SWIGTYPE_p_void.getCPtr(data), SWIGTYPE_p_NDSize.getCPtr(count), axis);
   }
 
 }
