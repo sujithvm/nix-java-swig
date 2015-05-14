@@ -94,12 +94,12 @@ public class Property {
     return nixJNI.Property_valueCount(swigCPtr, this);
   }
 
-  public void values(SWIGTYPE_p_std__vectorT_nix__Value_t values) {
-    nixJNI.Property_values__SWIG_0(swigCPtr, this, SWIGTYPE_p_std__vectorT_nix__Value_t.getCPtr(values));
+  public void values(ValueVector values) {
+    nixJNI.Property_values__SWIG_0(swigCPtr, this, ValueVector.getCPtr(values), values);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Value_t values() {
-    return new SWIGTYPE_p_std__vectorT_nix__Value_t(nixJNI.Property_values__SWIG_1(swigCPtr, this), true);
+  public ValueVector values() {
+    return new ValueVector(nixJNI.Property_values__SWIG_1(swigCPtr, this), true);
   }
 
   public void values(SWIGTYPE_p_boost__none_t t) {

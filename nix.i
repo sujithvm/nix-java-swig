@@ -114,9 +114,17 @@ namespace nix {
 }
 
 namespace std {
-	%template(IntVector)    vector<int>;
-	%template(DoubleVector) vector<double>;
-	%template(StringVector) vector<std::string>;
+	%template(IntVector)        vector<int>;
+	%template(DoubleVector)     vector<double>;
+	%template(StringVector)     vector<std::string>;
+
+	%template(BlockVector)      vector<nix::Block>;
+	%template(DataArrayVector)  vector<nix::DataArray>;
+	%template(DimensionVector)  vector<nix::Dimension>;
+	%template(PropertyVector)   vector<nix::Property>;
+	%template(SectionVector)    vector<nix::Section>;
+	%template(SourceVector)     vector<nix::Source>;
+	%template(ValueVector)      vector<nix::Value>;
 }
 
 

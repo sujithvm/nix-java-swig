@@ -62,24 +62,24 @@ public class Source {
     return nixJNI.Source_sourceCount(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t sources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Source_sources__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter)), true);
+  public SourceVector sources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter) {
+    return new SourceVector(nixJNI.Source_sources__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t sources() {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Source_sources__SWIG_1(swigCPtr, this), true);
+  public SourceVector sources() {
+    return new SourceVector(nixJNI.Source_sources__SWIG_1(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t findSources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter, long max_depth) {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Source_findSources__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter), max_depth), true);
+  public SourceVector findSources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter, long max_depth) {
+    return new SourceVector(nixJNI.Source_findSources__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter), max_depth), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t findSources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Source_findSources__SWIG_1(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter)), true);
+  public SourceVector findSources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter) {
+    return new SourceVector(nixJNI.Source_findSources__SWIG_1(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t findSources() {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Source_findSources__SWIG_2(swigCPtr, this), true);
+  public SourceVector findSources() {
+    return new SourceVector(nixJNI.Source_findSources__SWIG_2(swigCPtr, this), true);
   }
 
   public Source createSource(String name, String type) {

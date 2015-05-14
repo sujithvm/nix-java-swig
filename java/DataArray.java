@@ -90,12 +90,12 @@ public class DataArray {
     nixJNI.DataArray_polynomCoefficients__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Dimension_t dimensions(SWIGTYPE_p_util__FilterT_nix__Dimension_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_nix__Dimension_t(nixJNI.DataArray_dimensions__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Dimension_t__type.getCPtr(filter)), true);
+  public DimensionVector dimensions(SWIGTYPE_p_util__FilterT_nix__Dimension_t__type filter) {
+    return new DimensionVector(nixJNI.DataArray_dimensions__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Dimension_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Dimension_t dimensions() {
-    return new SWIGTYPE_p_std__vectorT_nix__Dimension_t(nixJNI.DataArray_dimensions__SWIG_1(swigCPtr, this), true);
+  public DimensionVector dimensions() {
+    return new DimensionVector(nixJNI.DataArray_dimensions__SWIG_1(swigCPtr, this), true);
   }
 
   public long dimensionCount() {

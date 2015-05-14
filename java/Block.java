@@ -62,24 +62,24 @@ public class Block {
     return nixJNI.Block_sourceCount(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t sources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Block_sources__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter)), true);
+  public SourceVector sources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter) {
+    return new SourceVector(nixJNI.Block_sources__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t sources() {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Block_sources__SWIG_1(swigCPtr, this), true);
+  public SourceVector sources() {
+    return new SourceVector(nixJNI.Block_sources__SWIG_1(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t findSources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter, long max_depth) {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Block_findSources__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter), max_depth), true);
+  public SourceVector findSources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter, long max_depth) {
+    return new SourceVector(nixJNI.Block_findSources__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter), max_depth), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t findSources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Block_findSources__SWIG_1(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter)), true);
+  public SourceVector findSources(SWIGTYPE_p_util__FilterT_nix__Source_t__type filter) {
+    return new SourceVector(nixJNI.Block_findSources__SWIG_1(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Source_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Source_t findSources() {
-    return new SWIGTYPE_p_std__vectorT_nix__Source_t(nixJNI.Block_findSources__SWIG_2(swigCPtr, this), true);
+  public SourceVector findSources() {
+    return new SourceVector(nixJNI.Block_findSources__SWIG_2(swigCPtr, this), true);
   }
 
   public Source createSource(String name, String type) {
@@ -110,12 +110,12 @@ public class Block {
     return new DataArray(nixJNI.Block_getDataArray__SWIG_1(swigCPtr, this, index), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__DataArray_t dataArrays(SWIGTYPE_p_util__AcceptAllT_nix__DataArray_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_nix__DataArray_t(nixJNI.Block_dataArrays__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__AcceptAllT_nix__DataArray_t__type.getCPtr(filter)), true);
+  public DataArrayVector dataArrays(SWIGTYPE_p_util__AcceptAllT_nix__DataArray_t__type filter) {
+    return new DataArrayVector(nixJNI.Block_dataArrays__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__AcceptAllT_nix__DataArray_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__DataArray_t dataArrays() {
-    return new SWIGTYPE_p_std__vectorT_nix__DataArray_t(nixJNI.Block_dataArrays__SWIG_1(swigCPtr, this), true);
+  public DataArrayVector dataArrays() {
+    return new DataArrayVector(nixJNI.Block_dataArrays__SWIG_1(swigCPtr, this), true);
   }
 
   public long dataArrayCount() {

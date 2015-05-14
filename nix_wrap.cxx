@@ -299,6 +299,104 @@ SWIGINTERN void std_vector_Sl_std_string_Sg__set(std::vector< std::string > *sel
                 else
                     throw std::out_of_range("vector index out of range");
             }
+SWIGINTERN std::vector< nix::Block >::const_reference std_vector_Sl_nix_Block_Sg__get(std::vector< nix::Block > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_nix_Block_Sg__set(std::vector< nix::Block > *self,int i,std::vector< nix::Block >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN std::vector< nix::DataArray >::const_reference std_vector_Sl_nix_DataArray_Sg__get(std::vector< nix::DataArray > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_nix_DataArray_Sg__set(std::vector< nix::DataArray > *self,int i,std::vector< nix::DataArray >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN std::vector< nix::Dimension >::const_reference std_vector_Sl_nix_Dimension_Sg__get(std::vector< nix::Dimension > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_nix_Dimension_Sg__set(std::vector< nix::Dimension > *self,int i,std::vector< nix::Dimension >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN std::vector< nix::Property >::const_reference std_vector_Sl_nix_Property_Sg__get(std::vector< nix::Property > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_nix_Property_Sg__set(std::vector< nix::Property > *self,int i,std::vector< nix::Property >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN std::vector< nix::Section >::const_reference std_vector_Sl_nix_Section_Sg__get(std::vector< nix::Section > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_nix_Section_Sg__set(std::vector< nix::Section > *self,int i,std::vector< nix::Section >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN std::vector< nix::Source >::const_reference std_vector_Sl_nix_Source_Sg__get(std::vector< nix::Source > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_nix_Source_Sg__set(std::vector< nix::Source > *self,int i,std::vector< nix::Source >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN std::vector< nix::Value >::const_reference std_vector_Sl_nix_Value_Sg__get(std::vector< nix::Value > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_nix_Value_Sg__set(std::vector< nix::Value > *self,int i,std::vector< nix::Value >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
 
 #ifdef __cplusplus
 extern "C" {
@@ -816,6 +914,1224 @@ SWIGEXPORT void JNICALL Java_nixJNI_delete_1StringVector(JNIEnv *jenv, jclass jc
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< std::string > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1BlockVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< nix::Block > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< nix::Block > *)new std::vector< nix::Block >();
+  *(std::vector< nix::Block > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1BlockVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< nix::Block >::size_type arg1 ;
+  std::vector< nix::Block > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< nix::Block >::size_type)jarg1; 
+  result = (std::vector< nix::Block > *)new std::vector< nix::Block >(arg1);
+  *(std::vector< nix::Block > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_BlockVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Block > *arg1 = (std::vector< nix::Block > *) 0 ;
+  std::vector< nix::Block >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Block > **)&jarg1; 
+  result = ((std::vector< nix::Block > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_BlockVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Block > *arg1 = (std::vector< nix::Block > *) 0 ;
+  std::vector< nix::Block >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Block > **)&jarg1; 
+  result = ((std::vector< nix::Block > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_BlockVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< nix::Block > *arg1 = (std::vector< nix::Block > *) 0 ;
+  std::vector< nix::Block >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Block > **)&jarg1; 
+  arg2 = (std::vector< nix::Block >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_nixJNI_BlockVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< nix::Block > *arg1 = (std::vector< nix::Block > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Block > **)&jarg1; 
+  result = (bool)((std::vector< nix::Block > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_BlockVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< nix::Block > *arg1 = (std::vector< nix::Block > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Block > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_BlockVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< nix::Block > *arg1 = (std::vector< nix::Block > *) 0 ;
+  std::vector< nix::Block >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< nix::Block > **)&jarg1; 
+  arg2 = *(std::vector< nix::Block >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Block >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< nix::Block >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_BlockVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< nix::Block > *arg1 = (std::vector< nix::Block > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Block >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Block > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< nix::Block >::value_type *) &std_vector_Sl_nix_Block_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< nix::Block >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_BlockVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< nix::Block > *arg1 = (std::vector< nix::Block > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Block >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< nix::Block > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< nix::Block >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Block >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_nix_Block_Sg__set(arg1,arg2,(nix::Block const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_delete_1BlockVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< nix::Block > *arg1 = (std::vector< nix::Block > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< nix::Block > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1DataArrayVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< nix::DataArray > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< nix::DataArray > *)new std::vector< nix::DataArray >();
+  *(std::vector< nix::DataArray > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1DataArrayVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< nix::DataArray >::size_type arg1 ;
+  std::vector< nix::DataArray > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< nix::DataArray >::size_type)jarg1; 
+  result = (std::vector< nix::DataArray > *)new std::vector< nix::DataArray >(arg1);
+  *(std::vector< nix::DataArray > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_DataArrayVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::DataArray > *arg1 = (std::vector< nix::DataArray > *) 0 ;
+  std::vector< nix::DataArray >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::DataArray > **)&jarg1; 
+  result = ((std::vector< nix::DataArray > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_DataArrayVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::DataArray > *arg1 = (std::vector< nix::DataArray > *) 0 ;
+  std::vector< nix::DataArray >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::DataArray > **)&jarg1; 
+  result = ((std::vector< nix::DataArray > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_DataArrayVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< nix::DataArray > *arg1 = (std::vector< nix::DataArray > *) 0 ;
+  std::vector< nix::DataArray >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::DataArray > **)&jarg1; 
+  arg2 = (std::vector< nix::DataArray >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_nixJNI_DataArrayVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< nix::DataArray > *arg1 = (std::vector< nix::DataArray > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::DataArray > **)&jarg1; 
+  result = (bool)((std::vector< nix::DataArray > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_DataArrayVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< nix::DataArray > *arg1 = (std::vector< nix::DataArray > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::DataArray > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_DataArrayVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< nix::DataArray > *arg1 = (std::vector< nix::DataArray > *) 0 ;
+  std::vector< nix::DataArray >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< nix::DataArray > **)&jarg1; 
+  arg2 = *(std::vector< nix::DataArray >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::DataArray >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< nix::DataArray >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_DataArrayVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< nix::DataArray > *arg1 = (std::vector< nix::DataArray > *) 0 ;
+  int arg2 ;
+  std::vector< nix::DataArray >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::DataArray > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< nix::DataArray >::value_type *) &std_vector_Sl_nix_DataArray_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< nix::DataArray >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_DataArrayVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< nix::DataArray > *arg1 = (std::vector< nix::DataArray > *) 0 ;
+  int arg2 ;
+  std::vector< nix::DataArray >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< nix::DataArray > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< nix::DataArray >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::DataArray >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_nix_DataArray_Sg__set(arg1,arg2,(nix::DataArray const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_delete_1DataArrayVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< nix::DataArray > *arg1 = (std::vector< nix::DataArray > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< nix::DataArray > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1DimensionVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< nix::Dimension > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< nix::Dimension > *)new std::vector< nix::Dimension >();
+  *(std::vector< nix::Dimension > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1DimensionVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< nix::Dimension >::size_type arg1 ;
+  std::vector< nix::Dimension > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< nix::Dimension >::size_type)jarg1; 
+  result = (std::vector< nix::Dimension > *)new std::vector< nix::Dimension >(arg1);
+  *(std::vector< nix::Dimension > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_DimensionVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Dimension > *arg1 = (std::vector< nix::Dimension > *) 0 ;
+  std::vector< nix::Dimension >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  result = ((std::vector< nix::Dimension > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_DimensionVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Dimension > *arg1 = (std::vector< nix::Dimension > *) 0 ;
+  std::vector< nix::Dimension >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  result = ((std::vector< nix::Dimension > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_DimensionVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< nix::Dimension > *arg1 = (std::vector< nix::Dimension > *) 0 ;
+  std::vector< nix::Dimension >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  arg2 = (std::vector< nix::Dimension >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_nixJNI_DimensionVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< nix::Dimension > *arg1 = (std::vector< nix::Dimension > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  result = (bool)((std::vector< nix::Dimension > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_DimensionVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< nix::Dimension > *arg1 = (std::vector< nix::Dimension > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_DimensionVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< nix::Dimension > *arg1 = (std::vector< nix::Dimension > *) 0 ;
+  std::vector< nix::Dimension >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  arg2 = *(std::vector< nix::Dimension >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Dimension >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< nix::Dimension >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_DimensionVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< nix::Dimension > *arg1 = (std::vector< nix::Dimension > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Dimension >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< nix::Dimension >::value_type *) &std_vector_Sl_nix_Dimension_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< nix::Dimension >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_DimensionVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< nix::Dimension > *arg1 = (std::vector< nix::Dimension > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Dimension >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< nix::Dimension >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Dimension >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_nix_Dimension_Sg__set(arg1,arg2,(nix::Dimension const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_delete_1DimensionVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< nix::Dimension > *arg1 = (std::vector< nix::Dimension > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1PropertyVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< nix::Property > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< nix::Property > *)new std::vector< nix::Property >();
+  *(std::vector< nix::Property > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1PropertyVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< nix::Property >::size_type arg1 ;
+  std::vector< nix::Property > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< nix::Property >::size_type)jarg1; 
+  result = (std::vector< nix::Property > *)new std::vector< nix::Property >(arg1);
+  *(std::vector< nix::Property > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_PropertyVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Property > *arg1 = (std::vector< nix::Property > *) 0 ;
+  std::vector< nix::Property >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Property > **)&jarg1; 
+  result = ((std::vector< nix::Property > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_PropertyVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Property > *arg1 = (std::vector< nix::Property > *) 0 ;
+  std::vector< nix::Property >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Property > **)&jarg1; 
+  result = ((std::vector< nix::Property > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_PropertyVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< nix::Property > *arg1 = (std::vector< nix::Property > *) 0 ;
+  std::vector< nix::Property >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Property > **)&jarg1; 
+  arg2 = (std::vector< nix::Property >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_nixJNI_PropertyVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< nix::Property > *arg1 = (std::vector< nix::Property > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Property > **)&jarg1; 
+  result = (bool)((std::vector< nix::Property > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_PropertyVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< nix::Property > *arg1 = (std::vector< nix::Property > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Property > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_PropertyVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< nix::Property > *arg1 = (std::vector< nix::Property > *) 0 ;
+  std::vector< nix::Property >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< nix::Property > **)&jarg1; 
+  arg2 = *(std::vector< nix::Property >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Property >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< nix::Property >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_PropertyVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< nix::Property > *arg1 = (std::vector< nix::Property > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Property >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Property > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< nix::Property >::value_type *) &std_vector_Sl_nix_Property_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< nix::Property >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_PropertyVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< nix::Property > *arg1 = (std::vector< nix::Property > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Property >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< nix::Property > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< nix::Property >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Property >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_nix_Property_Sg__set(arg1,arg2,(nix::Property const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_delete_1PropertyVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< nix::Property > *arg1 = (std::vector< nix::Property > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< nix::Property > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SectionVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< nix::Section > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< nix::Section > *)new std::vector< nix::Section >();
+  *(std::vector< nix::Section > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SectionVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< nix::Section >::size_type arg1 ;
+  std::vector< nix::Section > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< nix::Section >::size_type)jarg1; 
+  result = (std::vector< nix::Section > *)new std::vector< nix::Section >(arg1);
+  *(std::vector< nix::Section > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_SectionVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Section > *arg1 = (std::vector< nix::Section > *) 0 ;
+  std::vector< nix::Section >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Section > **)&jarg1; 
+  result = ((std::vector< nix::Section > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_SectionVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Section > *arg1 = (std::vector< nix::Section > *) 0 ;
+  std::vector< nix::Section >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Section > **)&jarg1; 
+  result = ((std::vector< nix::Section > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_SectionVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< nix::Section > *arg1 = (std::vector< nix::Section > *) 0 ;
+  std::vector< nix::Section >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Section > **)&jarg1; 
+  arg2 = (std::vector< nix::Section >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_nixJNI_SectionVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< nix::Section > *arg1 = (std::vector< nix::Section > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Section > **)&jarg1; 
+  result = (bool)((std::vector< nix::Section > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_SectionVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< nix::Section > *arg1 = (std::vector< nix::Section > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Section > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_SectionVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< nix::Section > *arg1 = (std::vector< nix::Section > *) 0 ;
+  std::vector< nix::Section >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< nix::Section > **)&jarg1; 
+  arg2 = *(std::vector< nix::Section >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Section >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< nix::Section >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_SectionVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< nix::Section > *arg1 = (std::vector< nix::Section > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Section >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Section > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< nix::Section >::value_type *) &std_vector_Sl_nix_Section_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< nix::Section >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_SectionVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< nix::Section > *arg1 = (std::vector< nix::Section > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Section >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< nix::Section > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< nix::Section >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Section >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_nix_Section_Sg__set(arg1,arg2,(nix::Section const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_delete_1SectionVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< nix::Section > *arg1 = (std::vector< nix::Section > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< nix::Section > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SourceVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< nix::Source > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< nix::Source > *)new std::vector< nix::Source >();
+  *(std::vector< nix::Source > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SourceVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< nix::Source >::size_type arg1 ;
+  std::vector< nix::Source > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< nix::Source >::size_type)jarg1; 
+  result = (std::vector< nix::Source > *)new std::vector< nix::Source >(arg1);
+  *(std::vector< nix::Source > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_SourceVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Source > *arg1 = (std::vector< nix::Source > *) 0 ;
+  std::vector< nix::Source >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Source > **)&jarg1; 
+  result = ((std::vector< nix::Source > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_SourceVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Source > *arg1 = (std::vector< nix::Source > *) 0 ;
+  std::vector< nix::Source >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Source > **)&jarg1; 
+  result = ((std::vector< nix::Source > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_SourceVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< nix::Source > *arg1 = (std::vector< nix::Source > *) 0 ;
+  std::vector< nix::Source >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Source > **)&jarg1; 
+  arg2 = (std::vector< nix::Source >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_nixJNI_SourceVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< nix::Source > *arg1 = (std::vector< nix::Source > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Source > **)&jarg1; 
+  result = (bool)((std::vector< nix::Source > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_SourceVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< nix::Source > *arg1 = (std::vector< nix::Source > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Source > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_SourceVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< nix::Source > *arg1 = (std::vector< nix::Source > *) 0 ;
+  std::vector< nix::Source >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< nix::Source > **)&jarg1; 
+  arg2 = *(std::vector< nix::Source >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Source >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< nix::Source >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_SourceVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< nix::Source > *arg1 = (std::vector< nix::Source > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Source >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Source > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< nix::Source >::value_type *) &std_vector_Sl_nix_Source_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< nix::Source >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_SourceVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< nix::Source > *arg1 = (std::vector< nix::Source > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Source >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< nix::Source > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< nix::Source >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Source >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_nix_Source_Sg__set(arg1,arg2,(nix::Source const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_delete_1SourceVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< nix::Source > *arg1 = (std::vector< nix::Source > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< nix::Source > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1ValueVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< nix::Value > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< nix::Value > *)new std::vector< nix::Value >();
+  *(std::vector< nix::Value > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1ValueVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< nix::Value >::size_type arg1 ;
+  std::vector< nix::Value > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< nix::Value >::size_type)jarg1; 
+  result = (std::vector< nix::Value > *)new std::vector< nix::Value >(arg1);
+  *(std::vector< nix::Value > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_ValueVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Value > *arg1 = (std::vector< nix::Value > *) 0 ;
+  std::vector< nix::Value >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Value > **)&jarg1; 
+  result = ((std::vector< nix::Value > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_ValueVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Value > *arg1 = (std::vector< nix::Value > *) 0 ;
+  std::vector< nix::Value >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Value > **)&jarg1; 
+  result = ((std::vector< nix::Value > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_ValueVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< nix::Value > *arg1 = (std::vector< nix::Value > *) 0 ;
+  std::vector< nix::Value >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Value > **)&jarg1; 
+  arg2 = (std::vector< nix::Value >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_nixJNI_ValueVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< nix::Value > *arg1 = (std::vector< nix::Value > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Value > **)&jarg1; 
+  result = (bool)((std::vector< nix::Value > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_ValueVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< nix::Value > *arg1 = (std::vector< nix::Value > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Value > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_ValueVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< nix::Value > *arg1 = (std::vector< nix::Value > *) 0 ;
+  std::vector< nix::Value >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< nix::Value > **)&jarg1; 
+  arg2 = *(std::vector< nix::Value >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Value >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< nix::Value >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_nixJNI_ValueVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< nix::Value > *arg1 = (std::vector< nix::Value > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Value >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Value > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< nix::Value >::value_type *) &std_vector_Sl_nix_Value_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< nix::Value >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_ValueVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< nix::Value > *arg1 = (std::vector< nix::Value > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Value >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< nix::Value > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< nix::Value >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Value >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_nix_Value_Sg__set(arg1,arg2,(nix::Value const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_nixJNI_delete_1ValueVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< nix::Value > *arg1 = (std::vector< nix::Value > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< nix::Value > **)&jarg1; 
   delete arg1;
 }
 
@@ -1951,7 +3267,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Source_1sources_1_1SWIG_10(JNIEnv *jenv, jc
   jlong jresult = 0 ;
   nix::Source *arg1 = (nix::Source *) 0 ;
   util::Filter< nix::Source >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -1971,7 +3287,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Source_1sources_1_1SWIG_10(JNIEnv *jenv, jc
 SWIGEXPORT jlong JNICALL Java_nixJNI_Source_1sources_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Source *arg1 = (nix::Source *) 0 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -1988,7 +3304,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Source_1findSources_1_1SWIG_10(JNIEnv *jenv
   nix::Source *arg1 = (nix::Source *) 0 ;
   util::Filter< nix::Source >::type *arg2 = 0 ;
   size_t arg3 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -2010,7 +3326,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Source_1findSources_1_1SWIG_11(JNIEnv *jenv
   jlong jresult = 0 ;
   nix::Source *arg1 = (nix::Source *) 0 ;
   util::Filter< nix::Source >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -2030,7 +3346,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Source_1findSources_1_1SWIG_11(JNIEnv *jenv
 SWIGEXPORT jlong JNICALL Java_nixJNI_Source_1findSources_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Source *arg1 = (nix::Source *) 0 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -2378,7 +3694,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_DataArray_1dimensions_1_1SWIG_10(JNIEnv *je
   jlong jresult = 0 ;
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
   util::Filter< nix::Dimension >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Dimension > > result;
+  std::vector< nix::Dimension > result;
   
   (void)jenv;
   (void)jcls;
@@ -2398,7 +3714,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_DataArray_1dimensions_1_1SWIG_10(JNIEnv *je
 SWIGEXPORT jlong JNICALL Java_nixJNI_DataArray_1dimensions_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
-  SwigValueWrapper< std::vector< nix::Dimension > > result;
+  std::vector< nix::Dimension > result;
   
   (void)jenv;
   (void)jcls;
@@ -3675,13 +4991,14 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Property_1valueCount(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Property_1values_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Property_1values_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   nix::Property *arg1 = (nix::Property *) 0 ;
   std::vector< nix::Value > *arg2 = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
+  (void)jarg2_;
   arg1 = *(nix::Property **)&jarg1; 
   arg2 = *(std::vector< nix::Value > **)&jarg2;
   if (!arg2) {
@@ -3695,7 +5012,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Property_1values_1_1SWIG_10(JNIEnv *jenv, jc
 SWIGEXPORT jlong JNICALL Java_nixJNI_Property_1values_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Property *arg1 = (nix::Property *) 0 ;
-  SwigValueWrapper< std::vector< nix::Value > > result;
+  std::vector< nix::Value > result;
   
   (void)jenv;
   (void)jcls;
@@ -4115,7 +5432,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1sections_1_1SWIG_10(JNIEnv *jenv, 
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
   util::Filter< nix::Section >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -4135,7 +5452,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1sections_1_1SWIG_10(JNIEnv *jenv, 
 SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1sections_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -4152,7 +5469,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1findSections_1_1SWIG_10(JNIEnv *je
   nix::Section *arg1 = (nix::Section *) 0 ;
   util::Filter< nix::Section >::type *arg2 = 0 ;
   size_t arg3 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -4174,7 +5491,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1findSections_1_1SWIG_11(JNIEnv *je
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
   util::Filter< nix::Section >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -4194,7 +5511,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1findSections_1_1SWIG_11(JNIEnv *je
 SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1findSections_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -4210,7 +5527,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1findRelated_1_1SWIG_10(JNIEnv *jen
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
   util::Filter< nix::Section >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -4230,7 +5547,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1findRelated_1_1SWIG_10(JNIEnv *jen
 SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1findRelated_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -4432,7 +5749,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1properties_1_1SWIG_10(JNIEnv *jenv
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
   util::Filter< nix::Property >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Property > > result;
+  std::vector< nix::Property > result;
   
   (void)jenv;
   (void)jcls;
@@ -4452,7 +5769,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1properties_1_1SWIG_10(JNIEnv *jenv
 SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1properties_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
-  SwigValueWrapper< std::vector< nix::Property > > result;
+  std::vector< nix::Property > result;
   
   (void)jenv;
   (void)jcls;
@@ -4467,7 +5784,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1properties_1_1SWIG_11(JNIEnv *jenv
 SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1inheritedProperties(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
-  SwigValueWrapper< std::vector< nix::Property > > result;
+  std::vector< nix::Property > result;
   
   (void)jenv;
   (void)jcls;
@@ -4540,7 +5857,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1createProperty_1_1SWIG_11(JNIEnv *
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1createProperty_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jlong jarg3) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1createProperty_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
   std::string *arg2 = 0 ;
@@ -4550,6 +5867,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1createProperty_1_1SWIG_12(JNIEnv *
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
+  (void)jarg3_;
   arg1 = *(nix::Section **)&jarg1; 
   if(!jarg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
@@ -4767,7 +6085,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1sources_1_1SWIG_10(JNIEnv *jenv, jcl
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
   util::Filter< nix::Source >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -4787,7 +6105,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1sources_1_1SWIG_10(JNIEnv *jenv, jcl
 SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1sources_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -4804,7 +6122,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1findSources_1_1SWIG_10(JNIEnv *jenv,
   nix::Block *arg1 = (nix::Block *) 0 ;
   util::Filter< nix::Source >::type *arg2 = 0 ;
   size_t arg3 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -4826,7 +6144,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1findSources_1_1SWIG_11(JNIEnv *jenv,
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
   util::Filter< nix::Source >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -4846,7 +6164,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1findSources_1_1SWIG_11(JNIEnv *jenv,
 SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1findSources_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
-  SwigValueWrapper< std::vector< nix::Source > > result;
+  std::vector< nix::Source > result;
   
   (void)jenv;
   (void)jcls;
@@ -5033,7 +6351,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1dataArrays_1_1SWIG_10(JNIEnv *jenv, 
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
   util::AcceptAll< nix::DataArray >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::DataArray > > result;
+  std::vector< nix::DataArray > result;
   
   (void)jenv;
   (void)jcls;
@@ -5053,7 +6371,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1dataArrays_1_1SWIG_10(JNIEnv *jenv, 
 SWIGEXPORT jlong JNICALL Java_nixJNI_Block_1dataArrays_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
-  SwigValueWrapper< std::vector< nix::DataArray > > result;
+  std::vector< nix::DataArray > result;
   
   (void)jenv;
   (void)jcls;
@@ -5927,7 +7245,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1blocks_1_1SWIG_10(JNIEnv *jenv, jclas
   jlong jresult = 0 ;
   nix::File *arg1 = (nix::File *) 0 ;
   util::Filter< nix::Block >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Block > > result;
+  std::vector< nix::Block > result;
   
   (void)jenv;
   (void)jcls;
@@ -5947,7 +7265,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1blocks_1_1SWIG_10(JNIEnv *jenv, jclas
 SWIGEXPORT jlong JNICALL Java_nixJNI_File_1blocks_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::File *arg1 = (nix::File *) 0 ;
-  SwigValueWrapper< std::vector< nix::Block > > result;
+  std::vector< nix::Block > result;
   
   (void)jenv;
   (void)jcls;
@@ -6067,7 +7385,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1sections_1_1SWIG_10(JNIEnv *jenv, jcl
   jlong jresult = 0 ;
   nix::File *arg1 = (nix::File *) 0 ;
   util::Filter< nix::Section >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -6087,7 +7405,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1sections_1_1SWIG_10(JNIEnv *jenv, jcl
 SWIGEXPORT jlong JNICALL Java_nixJNI_File_1sections_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::File *arg1 = (nix::File *) 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -6104,7 +7422,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1findSections_1_1SWIG_10(JNIEnv *jenv,
   nix::File *arg1 = (nix::File *) 0 ;
   util::Filter< nix::Section >::type *arg2 = 0 ;
   size_t arg3 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -6126,7 +7444,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1findSections_1_1SWIG_11(JNIEnv *jenv,
   jlong jresult = 0 ;
   nix::File *arg1 = (nix::File *) 0 ;
   util::Filter< nix::Section >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -6147,7 +7465,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1findSections_1_1SWIG_12(JNIEnv *jenv,
   jlong jresult = 0 ;
   nix::File *arg1 = (nix::File *) 0 ;
   size_t arg2 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
@@ -6163,7 +7481,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1findSections_1_1SWIG_12(JNIEnv *jenv,
 SWIGEXPORT jlong JNICALL Java_nixJNI_File_1findSections_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::File *arg1 = (nix::File *) 0 ;
-  SwigValueWrapper< std::vector< nix::Section > > result;
+  std::vector< nix::Section > result;
   
   (void)jenv;
   (void)jcls;
