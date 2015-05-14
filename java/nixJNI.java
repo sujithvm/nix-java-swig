@@ -17,7 +17,6 @@ public class nixJNI {
   public final static native int Implementation_Hdf5_get();
   public final static native long new_Block__SWIG_0();
   public final static native long new_Block__SWIG_1(long jarg1, Block jarg1_);
-  public final static native long new_Block__SWIG_2(long jarg1);
   public final static native boolean Block_hasSource__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native boolean Block_hasSource__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_getSource__SWIG_0(long jarg1, Block jarg1_, String jarg2);
@@ -64,7 +63,6 @@ public class nixJNI {
   public final static native void delete_Block(long jarg1);
   public final static native long new_DataArray__SWIG_0();
   public final static native long new_DataArray__SWIG_1(long jarg1, DataArray jarg1_);
-  public final static native long new_DataArray__SWIG_2(long jarg1);
   public final static native long DataArray_label__SWIG_0(long jarg1, DataArray jarg1_);
   public final static native void DataArray_label__SWIG_1(long jarg1, DataArray jarg1_, String jarg2);
   public final static native void DataArray_label__SWIG_2(long jarg1, DataArray jarg1_, long jarg2);
@@ -96,8 +94,7 @@ public class nixJNI {
   public final static native void DataArray_appendData(long jarg1, DataArray jarg1_, long jarg2, long jarg3, long jarg4, long jarg5);
   public final static native void delete_DataArray(long jarg1);
   public final static native long new_SampledDimension__SWIG_0();
-  public final static native long new_SampledDimension__SWIG_1(long jarg1);
-  public final static native long new_SampledDimension__SWIG_3(long jarg1, SampledDimension jarg1_);
+  public final static native long new_SampledDimension__SWIG_1(long jarg1, SampledDimension jarg1_);
   public final static native long SampledDimension_index(long jarg1, SampledDimension jarg1_);
   public final static native long SampledDimension_dimensionType(long jarg1, SampledDimension jarg1_);
   public final static native long SampledDimension_label__SWIG_0(long jarg1, SampledDimension jarg1_);
@@ -117,8 +114,7 @@ public class nixJNI {
   public final static native long SampledDimension_axis__SWIG_1(long jarg1, SampledDimension jarg1_, long jarg2);
   public final static native void delete_SampledDimension(long jarg1);
   public final static native long new_SetDimension__SWIG_0();
-  public final static native long new_SetDimension__SWIG_1(long jarg1);
-  public final static native long new_SetDimension__SWIG_3(long jarg1, SetDimension jarg1_);
+  public final static native long new_SetDimension__SWIG_1(long jarg1, SetDimension jarg1_);
   public final static native long SetDimension_index(long jarg1, SetDimension jarg1_);
   public final static native long SetDimension_dimensionType(long jarg1, SetDimension jarg1_);
   public final static native long SetDimension_labels__SWIG_0(long jarg1, SetDimension jarg1_);
@@ -126,8 +122,7 @@ public class nixJNI {
   public final static native void SetDimension_labels__SWIG_2(long jarg1, SetDimension jarg1_, long jarg2);
   public final static native void delete_SetDimension(long jarg1);
   public final static native long new_RangeDimension__SWIG_0();
-  public final static native long new_RangeDimension__SWIG_1(long jarg1);
-  public final static native long new_RangeDimension__SWIG_3(long jarg1, RangeDimension jarg1_);
+  public final static native long new_RangeDimension__SWIG_1(long jarg1, RangeDimension jarg1_);
   public final static native long RangeDimension_index(long jarg1, RangeDimension jarg1_);
   public final static native long RangeDimension_dimensionType(long jarg1, RangeDimension jarg1_);
   public final static native long RangeDimension_label__SWIG_0(long jarg1, RangeDimension jarg1_);
@@ -144,11 +139,10 @@ public class nixJNI {
   public final static native long RangeDimension_axis__SWIG_1(long jarg1, RangeDimension jarg1_, long jarg2);
   public final static native void delete_RangeDimension(long jarg1);
   public final static native long new_Dimension__SWIG_0();
-  public final static native long new_Dimension__SWIG_1(long jarg1);
-  public final static native long new_Dimension__SWIG_3(long jarg1, Dimension jarg1_);
-  public final static native long new_Dimension__SWIG_4(long jarg1, SampledDimension jarg1_);
-  public final static native long new_Dimension__SWIG_5(long jarg1, RangeDimension jarg1_);
-  public final static native long new_Dimension__SWIG_6(long jarg1, SetDimension jarg1_);
+  public final static native long new_Dimension__SWIG_1(long jarg1, Dimension jarg1_);
+  public final static native long new_Dimension__SWIG_2(long jarg1, SampledDimension jarg1_);
+  public final static native long new_Dimension__SWIG_3(long jarg1, RangeDimension jarg1_);
+  public final static native long new_Dimension__SWIG_4(long jarg1, SetDimension jarg1_);
   public final static native long Dimension_index(long jarg1, Dimension jarg1_);
   public final static native long Dimension_dimensionType(long jarg1, Dimension jarg1_);
   public final static native long Dimension_asSetDimension(long jarg1, Dimension jarg1_);

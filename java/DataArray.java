@@ -42,10 +42,6 @@ public class DataArray {
     this(nixJNI.new_DataArray__SWIG_1(DataArray.getCPtr(other), other), true);
   }
 
-  public DataArray(SWIGTYPE_p_std__shared_ptrT_nix__base__IDataArray_t p_impl) {
-    this(nixJNI.new_DataArray__SWIG_2(SWIGTYPE_p_std__shared_ptrT_nix__base__IDataArray_t.getCPtr(p_impl)), true);
-  }
-
   public SWIGTYPE_p_boost__optionalT_std__string_t label() {
     return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.DataArray_label__SWIG_0(swigCPtr, this), true);
   }

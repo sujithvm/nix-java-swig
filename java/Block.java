@@ -42,10 +42,6 @@ public class Block {
     this(nixJNI.new_Block__SWIG_1(Block.getCPtr(other), other), true);
   }
 
-  public Block(SWIGTYPE_p_std__shared_ptrT_nix__base__IBlock_t p_impl) {
-    this(nixJNI.new_Block__SWIG_2(SWIGTYPE_p_std__shared_ptrT_nix__base__IBlock_t.getCPtr(p_impl)), true);
-  }
-
   public boolean hasSource(String name_or_id) {
     return nixJNI.Block_hasSource__SWIG_0(swigCPtr, this, name_or_id);
   }

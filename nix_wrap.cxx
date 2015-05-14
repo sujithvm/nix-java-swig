@@ -319,24 +319,6 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Block_1_1SWIG_11(JNIEnv *jenv, jclass 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Block_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::IBlock > *arg1 = 0 ;
-  nix::Block *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::IBlock > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::IBlock > const & reference is null");
-    return 0;
-  } 
-  result = (nix::Block *)new nix::Block((std::shared_ptr< nix::base::IBlock > const &)*arg1);
-  *(nix::Block **)&jresult = result; 
-  return jresult;
-}
-
-
 SWIGEXPORT jboolean JNICALL Java_nixJNI_Block_1hasSource_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jboolean jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
@@ -1343,24 +1325,6 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1DataArray_1_1SWIG_11(JNIEnv *jenv, jcl
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1DataArray_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::IDataArray > *arg1 = 0 ;
-  nix::DataArray *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::IDataArray > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::IDataArray > const & reference is null");
-    return 0;
-  } 
-  result = (nix::DataArray *)new nix::DataArray((std::shared_ptr< nix::base::IDataArray > const &)*arg1);
-  *(nix::DataArray **)&jresult = result; 
-  return jresult;
-}
-
-
 SWIGEXPORT jlong JNICALL Java_nixJNI_DataArray_1label_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
@@ -1930,25 +1894,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SampledDimension_1_1SWIG_10(JNIEnv *je
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SampledDimension_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::ISampledDimension > *arg1 = 0 ;
-  nix::SampledDimension *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::ISampledDimension > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::ISampledDimension > const & reference is null");
-    return 0;
-  } 
-  result = (nix::SampledDimension *)new nix::SampledDimension((std::shared_ptr< nix::base::ISampledDimension > const &)*arg1);
-  *(nix::SampledDimension **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SampledDimension_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SampledDimension_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::SampledDimension *arg1 = 0 ;
   nix::SampledDimension *result = 0 ;
@@ -2274,25 +2220,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SetDimension_1_1SWIG_10(JNIEnv *jenv, 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SetDimension_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::ISetDimension > *arg1 = 0 ;
-  nix::SetDimension *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::ISetDimension > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::ISetDimension > const & reference is null");
-    return 0;
-  } 
-  result = (nix::SetDimension *)new nix::SetDimension((std::shared_ptr< nix::base::ISetDimension > const &)*arg1);
-  *(nix::SetDimension **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SetDimension_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1SetDimension_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::SetDimension *arg1 = 0 ;
   nix::SetDimension *result = 0 ;
@@ -2414,25 +2342,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1RangeDimension_1_1SWIG_10(JNIEnv *jenv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1RangeDimension_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::IRangeDimension > *arg1 = 0 ;
-  nix::RangeDimension *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::IRangeDimension > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::IRangeDimension > const & reference is null");
-    return 0;
-  } 
-  result = (nix::RangeDimension *)new nix::RangeDimension((std::shared_ptr< nix::base::IRangeDimension > const &)*arg1);
-  *(nix::RangeDimension **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1RangeDimension_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1RangeDimension_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::RangeDimension *arg1 = 0 ;
   nix::RangeDimension *result = 0 ;
@@ -2715,25 +2625,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_10(JNIEnv *jenv, jcl
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::shared_ptr< nix::base::IDimension > *arg1 = 0 ;
-  nix::Dimension *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(std::shared_ptr< nix::base::IDimension > **)&jarg1;
-  if (!arg1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::shared_ptr< nix::base::IDimension > const & reference is null");
-    return 0;
-  } 
-  result = (nix::Dimension *)new nix::Dimension((std::shared_ptr< nix::base::IDimension > const &)*arg1);
-  *(nix::Dimension **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Dimension *arg1 = 0 ;
   nix::Dimension *result = 0 ;
@@ -2752,7 +2644,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_13(JNIEnv *jenv, jcl
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::SampledDimension *arg1 = 0 ;
   nix::Dimension *result = 0 ;
@@ -2771,7 +2663,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_14(JNIEnv *jenv, jcl
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::RangeDimension *arg1 = 0 ;
   nix::Dimension *result = 0 ;
@@ -2790,7 +2682,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_15(JNIEnv *jenv, jcl
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Dimension_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::SetDimension *arg1 = 0 ;
   nix::Dimension *result = 0 ;

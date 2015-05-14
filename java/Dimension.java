@@ -38,24 +38,20 @@ public class Dimension {
     this(nixJNI.new_Dimension__SWIG_0(), true);
   }
 
-  public Dimension(SWIGTYPE_p_std__shared_ptrT_nix__base__IDimension_t p_impl) {
-    this(nixJNI.new_Dimension__SWIG_1(SWIGTYPE_p_std__shared_ptrT_nix__base__IDimension_t.getCPtr(p_impl)), true);
-  }
-
   public Dimension(Dimension other) {
-    this(nixJNI.new_Dimension__SWIG_3(Dimension.getCPtr(other), other), true);
+    this(nixJNI.new_Dimension__SWIG_1(Dimension.getCPtr(other), other), true);
   }
 
   public Dimension(SampledDimension other) {
-    this(nixJNI.new_Dimension__SWIG_4(SampledDimension.getCPtr(other), other), true);
+    this(nixJNI.new_Dimension__SWIG_2(SampledDimension.getCPtr(other), other), true);
   }
 
   public Dimension(RangeDimension other) {
-    this(nixJNI.new_Dimension__SWIG_5(RangeDimension.getCPtr(other), other), true);
+    this(nixJNI.new_Dimension__SWIG_3(RangeDimension.getCPtr(other), other), true);
   }
 
   public Dimension(SetDimension other) {
-    this(nixJNI.new_Dimension__SWIG_6(SetDimension.getCPtr(other), other), true);
+    this(nixJNI.new_Dimension__SWIG_4(SetDimension.getCPtr(other), other), true);
   }
 
   public long index() {

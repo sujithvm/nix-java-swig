@@ -38,12 +38,8 @@ public class SetDimension {
     this(nixJNI.new_SetDimension__SWIG_0(), true);
   }
 
-  public SetDimension(SWIGTYPE_p_std__shared_ptrT_nix__base__ISetDimension_t p_impl) {
-    this(nixJNI.new_SetDimension__SWIG_1(SWIGTYPE_p_std__shared_ptrT_nix__base__ISetDimension_t.getCPtr(p_impl)), true);
-  }
-
   public SetDimension(SetDimension other) {
-    this(nixJNI.new_SetDimension__SWIG_3(SetDimension.getCPtr(other), other), true);
+    this(nixJNI.new_SetDimension__SWIG_1(SetDimension.getCPtr(other), other), true);
   }
 
   public long index() {

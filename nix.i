@@ -61,6 +61,30 @@ typedef long long int          ndssize_t;
 	Ignores
 */
 namespace nix {
+	// Block back-end constructors
+	%ignore Block::Block(const std::shared_ptr<base::IBlock> &);
+	%ignore Block::Block(std::shared_ptr<base::IBlock> &&);
+
+	// DataArray back-end constructors
+	%ignore DataArray::DataArray(const std::shared_ptr<base::IDataArray> &);
+	%ignore DataArray::DataArray(std::shared_ptr<base::IDataArray> &&);
+
+	// SampledDimension back-end constructors
+	%ignore SampledDimension::SampledDimension(const std::shared_ptr<base::ISampledDimension> &);
+	%ignore SampledDimension::SampledDimension(std::shared_ptr<base::ISampledDimension> &&);
+
+	// SetDimension back-end constructors
+	%ignore SetDimension::SetDimension(const std::shared_ptr<base::ISetDimension> &);
+	%ignore SetDimension::SetDimension(std::shared_ptr<base::ISetDimension> &&);
+
+	// RangeDimension back-end constructors
+	%ignore RangeDimension::RangeDimension(const std::shared_ptr<base::IRangeDimension> &);
+	%ignore RangeDimension::RangeDimension(std::shared_ptr<base::IRangeDimension> &&);
+
+	// Dimension back-end constructors
+	%ignore Dimension::Dimension(const std::shared_ptr<base::IDimension> &);
+	%ignore Dimension::Dimension(std::shared_ptr<base::IDimension> &&);
+
 	// File back-end constructors
 	%ignore File::File(const std::shared_ptr<base::IFile> &);
 	%ignore File::File(std::shared_ptr<base::IFile> &&);

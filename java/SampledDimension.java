@@ -38,12 +38,8 @@ public class SampledDimension {
     this(nixJNI.new_SampledDimension__SWIG_0(), true);
   }
 
-  public SampledDimension(SWIGTYPE_p_std__shared_ptrT_nix__base__ISampledDimension_t p_impl) {
-    this(nixJNI.new_SampledDimension__SWIG_1(SWIGTYPE_p_std__shared_ptrT_nix__base__ISampledDimension_t.getCPtr(p_impl)), true);
-  }
-
   public SampledDimension(SampledDimension other) {
-    this(nixJNI.new_SampledDimension__SWIG_3(SampledDimension.getCPtr(other), other), true);
+    this(nixJNI.new_SampledDimension__SWIG_1(SampledDimension.getCPtr(other), other), true);
   }
 
   public long index() {
