@@ -74,12 +74,12 @@ public class RangeDimension {
     nixJNI.RangeDimension_unit__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t ticks() {
-    return new SWIGTYPE_p_std__vectorT_double_t(nixJNI.RangeDimension_ticks__SWIG_0(swigCPtr, this), true);
+  public DoubleVector ticks() {
+    return new DoubleVector(nixJNI.RangeDimension_ticks__SWIG_0(swigCPtr, this), true);
   }
 
-  public void ticks(SWIGTYPE_p_std__vectorT_double_t ticks) {
-    nixJNI.RangeDimension_ticks__SWIG_1(swigCPtr, this, SWIGTYPE_p_std__vectorT_double_t.getCPtr(ticks));
+  public void ticks(DoubleVector ticks) {
+    nixJNI.RangeDimension_ticks__SWIG_1(swigCPtr, this, DoubleVector.getCPtr(ticks), ticks);
   }
 
   public double tickAt(long index) {
@@ -90,12 +90,12 @@ public class RangeDimension {
     return nixJNI.RangeDimension_indexOf(swigCPtr, this, position);
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t axis(long count, long startIndex) {
-    return new SWIGTYPE_p_std__vectorT_double_t(nixJNI.RangeDimension_axis__SWIG_0(swigCPtr, this, count, startIndex), true);
+  public DoubleVector axis(long count, long startIndex) {
+    return new DoubleVector(nixJNI.RangeDimension_axis__SWIG_0(swigCPtr, this, count, startIndex), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t axis(long count) {
-    return new SWIGTYPE_p_std__vectorT_double_t(nixJNI.RangeDimension_axis__SWIG_1(swigCPtr, this, count), true);
+  public DoubleVector axis(long count) {
+    return new DoubleVector(nixJNI.RangeDimension_axis__SWIG_1(swigCPtr, this, count), true);
   }
 
 }

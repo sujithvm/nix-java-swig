@@ -13,6 +13,39 @@ public class nixJNI {
         System.loadLibrary("nix_jni");
     }
 
+  public final static native long new_IntVector__SWIG_0();
+  public final static native long new_IntVector__SWIG_1(long jarg1);
+  public final static native long IntVector_size(long jarg1, IntVector jarg1_);
+  public final static native long IntVector_capacity(long jarg1, IntVector jarg1_);
+  public final static native void IntVector_reserve(long jarg1, IntVector jarg1_, long jarg2);
+  public final static native boolean IntVector_isEmpty(long jarg1, IntVector jarg1_);
+  public final static native void IntVector_clear(long jarg1, IntVector jarg1_);
+  public final static native void IntVector_add(long jarg1, IntVector jarg1_, int jarg2);
+  public final static native int IntVector_get(long jarg1, IntVector jarg1_, int jarg2);
+  public final static native void IntVector_set(long jarg1, IntVector jarg1_, int jarg2, int jarg3);
+  public final static native void delete_IntVector(long jarg1);
+  public final static native long new_DoubleVector__SWIG_0();
+  public final static native long new_DoubleVector__SWIG_1(long jarg1);
+  public final static native long DoubleVector_size(long jarg1, DoubleVector jarg1_);
+  public final static native long DoubleVector_capacity(long jarg1, DoubleVector jarg1_);
+  public final static native void DoubleVector_reserve(long jarg1, DoubleVector jarg1_, long jarg2);
+  public final static native boolean DoubleVector_isEmpty(long jarg1, DoubleVector jarg1_);
+  public final static native void DoubleVector_clear(long jarg1, DoubleVector jarg1_);
+  public final static native void DoubleVector_add(long jarg1, DoubleVector jarg1_, double jarg2);
+  public final static native double DoubleVector_get(long jarg1, DoubleVector jarg1_, int jarg2);
+  public final static native void DoubleVector_set(long jarg1, DoubleVector jarg1_, int jarg2, double jarg3);
+  public final static native void delete_DoubleVector(long jarg1);
+  public final static native long new_StringVector__SWIG_0();
+  public final static native long new_StringVector__SWIG_1(long jarg1);
+  public final static native long StringVector_size(long jarg1, StringVector jarg1_);
+  public final static native long StringVector_capacity(long jarg1, StringVector jarg1_);
+  public final static native void StringVector_reserve(long jarg1, StringVector jarg1_, long jarg2);
+  public final static native boolean StringVector_isEmpty(long jarg1, StringVector jarg1_);
+  public final static native void StringVector_clear(long jarg1, StringVector jarg1_);
+  public final static native void StringVector_add(long jarg1, StringVector jarg1_, String jarg2);
+  public final static native String StringVector_get(long jarg1, StringVector jarg1_, int jarg2);
+  public final static native void StringVector_set(long jarg1, StringVector jarg1_, int jarg2, String jarg3);
+  public final static native void delete_StringVector(long jarg1);
   public final static native int FileMode_ReadOnly_get();
   public final static native int Implementation_Hdf5_get();
   public final static native int DataType_Nothing_get();
@@ -44,7 +77,7 @@ public class nixJNI {
   public final static native long SetDimension_index(long jarg1, SetDimension jarg1_);
   public final static native int SetDimension_dimensionType(long jarg1, SetDimension jarg1_);
   public final static native long SetDimension_labels__SWIG_0(long jarg1, SetDimension jarg1_);
-  public final static native void SetDimension_labels__SWIG_1(long jarg1, SetDimension jarg1_, long jarg2);
+  public final static native void SetDimension_labels__SWIG_1(long jarg1, SetDimension jarg1_, long jarg2, StringVector jarg2_);
   public final static native void SetDimension_labels__SWIG_2(long jarg1, SetDimension jarg1_, long jarg2);
   public final static native void delete_SetDimension(long jarg1);
   public final static native long new_RangeDimension__SWIG_0();
@@ -58,7 +91,7 @@ public class nixJNI {
   public final static native void RangeDimension_unit__SWIG_1(long jarg1, RangeDimension jarg1_, String jarg2);
   public final static native void RangeDimension_unit__SWIG_2(long jarg1, RangeDimension jarg1_, long jarg2);
   public final static native long RangeDimension_ticks__SWIG_0(long jarg1, RangeDimension jarg1_);
-  public final static native void RangeDimension_ticks__SWIG_1(long jarg1, RangeDimension jarg1_, long jarg2);
+  public final static native void RangeDimension_ticks__SWIG_1(long jarg1, RangeDimension jarg1_, long jarg2, DoubleVector jarg2_);
   public final static native double RangeDimension_tickAt(long jarg1, RangeDimension jarg1_, long jarg2);
   public final static native long RangeDimension_indexOf(long jarg1, RangeDimension jarg1_, double jarg2);
   public final static native long RangeDimension_axis__SWIG_0(long jarg1, RangeDimension jarg1_, long jarg2, long jarg3);
@@ -102,7 +135,7 @@ public class nixJNI {
   public final static native long DataArray_expansionOrigin__SWIG_0(long jarg1, DataArray jarg1_);
   public final static native void DataArray_expansionOrigin__SWIG_1(long jarg1, DataArray jarg1_, double jarg2);
   public final static native void DataArray_expansionOrigin__SWIG_2(long jarg1, DataArray jarg1_, long jarg2);
-  public final static native void DataArray_polynomCoefficients__SWIG_0(long jarg1, DataArray jarg1_, long jarg2);
+  public final static native void DataArray_polynomCoefficients__SWIG_0(long jarg1, DataArray jarg1_, long jarg2, DoubleVector jarg2_);
   public final static native long DataArray_polynomCoefficients__SWIG_1(long jarg1, DataArray jarg1_);
   public final static native void DataArray_polynomCoefficients__SWIG_2(long jarg1, DataArray jarg1_, long jarg2);
   public final static native long DataArray_dimensions__SWIG_0(long jarg1, DataArray jarg1_, long jarg2);
@@ -110,10 +143,10 @@ public class nixJNI {
   public final static native long DataArray_dimensionCount(long jarg1, DataArray jarg1_);
   public final static native long DataArray_getDimension(long jarg1, DataArray jarg1_, long jarg2);
   public final static native long DataArray_appendSetDimension(long jarg1, DataArray jarg1_);
-  public final static native long DataArray_appendRangeDimension(long jarg1, DataArray jarg1_, long jarg2);
+  public final static native long DataArray_appendRangeDimension(long jarg1, DataArray jarg1_, long jarg2, DoubleVector jarg2_);
   public final static native long DataArray_appendSampledDimension(long jarg1, DataArray jarg1_, double jarg2);
   public final static native long DataArray_createSetDimension(long jarg1, DataArray jarg1_, long jarg2);
-  public final static native long DataArray_createRangeDimension(long jarg1, DataArray jarg1_, long jarg2, long jarg3);
+  public final static native long DataArray_createRangeDimension(long jarg1, DataArray jarg1_, long jarg2, long jarg3, DoubleVector jarg3_);
   public final static native long DataArray_createSampledDimension(long jarg1, DataArray jarg1_, long jarg2, double jarg3);
   public final static native boolean DataArray_deleteDimension(long jarg1, DataArray jarg1_, long jarg2);
   public final static native void DataArray_getDataDirect(long jarg1, DataArray jarg1_, int jarg2, long jarg3, long jarg4, long jarg5);
@@ -261,7 +294,7 @@ public class nixJNI {
   public final static native long Block_tags__SWIG_0(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_tags__SWIG_1(long jarg1, Block jarg1_);
   public final static native long Block_tagCount(long jarg1, Block jarg1_);
-  public final static native long Block_createTag(long jarg1, Block jarg1_, String jarg2, String jarg3, long jarg4);
+  public final static native long Block_createTag(long jarg1, Block jarg1_, String jarg2, String jarg3, long jarg4, DoubleVector jarg4_);
   public final static native boolean Block_deleteTag__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native boolean Block_deleteTag__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native boolean Block_hasMultiTag__SWIG_0(long jarg1, Block jarg1_, String jarg2);

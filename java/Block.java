@@ -162,8 +162,8 @@ public class Block {
     return nixJNI.Block_tagCount(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_Tag createTag(String name, String type, SWIGTYPE_p_std__vectorT_double_t position) {
-    return new SWIGTYPE_p_Tag(nixJNI.Block_createTag(swigCPtr, this, name, type, SWIGTYPE_p_std__vectorT_double_t.getCPtr(position)), true);
+  public SWIGTYPE_p_Tag createTag(String name, String type, DoubleVector position) {
+    return new SWIGTYPE_p_Tag(nixJNI.Block_createTag(swigCPtr, this, name, type, DoubleVector.getCPtr(position), position), true);
   }
 
   public boolean deleteTag(String name_or_id) {

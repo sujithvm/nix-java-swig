@@ -113,6 +113,13 @@ namespace nix {
 
 }
 
+namespace std {
+	%template(IntVector)    vector<int>;
+	%template(DoubleVector) vector<double>;
+	%template(StringVector) vector<std::string>;
+}
+
+
 /*
 	Extensions
 */

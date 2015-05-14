@@ -78,12 +78,12 @@ public class DataArray {
     nixJNI.DataArray_expansionOrigin__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
   }
 
-  public void polynomCoefficients(SWIGTYPE_p_std__vectorT_double_t polynom_coefficients) {
-    nixJNI.DataArray_polynomCoefficients__SWIG_0(swigCPtr, this, SWIGTYPE_p_std__vectorT_double_t.getCPtr(polynom_coefficients));
+  public void polynomCoefficients(DoubleVector polynom_coefficients) {
+    nixJNI.DataArray_polynomCoefficients__SWIG_0(swigCPtr, this, DoubleVector.getCPtr(polynom_coefficients), polynom_coefficients);
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t polynomCoefficients() {
-    return new SWIGTYPE_p_std__vectorT_double_t(nixJNI.DataArray_polynomCoefficients__SWIG_1(swigCPtr, this), true);
+  public DoubleVector polynomCoefficients() {
+    return new DoubleVector(nixJNI.DataArray_polynomCoefficients__SWIG_1(swigCPtr, this), true);
   }
 
   public void polynomCoefficients(SWIGTYPE_p_none_t t) {
@@ -110,8 +110,8 @@ public class DataArray {
     return new SetDimension(nixJNI.DataArray_appendSetDimension(swigCPtr, this), true);
   }
 
-  public RangeDimension appendRangeDimension(SWIGTYPE_p_std__vectorT_double_t ticks) {
-    return new RangeDimension(nixJNI.DataArray_appendRangeDimension(swigCPtr, this, SWIGTYPE_p_std__vectorT_double_t.getCPtr(ticks)), true);
+  public RangeDimension appendRangeDimension(DoubleVector ticks) {
+    return new RangeDimension(nixJNI.DataArray_appendRangeDimension(swigCPtr, this, DoubleVector.getCPtr(ticks), ticks), true);
   }
 
   public SampledDimension appendSampledDimension(double sampling_interval) {
@@ -122,8 +122,8 @@ public class DataArray {
     return new SetDimension(nixJNI.DataArray_createSetDimension(swigCPtr, this, id), true);
   }
 
-  public RangeDimension createRangeDimension(long id, SWIGTYPE_p_std__vectorT_double_t ticks) {
-    return new RangeDimension(nixJNI.DataArray_createRangeDimension(swigCPtr, this, id, SWIGTYPE_p_std__vectorT_double_t.getCPtr(ticks)), true);
+  public RangeDimension createRangeDimension(long id, DoubleVector ticks) {
+    return new RangeDimension(nixJNI.DataArray_createRangeDimension(swigCPtr, this, id, DoubleVector.getCPtr(ticks), ticks), true);
   }
 
   public SampledDimension createSampledDimension(long id, double sampling_interval) {

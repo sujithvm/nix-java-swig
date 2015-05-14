@@ -150,8 +150,8 @@ public class File {
     return nixJNI.File_deleteSection__SWIG_1(swigCPtr, this, Section.getCPtr(section), section);
   }
 
-  public SWIGTYPE_p_std__vectorT_int_t version() {
-    return new SWIGTYPE_p_std__vectorT_int_t(nixJNI.File_version(swigCPtr, this), true);
+  public IntVector version() {
+    return new IntVector(nixJNI.File_version(swigCPtr, this), true);
   }
 
   public String format() {

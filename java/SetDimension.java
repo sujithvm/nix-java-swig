@@ -50,12 +50,12 @@ public class SetDimension {
     return DimensionType.swigToEnum(nixJNI.SetDimension_dimensionType(swigCPtr, this));
   }
 
-  public SWIGTYPE_p_std__vectorT_std__string_t labels() {
-    return new SWIGTYPE_p_std__vectorT_std__string_t(nixJNI.SetDimension_labels__SWIG_0(swigCPtr, this), true);
+  public StringVector labels() {
+    return new StringVector(nixJNI.SetDimension_labels__SWIG_0(swigCPtr, this), true);
   }
 
-  public void labels(SWIGTYPE_p_std__vectorT_std__string_t labels) {
-    nixJNI.SetDimension_labels__SWIG_1(swigCPtr, this, SWIGTYPE_p_std__vectorT_std__string_t.getCPtr(labels));
+  public void labels(StringVector labels) {
+    nixJNI.SetDimension_labels__SWIG_1(swigCPtr, this, StringVector.getCPtr(labels), labels);
   }
 
   public void labels(SWIGTYPE_p_boost__none_t t) {

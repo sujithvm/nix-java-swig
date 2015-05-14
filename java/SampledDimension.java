@@ -102,12 +102,12 @@ public class SampledDimension {
     return nixJNI.SampledDimension_positionAt(swigCPtr, this, index);
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t axis(long count, long startIndex) {
-    return new SWIGTYPE_p_std__vectorT_double_t(nixJNI.SampledDimension_axis__SWIG_0(swigCPtr, this, count, startIndex), true);
+  public DoubleVector axis(long count, long startIndex) {
+    return new DoubleVector(nixJNI.SampledDimension_axis__SWIG_0(swigCPtr, this, count, startIndex), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t axis(long count) {
-    return new SWIGTYPE_p_std__vectorT_double_t(nixJNI.SampledDimension_axis__SWIG_1(swigCPtr, this, count), true);
+  public DoubleVector axis(long count) {
+    return new DoubleVector(nixJNI.SampledDimension_axis__SWIG_1(swigCPtr, this, count), true);
   }
 
 }
