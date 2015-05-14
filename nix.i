@@ -47,6 +47,7 @@ using namespace nix;
 
 typedef unsigned long long int ndsize_t;
 typedef long long int          ndssize_t;
+
 %}
 
 
@@ -123,6 +124,9 @@ namespace nix {
 		DataView();
 	}  
 }
+
+// wrap time_t to long
+typedef long long time_t;
 
 
 

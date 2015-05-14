@@ -162,12 +162,12 @@ public class File {
     return nixJNI.File_location(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_time_t createdAt() {
-    return new SWIGTYPE_p_time_t(nixJNI.File_createdAt(swigCPtr, this), true);
+  public long createdAt() {
+    return nixJNI.File_createdAt(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_time_t updatedAt() {
-    return new SWIGTYPE_p_time_t(nixJNI.File_updatedAt(swigCPtr, this), true);
+  public long updatedAt() {
+    return nixJNI.File_updatedAt(swigCPtr, this);
   }
 
   public void setUpdatedAt() {
@@ -182,8 +182,8 @@ public class File {
     nixJNI.File_setCreatedAt(swigCPtr, this);
   }
 
-  public void forceCreatedAt(SWIGTYPE_p_time_t t) {
-    nixJNI.File_forceCreatedAt(swigCPtr, this, SWIGTYPE_p_time_t.getCPtr(t));
+  public void forceCreatedAt(long t) {
+    nixJNI.File_forceCreatedAt(swigCPtr, this, t);
   }
 
   public void close() {

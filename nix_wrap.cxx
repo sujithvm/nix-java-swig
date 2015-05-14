@@ -250,6 +250,7 @@ typedef unsigned long long int ndsize_t;
 typedef long long int          ndssize_t;
 
 
+
 #include <string>
 
 
@@ -3461,8 +3462,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1createdAt(JNIEnv *jenv, jclass jcls, 
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::File **)&jarg1; 
-  result = ((nix::File const *)arg1)->createdAt();
-  *(time_t **)&jresult = new time_t((const time_t &)result); 
+  result = (time_t)((nix::File const *)arg1)->createdAt();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -3476,8 +3477,8 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_File_1updatedAt(JNIEnv *jenv, jclass jcls, 
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::File **)&jarg1; 
-  result = ((nix::File const *)arg1)->updatedAt();
-  *(time_t **)&jresult = new time_t((const time_t &)result); 
+  result = (time_t)((nix::File const *)arg1)->updatedAt();
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -3518,18 +3519,12 @@ SWIGEXPORT void JNICALL Java_nixJNI_File_1setCreatedAt(JNIEnv *jenv, jclass jcls
 SWIGEXPORT void JNICALL Java_nixJNI_File_1forceCreatedAt(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   nix::File *arg1 = (nix::File *) 0 ;
   time_t arg2 ;
-  time_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::File **)&jarg1; 
-  argp2 = *(time_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null time_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (time_t)jarg2; 
   (arg1)->forceCreatedAt(arg2);
 }
 
