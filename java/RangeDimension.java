@@ -46,8 +46,8 @@ public class RangeDimension {
     return nixJNI.RangeDimension_index(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_DimensionType dimensionType() {
-    return new SWIGTYPE_p_DimensionType(nixJNI.RangeDimension_dimensionType(swigCPtr, this), true);
+  public DimensionType dimensionType() {
+    return DimensionType.swigToEnum(nixJNI.RangeDimension_dimensionType(swigCPtr, this));
   }
 
   public SWIGTYPE_p_boost__optionalT_std__string_t label() {

@@ -58,8 +58,8 @@ public class Dimension {
     return nixJNI.Dimension_index(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_DimensionType dimensionType() {
-    return new SWIGTYPE_p_DimensionType(nixJNI.Dimension_dimensionType(swigCPtr, this), true);
+  public DimensionType dimensionType() {
+    return DimensionType.swigToEnum(nixJNI.Dimension_dimensionType(swigCPtr, this));
   }
 
   public SetDimension asSetDimension() {

@@ -46,8 +46,8 @@ public class SetDimension {
     return nixJNI.SetDimension_index(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_DimensionType dimensionType() {
-    return new SWIGTYPE_p_DimensionType(nixJNI.SetDimension_dimensionType(swigCPtr, this), true);
+  public DimensionType dimensionType() {
+    return DimensionType.swigToEnum(nixJNI.SetDimension_dimensionType(swigCPtr, this));
   }
 
   public SWIGTYPE_p_std__vectorT_std__string_t labels() {

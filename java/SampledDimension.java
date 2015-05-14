@@ -46,8 +46,8 @@ public class SampledDimension {
     return nixJNI.SampledDimension_index(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_DimensionType dimensionType() {
-    return new SWIGTYPE_p_DimensionType(nixJNI.SampledDimension_dimensionType(swigCPtr, this), true);
+  public DimensionType dimensionType() {
+    return DimensionType.swigToEnum(nixJNI.SampledDimension_dimensionType(swigCPtr, this));
   }
 
   public SWIGTYPE_p_boost__optionalT_std__string_t label() {

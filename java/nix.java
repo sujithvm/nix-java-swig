@@ -8,8 +8,8 @@
 
 
 public class nix {
-  public static String link_type_to_string(SWIGTYPE_p_LinkType ltype) {
-    return nixJNI.link_type_to_string(SWIGTYPE_p_LinkType.getCPtr(ltype));
+  public static String link_type_to_string(LinkType ltype) {
+    return nixJNI.link_type_to_string(ltype.swigValue());
   }
 
   public static void swap(Value a, Value b) {

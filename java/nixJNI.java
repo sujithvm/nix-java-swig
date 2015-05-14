@@ -18,7 +18,7 @@ public class nixJNI {
   public final static native long new_Block__SWIG_0();
   public final static native long new_Block__SWIG_1(long jarg1, Block jarg1_);
   public final static native boolean Block_hasSource__SWIG_0(long jarg1, Block jarg1_, String jarg2);
-  public final static native boolean Block_hasSource__SWIG_1(long jarg1, Block jarg1_, long jarg2);
+  public final static native boolean Block_hasSource__SWIG_1(long jarg1, Block jarg1_, long jarg2, Source jarg2_);
   public final static native long Block_getSource__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native long Block_getSource__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_sourceCount(long jarg1, Block jarg1_);
@@ -29,9 +29,9 @@ public class nixJNI {
   public final static native long Block_findSources__SWIG_2(long jarg1, Block jarg1_);
   public final static native long Block_createSource(long jarg1, Block jarg1_, String jarg2, String jarg3);
   public final static native boolean Block_deleteSource__SWIG_0(long jarg1, Block jarg1_, String jarg2);
-  public final static native boolean Block_deleteSource__SWIG_1(long jarg1, Block jarg1_, long jarg2);
+  public final static native boolean Block_deleteSource__SWIG_1(long jarg1, Block jarg1_, long jarg2, Source jarg2_);
   public final static native boolean Block_hasDataArray__SWIG_0(long jarg1, Block jarg1_, String jarg2);
-  public final static native boolean Block_hasDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2);
+  public final static native boolean Block_hasDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2, DataArray jarg2_);
   public final static native long Block_getDataArray__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native long Block_getDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_dataArrays__SWIG_0(long jarg1, Block jarg1_, long jarg2);
@@ -39,7 +39,7 @@ public class nixJNI {
   public final static native long Block_dataArrayCount(long jarg1, Block jarg1_);
   public final static native long Block_createDataArray(long jarg1, Block jarg1_, String jarg2, String jarg3, long jarg4, long jarg5);
   public final static native boolean Block_deleteDataArray__SWIG_0(long jarg1, Block jarg1_, String jarg2);
-  public final static native boolean Block_deleteDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2);
+  public final static native boolean Block_deleteDataArray__SWIG_1(long jarg1, Block jarg1_, long jarg2, DataArray jarg2_);
   public final static native boolean Block_hasTag__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native boolean Block_hasTag__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_getTag__SWIG_0(long jarg1, Block jarg1_, String jarg2);
@@ -57,7 +57,7 @@ public class nixJNI {
   public final static native long Block_multiTags__SWIG_0(long jarg1, Block jarg1_, long jarg2);
   public final static native long Block_multiTags__SWIG_1(long jarg1, Block jarg1_);
   public final static native long Block_multiTagCount(long jarg1, Block jarg1_);
-  public final static native long Block_createMultiTag(long jarg1, Block jarg1_, String jarg2, String jarg3, long jarg4);
+  public final static native long Block_createMultiTag(long jarg1, Block jarg1_, String jarg2, String jarg3, long jarg4, DataArray jarg4_);
   public final static native boolean Block_deleteMultiTag__SWIG_0(long jarg1, Block jarg1_, String jarg2);
   public final static native boolean Block_deleteMultiTag__SWIG_1(long jarg1, Block jarg1_, long jarg2);
   public final static native void delete_Block(long jarg1);
@@ -96,7 +96,7 @@ public class nixJNI {
   public final static native long new_SampledDimension__SWIG_0();
   public final static native long new_SampledDimension__SWIG_1(long jarg1, SampledDimension jarg1_);
   public final static native long SampledDimension_index(long jarg1, SampledDimension jarg1_);
-  public final static native long SampledDimension_dimensionType(long jarg1, SampledDimension jarg1_);
+  public final static native int SampledDimension_dimensionType(long jarg1, SampledDimension jarg1_);
   public final static native long SampledDimension_label__SWIG_0(long jarg1, SampledDimension jarg1_);
   public final static native void SampledDimension_label__SWIG_1(long jarg1, SampledDimension jarg1_, String jarg2);
   public final static native void SampledDimension_label__SWIG_2(long jarg1, SampledDimension jarg1_, long jarg2);
@@ -116,7 +116,7 @@ public class nixJNI {
   public final static native long new_SetDimension__SWIG_0();
   public final static native long new_SetDimension__SWIG_1(long jarg1, SetDimension jarg1_);
   public final static native long SetDimension_index(long jarg1, SetDimension jarg1_);
-  public final static native long SetDimension_dimensionType(long jarg1, SetDimension jarg1_);
+  public final static native int SetDimension_dimensionType(long jarg1, SetDimension jarg1_);
   public final static native long SetDimension_labels__SWIG_0(long jarg1, SetDimension jarg1_);
   public final static native void SetDimension_labels__SWIG_1(long jarg1, SetDimension jarg1_, long jarg2);
   public final static native void SetDimension_labels__SWIG_2(long jarg1, SetDimension jarg1_, long jarg2);
@@ -124,7 +124,7 @@ public class nixJNI {
   public final static native long new_RangeDimension__SWIG_0();
   public final static native long new_RangeDimension__SWIG_1(long jarg1, RangeDimension jarg1_);
   public final static native long RangeDimension_index(long jarg1, RangeDimension jarg1_);
-  public final static native long RangeDimension_dimensionType(long jarg1, RangeDimension jarg1_);
+  public final static native int RangeDimension_dimensionType(long jarg1, RangeDimension jarg1_);
   public final static native long RangeDimension_label__SWIG_0(long jarg1, RangeDimension jarg1_);
   public final static native void RangeDimension_label__SWIG_1(long jarg1, RangeDimension jarg1_, String jarg2);
   public final static native void RangeDimension_label__SWIG_2(long jarg1, RangeDimension jarg1_, long jarg2);
@@ -144,7 +144,7 @@ public class nixJNI {
   public final static native long new_Dimension__SWIG_3(long jarg1, RangeDimension jarg1_);
   public final static native long new_Dimension__SWIG_4(long jarg1, SetDimension jarg1_);
   public final static native long Dimension_index(long jarg1, Dimension jarg1_);
-  public final static native long Dimension_dimensionType(long jarg1, Dimension jarg1_);
+  public final static native int Dimension_dimensionType(long jarg1, Dimension jarg1_);
   public final static native long Dimension_asSetDimension(long jarg1, Dimension jarg1_);
   public final static native long Dimension_asSampledDimension(long jarg1, Dimension jarg1_);
   public final static native long Dimension_asRangeDimension(long jarg1, Dimension jarg1_);
@@ -213,13 +213,13 @@ public class nixJNI {
   public final static native void delete_Property(long jarg1);
   public final static native long new_Feature__SWIG_0();
   public final static native long new_Feature__SWIG_1(long jarg1, Feature jarg1_);
-  public final static native void Feature_linkType__SWIG_0(long jarg1, Feature jarg1_, long jarg2);
-  public final static native long Feature_linkType__SWIG_1(long jarg1, Feature jarg1_);
+  public final static native void Feature_linkType__SWIG_0(long jarg1, Feature jarg1_, int jarg2);
+  public final static native int Feature_linkType__SWIG_1(long jarg1, Feature jarg1_);
   public final static native void Feature_data__SWIG_0(long jarg1, Feature jarg1_, String jarg2);
   public final static native void Feature_data__SWIG_1(long jarg1, Feature jarg1_, long jarg2, DataArray jarg2_);
   public final static native long Feature_data__SWIG_2(long jarg1, Feature jarg1_);
   public final static native void delete_Feature(long jarg1);
-  public final static native String link_type_to_string(long jarg1);
+  public final static native String link_type_to_string(int jarg1);
   public final static native long new_Section__SWIG_0();
   public final static native long new_Section__SWIG_1(long jarg1);
   public final static native long new_Section__SWIG_2(long jarg1, Section jarg1_);

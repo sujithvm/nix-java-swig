@@ -124,6 +124,35 @@ namespace nix {
 	}  
 }
 
+/*
+	Import base headers
+*/
+
+%import <nix/base/IEntity.hpp>
+%import <nix/base/INamedEntity.hpp>
+%import <nix/base/IEntityWithMetadata.hpp>
+%import <nix/base/IEntityWithSources.hpp>
+%import <nix/base/Entity.hpp>
+%import <nix/base/EntityWithMetadata.hpp>
+%import <nix/base/EntityWithSources.hpp>
+%import <nix/base/IBaseTag.hpp>
+%import <nix/base/IBlock.hpp>
+%import <nix/base/IDataArray.hpp>
+%import <nix/base/IDimensions.hpp>
+%import <nix/base/IFeature.hpp>
+%import <nix/base/ImplContainer.hpp>
+%import <nix/base/IMultiTag.hpp>
+%import <nix/base/IProperty.hpp>
+%import <nix/base/ISection.hpp>
+%import <nix/base/ISource.hpp>
+%import <nix/base/ITag.hpp>
+%import <nix/base/NamedEntity.hpp>
+
+
+/*
+	Build bindings for following files
+*/
+
 // Build bindings for FileMode and Implementation in IFile but ignore base IFile
 %ignore nix::base::IFile;
 %include <nix/base/IFile.hpp>

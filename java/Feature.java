@@ -42,12 +42,12 @@ public class Feature {
     this(nixJNI.new_Feature__SWIG_1(Feature.getCPtr(other), other), true);
   }
 
-  public void linkType(SWIGTYPE_p_LinkType type) {
-    nixJNI.Feature_linkType__SWIG_0(swigCPtr, this, SWIGTYPE_p_LinkType.getCPtr(type));
+  public void linkType(LinkType type) {
+    nixJNI.Feature_linkType__SWIG_0(swigCPtr, this, type.swigValue());
   }
 
-  public SWIGTYPE_p_LinkType linkType() {
-    return new SWIGTYPE_p_LinkType(nixJNI.Feature_linkType__SWIG_1(swigCPtr, this), true);
+  public LinkType linkType() {
+    return LinkType.swigToEnum(nixJNI.Feature_linkType__SWIG_1(swigCPtr, this));
   }
 
   public void data(String name_or_id) {
