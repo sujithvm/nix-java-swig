@@ -5087,27 +5087,7 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Section_1_1SWIG_10(JNIEnv *jenv, jclas
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Section_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  jlong jresult = 0 ;
-  std::nullptr_t arg1 ;
-  std::nullptr_t *argp1 ;
-  nix::Section *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  argp1 = *(std::nullptr_t **)&jarg1; 
-  if (!argp1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::nullptr_t");
-    return 0;
-  }
-  arg1 = *argp1; 
-  result = (nix::Section *)new nix::Section(arg1);
-  *(nix::Section **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Section_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Section_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Section *arg1 = 0 ;
   nix::Section *result = 0 ;

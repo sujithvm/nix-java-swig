@@ -38,12 +38,8 @@ public class Section {
     this(nixJNI.new_Section__SWIG_0(), true);
   }
 
-  public Section(SWIGTYPE_p_std__nullptr_t ptr) {
-    this(nixJNI.new_Section__SWIG_1(SWIGTYPE_p_std__nullptr_t.getCPtr(ptr)), true);
-  }
-
   public Section(Section other) {
-    this(nixJNI.new_Section__SWIG_2(Section.getCPtr(other), other), true);
+    this(nixJNI.new_Section__SWIG_1(Section.getCPtr(other), other), true);
   }
 
   public void repository(String repository) {

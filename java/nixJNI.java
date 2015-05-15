@@ -297,8 +297,7 @@ public class nixJNI {
   public final static native int Property_compare(long jarg1, Property jarg1_, long jarg2, Property jarg2_);
   public final static native void delete_Property(long jarg1);
   public final static native long new_Section__SWIG_0();
-  public final static native long new_Section__SWIG_1(long jarg1);
-  public final static native long new_Section__SWIG_2(long jarg1, Section jarg1_);
+  public final static native long new_Section__SWIG_1(long jarg1, Section jarg1_);
   public final static native void Section_repository__SWIG_0(long jarg1, Section jarg1_, String jarg2);
   public final static native long Section_repository__SWIG_1(long jarg1, Section jarg1_);
   public final static native void Section_repository__SWIG_2(long jarg1, Section jarg1_, long jarg2);

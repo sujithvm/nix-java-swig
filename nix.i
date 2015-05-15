@@ -84,6 +84,9 @@ namespace nix {
 	%ignore Source::Source(const std::shared_ptr<base::ISource> &);
 	%ignore Source::Source(std::shared_ptr<base::ISource> &&);
 
+	// ignore overloaded null constructor
+	%ignore Section::Section(std::nullptr_t); 
+
 	// Operators
 	%ignore Block::operator= ;	
 	%ignore DataArray::operator= ;
