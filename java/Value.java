@@ -83,7 +83,7 @@ public class Value {
   }
 
   public Value(Value other) {
-    this(nixJNI.new_Value__SWIG_5(Value.getCPtr(other), other), true);
+    this(nixJNI.new_Value__SWIG_4(Value.getCPtr(other), other), true);
   }
 
   public void set(SWIGTYPE_p_none_t arg0) {

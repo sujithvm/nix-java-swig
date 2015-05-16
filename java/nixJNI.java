@@ -254,7 +254,7 @@ public class nixJNI {
   public final static native String Value_checksum_get(long jarg1, Value jarg1_);
   public final static native long new_Value__SWIG_0();
   public final static native long new_Value__SWIG_1(String jarg1);
-  public final static native long new_Value__SWIG_5(long jarg1, Value jarg1_);
+  public final static native long new_Value__SWIG_4(long jarg1, Value jarg1_);
   public final static native void delete_Value(long jarg1);
   public final static native void Value_set__SWIG_0(long jarg1, Value jarg1_, long jarg2);
   public final static native void Value_set__SWIG_1(long jarg1, Value jarg1_, boolean jarg2);

@@ -87,6 +87,10 @@ namespace nix {
 	// ignore overloaded null constructor
 	%ignore Section::Section(std::nullptr_t); 
 
+	// ignore conflicting overloaded constructors
+	%ignore Value::Value(char *); 
+	%ignore Value::Value(Value &&); 
+
 	// Operators
 	%ignore Block::operator= ;	
 	%ignore DataArray::operator= ;

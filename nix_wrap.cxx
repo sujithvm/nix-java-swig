@@ -4356,14 +4356,14 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Value_1_1SWIG_11(JNIEnv *jenv, jclass 
     arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
     if (!arg1) return 0;
   }
-  result = (nix::Value *)new nix::Value(arg1);
+  result = (nix::Value *)new nix::Value((char const *)arg1);
   *(nix::Value **)&jresult = result; 
   if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Value_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_nixJNI_new_1Value_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Value *arg1 = 0 ;
   nix::Value *result = 0 ;
