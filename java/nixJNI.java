@@ -258,10 +258,9 @@ public class nixJNI {
   public final static native void delete_Value(long jarg1);
   public final static native void Value_set__SWIG_0(long jarg1, Value jarg1_, long jarg2);
   public final static native void Value_set__SWIG_1(long jarg1, Value jarg1_, boolean jarg2);
-  public final static native void Value_set__SWIG_2(long jarg1, Value jarg1_, long jarg2);
+  public final static native void Value_set__SWIG_2(long jarg1, Value jarg1_, int jarg2);
   public final static native void Value_set__SWIG_3(long jarg1, Value jarg1_, long jarg2);
-  public final static native void Value_set__SWIG_4(long jarg1, Value jarg1_, long jarg2);
-  public final static native void Value_set__SWIG_5(long jarg1, Value jarg1_, long jarg2);
+  public final static native void Value_set__SWIG_5(long jarg1, Value jarg1_, java.math.BigInteger jarg2);
   public final static native void Value_set__SWIG_6(long jarg1, Value jarg1_, double jarg2);
   public final static native void Value_set__SWIG_7(long jarg1, Value jarg1_, String jarg2);
   public final static native void Value_get__SWIG_1(long jarg1, Value jarg1_, long jarg2);

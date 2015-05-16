@@ -257,6 +257,9 @@ using namespace nix;
 #include <vector>
 #include <stdexcept>
 
+
+#include <stdint.h>		// Use the C99 official header
+
 SWIGINTERN std::vector< int >::const_reference std_vector_Sl_int_Sg__get(std::vector< int > *self,int i){
                 int size = int(self->size());
                 if (i>=0 && i<size)
@@ -4424,21 +4427,15 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_11(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   int32_t arg2 ;
-  int32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  argp2 = *(int32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (int32_t)jarg2; 
   (arg1)->set(arg2);
 }
 
@@ -4446,56 +4443,47 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_12(JNIEnv *jenv, jclass j
 SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  argp2 = *(uint32_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint32_t");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg2 = (uint32_t)jarg2; 
   (arg1)->set(arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  nix::Value *arg1 = (nix::Value *) 0 ;
-  int64_t arg2 ;
-  int64_t *argp2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(nix::Value **)&jarg1; 
-  argp2 = *(int64_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int64_t");
-    return ;
-  }
-  arg2 = *argp2; 
-  (arg1)->set(arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jobject jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   uint64_t arg2 ;
-  uint64_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  argp2 = *(uint64_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null uint64_t");
-    return ;
+  {
+    jclass clazz;
+    jmethodID mid;
+    jbyteArray ba;
+    jbyte* bae;
+    jsize sz;
+    int i;
+    
+    if (!jarg2) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "BigInteger null");
+      return ;
+    }
+    clazz = jenv->GetObjectClass(jarg2);
+    mid = jenv->GetMethodID(clazz, "toByteArray", "()[B");
+    ba = (jbyteArray)jenv->CallObjectMethod(jarg2, mid);
+    bae = jenv->GetByteArrayElements(ba, 0);
+    sz = jenv->GetArrayLength(ba);
+    arg2 = 0;
+    for(i=0; i<sz; i++) {
+      arg2 = (arg2 << 8) | (uint64_t)(unsigned char)bae[i];
+    }
+    jenv->ReleaseByteArrayElements(ba, bae, 0);
   }
-  arg2 = *argp2; 
   (arg1)->set(arg2);
 }
 

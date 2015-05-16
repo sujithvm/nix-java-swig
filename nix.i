@@ -49,8 +49,11 @@ using namespace nix;
 
 
 %include "std_string.i"
-%include "typemaps.i"
 %include "std_vector.i"
+%include "stdint.i"
+%include "cpointer.i"
+%include "typemaps.i"
+
 
 #define NIXAPI
 #define NOEXCEPT

@@ -94,20 +94,16 @@ public class Value {
     nixJNI.Value_set__SWIG_1(swigCPtr, this, value);
   }
 
-  public void set(SWIGTYPE_p_int32_t value) {
-    nixJNI.Value_set__SWIG_2(swigCPtr, this, SWIGTYPE_p_int32_t.getCPtr(value));
+  public void set(int value) {
+    nixJNI.Value_set__SWIG_2(swigCPtr, this, value);
   }
 
-  public void set(SWIGTYPE_p_uint32_t value) {
-    nixJNI.Value_set__SWIG_3(swigCPtr, this, SWIGTYPE_p_uint32_t.getCPtr(value));
+  public void set(long value) {
+    nixJNI.Value_set__SWIG_3(swigCPtr, this, value);
   }
 
-  public void set(SWIGTYPE_p_int64_t value) {
-    nixJNI.Value_set__SWIG_4(swigCPtr, this, SWIGTYPE_p_int64_t.getCPtr(value));
-  }
-
-  public void set(SWIGTYPE_p_uint64_t value) {
-    nixJNI.Value_set__SWIG_5(swigCPtr, this, SWIGTYPE_p_uint64_t.getCPtr(value));
+  public void set(java.math.BigInteger value) {
+    nixJNI.Value_set__SWIG_5(swigCPtr, this, value);
   }
 
   public void set(double value) {
@@ -126,20 +122,20 @@ public class Value {
     nixJNI.Value_get__SWIG_2(swigCPtr, this, SWIGTYPE_p_bool.getCPtr(out));
   }
 
-  public void get(SWIGTYPE_p_int32_t value) {
-    nixJNI.Value_get__SWIG_3(swigCPtr, this, SWIGTYPE_p_int32_t.getCPtr(value));
+  public void get(SWIGTYPE_p_int value) {
+    nixJNI.Value_get__SWIG_3(swigCPtr, this, SWIGTYPE_p_int.getCPtr(value));
   }
 
-  public void get(SWIGTYPE_p_uint32_t value) {
-    nixJNI.Value_get__SWIG_4(swigCPtr, this, SWIGTYPE_p_uint32_t.getCPtr(value));
+  public void get(SWIGTYPE_p_unsigned_int value) {
+    nixJNI.Value_get__SWIG_4(swigCPtr, this, SWIGTYPE_p_unsigned_int.getCPtr(value));
   }
 
-  public void get(SWIGTYPE_p_int64_t value) {
-    nixJNI.Value_get__SWIG_5(swigCPtr, this, SWIGTYPE_p_int64_t.getCPtr(value));
+  public void get(SWIGTYPE_p_long_long value) {
+    nixJNI.Value_get__SWIG_5(swigCPtr, this, SWIGTYPE_p_long_long.getCPtr(value));
   }
 
-  public void get(SWIGTYPE_p_uint64_t value) {
-    nixJNI.Value_get__SWIG_6(swigCPtr, this, SWIGTYPE_p_uint64_t.getCPtr(value));
+  public void get(SWIGTYPE_p_unsigned_long_long value) {
+    nixJNI.Value_get__SWIG_6(swigCPtr, this, SWIGTYPE_p_unsigned_long_long.getCPtr(value));
   }
 
   public void get(SWIGTYPE_p_double value) {
