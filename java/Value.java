@@ -118,28 +118,24 @@ public class Value {
     nixJNI.Value_get__SWIG_1(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(tag));
   }
 
-  public void get(SWIGTYPE_p_bool out) {
-    nixJNI.Value_get__SWIG_2(swigCPtr, this, SWIGTYPE_p_bool.getCPtr(out));
+  public void get(boolean[] out) {
+    nixJNI.Value_get__SWIG_2(swigCPtr, this, out);
   }
 
-  public void get(SWIGTYPE_p_int value) {
-    nixJNI.Value_get__SWIG_3(swigCPtr, this, SWIGTYPE_p_int.getCPtr(value));
+  public void get(int[] value) {
+    nixJNI.Value_get__SWIG_3(swigCPtr, this, value);
   }
 
-  public void get(SWIGTYPE_p_unsigned_int value) {
-    nixJNI.Value_get__SWIG_4(swigCPtr, this, SWIGTYPE_p_unsigned_int.getCPtr(value));
+  public void get(long[] value) {
+    nixJNI.Value_get__SWIG_4(swigCPtr, this, value);
   }
 
-  public void get(SWIGTYPE_p_long_long value) {
-    nixJNI.Value_get__SWIG_5(swigCPtr, this, SWIGTYPE_p_long_long.getCPtr(value));
+  public void get(java.math.BigInteger[] value) {
+    nixJNI.Value_get__SWIG_6(swigCPtr, this, value);
   }
 
-  public void get(SWIGTYPE_p_unsigned_long_long value) {
-    nixJNI.Value_get__SWIG_6(swigCPtr, this, SWIGTYPE_p_unsigned_long_long.getCPtr(value));
-  }
-
-  public void get(SWIGTYPE_p_double value) {
-    nixJNI.Value_get__SWIG_7(swigCPtr, this, SWIGTYPE_p_double.getCPtr(value));
+  public void get(double[] value) {
+    nixJNI.Value_get__SWIG_7(swigCPtr, this, value);
   }
 
   public void get(SWIGTYPE_p_std__string value) {

@@ -158,7 +158,15 @@ typedef long long time_t;
 typedef long long int ndsize_t;
 typedef long long int ndssize_t;
 
-
+// for get functions of Value which passes by reference
+%apply bool     & OUTPUT { bool     & out   };
+%apply int32_t  & OUTPUT { int32_t  & value };
+%apply uint32_t & OUTPUT { uint32_t & value };
+%apply int64_t  & OUTPUT { int64_t  & value };
+%apply uint64_t & OUTPUT { uint64_t & value };
+%apply double   & OUTPUT { double   & value };
+// fix required for std::string&
+%apply std::string& OUTPUT { std::string & value };
 
 /*
 	Build bindings for following files

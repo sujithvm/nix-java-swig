@@ -4539,105 +4539,166 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_11(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbooleanArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   bool *arg2 = 0 ;
+  bool temp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  arg2 = *(bool **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bool & reference is null");
-    return ;
-  } 
+  {
+    if (!jarg2) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "array null");
+      return ;
+    }
+    if (jenv->GetArrayLength(jarg2) == 0) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, "Array must contain at least 1 element");
+      return ;
+    }
+    temp2 = false;
+    arg2 = &temp2; 
+  }
   ((nix::Value const *)arg1)->get(*arg2);
+  {
+    jboolean jvalue = (jboolean)temp2;
+    jenv->SetBooleanArrayRegion(jarg2, 0, 1, &jvalue);
+  }
+  
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jintArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   int32_t *arg2 = 0 ;
+  int32_t temp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  arg2 = *(int32_t **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "int32_t & reference is null");
-    return ;
-  } 
+  {
+    if (!jarg2) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "array null");
+      return ;
+    }
+    if (jenv->GetArrayLength(jarg2) == 0) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, "Array must contain at least 1 element");
+      return ;
+    }
+    temp2 = (int32_t)0;
+    arg2 = &temp2; 
+  }
   ((nix::Value const *)arg1)->get(*arg2);
+  {
+    jint jvalue = (jint)temp2;
+    jenv->SetIntArrayRegion(jarg2, 0, 1, &jvalue);
+  }
+  
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlongArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   uint32_t *arg2 = 0 ;
+  uint32_t temp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  arg2 = *(uint32_t **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint32_t & reference is null");
-    return ;
-  } 
+  {
+    if (!jarg2) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "array null");
+      return ;
+    }
+    if (jenv->GetArrayLength(jarg2) == 0) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, "Array must contain at least 1 element");
+      return ;
+    }
+    temp2 = (uint32_t)0;
+    arg2 = &temp2; 
+  }
   ((nix::Value const *)arg1)->get(*arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  nix::Value *arg1 = (nix::Value *) 0 ;
-  int64_t *arg2 = 0 ;
+  {
+    jlong jvalue = (jlong)temp2;
+    jenv->SetLongArrayRegion(jarg2, 0, 1, &jvalue);
+  }
   
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(nix::Value **)&jarg1; 
-  arg2 = *(int64_t **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "int64_t & reference is null");
-    return ;
-  } 
-  ((nix::Value const *)arg1)->get(*arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jobjectArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   uint64_t *arg2 = 0 ;
+  uint64_t temp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  arg2 = *(uint64_t **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "uint64_t & reference is null");
-    return ;
-  } 
+  {
+    if (!jarg2) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "array null");
+      return ;
+    }
+    if (jenv->GetArrayLength(jarg2) == 0) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, "Array must contain at least 1 element");
+      return ;
+    }
+    temp2 = (uint64_t)0;
+    arg2 = &temp2; 
+  }
   ((nix::Value const *)arg1)->get(*arg2);
+  {
+    jbyteArray ba = jenv->NewByteArray(9);
+    jbyte* bae = jenv->GetByteArrayElements(ba, 0);
+    jclass clazz = jenv->FindClass("java/math/BigInteger");
+    jmethodID mid = jenv->GetMethodID(clazz, "<init>", "([B)V");
+    jobject bigint;
+    int i;
+    
+    bae[0] = 0;
+    for(i=1; i<9; i++ ) {
+      bae[i] = (jbyte)(temp2>>8*(8-i));
+    }
+    
+    jenv->ReleaseByteArrayElements(ba, bae, 0);
+    bigint = jenv->NewObject(clazz, mid, ba);
+    jenv->SetObjectArrayElement(jarg2, 0, bigint);
+  }
+  
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdoubleArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   double *arg2 = 0 ;
+  double temp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  arg2 = *(double **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "double & reference is null");
-    return ;
-  } 
+  {
+    if (!jarg2) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "array null");
+      return ;
+    }
+    if (jenv->GetArrayLength(jarg2) == 0) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, "Array must contain at least 1 element");
+      return ;
+    }
+    temp2 = (double)0;
+    arg2 = &temp2; 
+  }
   ((nix::Value const *)arg1)->get(*arg2);
+  {
+    jdouble jvalue = (jdouble)temp2;
+    jenv->SetDoubleArrayRegion(jarg2, 0, 1, &jvalue);
+  }
+  
 }
 
 
