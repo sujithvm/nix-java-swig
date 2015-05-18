@@ -86,60 +86,52 @@ public class Value {
     this(nixJNI.new_Value__SWIG_4(Value.getCPtr(other), other), true);
   }
 
-  public void set() {
-    nixJNI.Value_set__SWIG_0(swigCPtr, this);
-  }
-
   public void set(boolean value) {
-    nixJNI.Value_set__SWIG_1(swigCPtr, this, value);
+    nixJNI.Value_set__SWIG_0(swigCPtr, this, value);
   }
 
   public void set(int value) {
-    nixJNI.Value_set__SWIG_2(swigCPtr, this, value);
+    nixJNI.Value_set__SWIG_1(swigCPtr, this, value);
   }
 
   public void set(long value) {
-    nixJNI.Value_set__SWIG_3(swigCPtr, this, value);
+    nixJNI.Value_set__SWIG_2(swigCPtr, this, value);
   }
 
   public void set(java.math.BigInteger value) {
-    nixJNI.Value_set__SWIG_5(swigCPtr, this, value);
+    nixJNI.Value_set__SWIG_4(swigCPtr, this, value);
   }
 
   public void set(double value) {
-    nixJNI.Value_set__SWIG_6(swigCPtr, this, value);
+    nixJNI.Value_set__SWIG_5(swigCPtr, this, value);
   }
 
   public void set(String value) {
-    nixJNI.Value_set__SWIG_7(swigCPtr, this, value);
-  }
-
-  public void get(SWIGTYPE_p_boost__none_t tag) {
-    nixJNI.Value_get__SWIG_1(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(tag));
+    nixJNI.Value_set__SWIG_6(swigCPtr, this, value);
   }
 
   public void get(boolean[] out) {
-    nixJNI.Value_get__SWIG_2(swigCPtr, this, out);
+    nixJNI.Value_get__SWIG_1(swigCPtr, this, out);
   }
 
   public void get(int[] value) {
-    nixJNI.Value_get__SWIG_3(swigCPtr, this, value);
+    nixJNI.Value_get__SWIG_2(swigCPtr, this, value);
   }
 
   public void get(long[] value) {
-    nixJNI.Value_get__SWIG_4(swigCPtr, this, value);
+    nixJNI.Value_get__SWIG_3(swigCPtr, this, value);
   }
 
   public void get(java.math.BigInteger[] value) {
-    nixJNI.Value_get__SWIG_6(swigCPtr, this, value);
+    nixJNI.Value_get__SWIG_5(swigCPtr, this, value);
   }
 
   public void get(double[] value) {
-    nixJNI.Value_get__SWIG_7(swigCPtr, this, value);
+    nixJNI.Value_get__SWIG_6(swigCPtr, this, value);
   }
 
   public void get(SWIGTYPE_p_std__string value) {
-    nixJNI.Value_get__SWIG_8(swigCPtr, this, SWIGTYPE_p_std__string.getCPtr(value));
+    nixJNI.Value_get__SWIG_7(swigCPtr, this, SWIGTYPE_p_std__string.getCPtr(value));
   }
 
   public DataType type() {

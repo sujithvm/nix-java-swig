@@ -242,7 +242,6 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 #include <nix/util/util.hpp>
 #include <nix/util/filter.hpp>
 #include <nix/util/dataAccess.hpp>
-#include <nix/DataType.hpp>
 
 using namespace nix;
 
@@ -4340,22 +4339,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_delete_1Value(JNIEnv *jenv, jclass jcls, jlo
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  nix::Value *arg1 = (nix::Value *) 0 ;
-  nix::none_t arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  
-  arg2 = boost::none;
-  
-  (void)jarg1_;
-  arg1 = *(nix::Value **)&jarg1; 
-  (arg1)->set(arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   bool arg2 ;
   
@@ -4368,7 +4352,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_11(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   int32_t arg2 ;
   
@@ -4381,7 +4365,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_12(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   uint32_t arg2 ;
   
@@ -4394,7 +4378,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_13(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jobject jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jobject jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   uint64_t arg2 ;
   
@@ -4429,7 +4413,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_15(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   double arg2 ;
   
@@ -4442,7 +4426,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_16(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   std::string *arg2 = 0 ;
   
@@ -4463,24 +4447,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_17(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  nix::Value *arg1 = (nix::Value *) 0 ;
-  nix::none_t *arg2 = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(nix::Value **)&jarg1; 
-  arg2 = *(nix::none_t **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::none_t & reference is null");
-    return ;
-  } 
-  ((nix::Value const *)arg1)->get(*arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbooleanArray jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbooleanArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   bool *arg2 = 0 ;
   bool temp2 ;
@@ -4510,7 +4477,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_12(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jintArray jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jintArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   int32_t *arg2 = 0 ;
   int32_t temp2 ;
@@ -4540,7 +4507,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_13(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlongArray jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlongArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   uint32_t *arg2 = 0 ;
   uint32_t temp2 ;
@@ -4570,7 +4537,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_14(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jobjectArray jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jobjectArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   uint64_t *arg2 = 0 ;
   uint64_t temp2 ;
@@ -4613,7 +4580,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_16(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdoubleArray jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdoubleArray jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   double *arg2 = 0 ;
   double temp2 ;
@@ -4643,7 +4610,7 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_17(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_18(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_17(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
   std::string *arg2 = 0 ;
   

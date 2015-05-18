@@ -41,7 +41,6 @@
 #include <nix/util/util.hpp>
 #include <nix/util/filter.hpp>
 #include <nix/util/dataAccess.hpp>
-#include <nix/DataType.hpp>
 
 using namespace nix;
 
@@ -93,6 +92,10 @@ namespace nix {
 	// ignore conflicting overloaded constructors
 	%ignore Value::Value(char *); 
 	%ignore Value::Value(Value &&); 
+
+	// ignore none_t setter and getter
+	%ignore Value::set(none_t);
+	%ignore Value::get(none_t &) const;
 
 	// Operators
 	%ignore Block::operator= ;	
