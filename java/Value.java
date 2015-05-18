@@ -86,8 +86,8 @@ public class Value {
     this(nixJNI.new_Value__SWIG_4(Value.getCPtr(other), other), true);
   }
 
-  public void set(SWIGTYPE_p_none_t arg0) {
-    nixJNI.Value_set__SWIG_0(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(arg0));
+  public void set() {
+    nixJNI.Value_set__SWIG_0(swigCPtr, this);
   }
 
   public void set(boolean value) {
@@ -114,8 +114,8 @@ public class Value {
     nixJNI.Value_set__SWIG_7(swigCPtr, this, value);
   }
 
-  public void get(SWIGTYPE_p_none_t tag) {
-    nixJNI.Value_get__SWIG_1(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(tag));
+  public void get(SWIGTYPE_p_boost__none_t tag) {
+    nixJNI.Value_get__SWIG_1(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(tag));
   }
 
   public void get(boolean[] out) {

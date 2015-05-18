@@ -50,20 +50,20 @@ public class DataArray {
     nixJNI.DataArray_label__SWIG_1(swigCPtr, this, label);
   }
 
-  public void label(SWIGTYPE_p_none_t t) {
-    nixJNI.DataArray_label__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
+  public void removeLabel() {
+    nixJNI.DataArray_removeLabel(swigCPtr, this);
   }
 
   public SWIGTYPE_p_boost__optionalT_std__string_t unit() {
     return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.DataArray_unit__SWIG_0(swigCPtr, this), true);
   }
 
-  public void unit(SWIGTYPE_p_none_t t) {
-    nixJNI.DataArray_unit__SWIG_1(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
+  public void removeUnit() {
+    nixJNI.DataArray_removeUnit(swigCPtr, this);
   }
 
   public void unit(String unit) {
-    nixJNI.DataArray_unit__SWIG_2(swigCPtr, this, unit);
+    nixJNI.DataArray_unit__SWIG_1(swigCPtr, this, unit);
   }
 
   public SWIGTYPE_p_boost__optionalT_double_t expansionOrigin() {
@@ -74,10 +74,6 @@ public class DataArray {
     nixJNI.DataArray_expansionOrigin__SWIG_1(swigCPtr, this, expansion_origin);
   }
 
-  public void expansionOrigin(SWIGTYPE_p_none_t t) {
-    nixJNI.DataArray_expansionOrigin__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
-  }
-
   public void polynomCoefficients(DoubleVector polynom_coefficients) {
     nixJNI.DataArray_polynomCoefficients__SWIG_0(swigCPtr, this, DoubleVector.getCPtr(polynom_coefficients), polynom_coefficients);
   }
@@ -86,8 +82,8 @@ public class DataArray {
     return new DoubleVector(nixJNI.DataArray_polynomCoefficients__SWIG_1(swigCPtr, this), true);
   }
 
-  public void polynomCoefficients(SWIGTYPE_p_none_t t) {
-    nixJNI.DataArray_polynomCoefficients__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
+  public void removePolynomCoefficients() {
+    nixJNI.DataArray_removePolynomCoefficients(swigCPtr, this);
   }
 
   public DimensionVector dimensions(SWIGTYPE_p_util__FilterT_nix__Dimension_t__type filter) {

@@ -58,8 +58,8 @@ public class SampledDimension {
     nixJNI.SampledDimension_label__SWIG_1(swigCPtr, this, label);
   }
 
-  public void label(SWIGTYPE_p_none_t t) {
-    nixJNI.SampledDimension_label__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
+  public void removeLabel() {
+    nixJNI.SampledDimension_removeLabel(swigCPtr, this);
   }
 
   public SWIGTYPE_p_boost__optionalT_std__string_t unit() {
@@ -70,8 +70,8 @@ public class SampledDimension {
     nixJNI.SampledDimension_unit__SWIG_1(swigCPtr, this, unit);
   }
 
-  public void unit(SWIGTYPE_p_none_t t) {
-    nixJNI.SampledDimension_unit__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
+  public void removeUnit() {
+    nixJNI.SampledDimension_removeUnit(swigCPtr, this);
   }
 
   public double samplingInterval() {
@@ -90,8 +90,8 @@ public class SampledDimension {
     nixJNI.SampledDimension_offset__SWIG_1(swigCPtr, this, offset);
   }
 
-  public void offset(SWIGTYPE_p_boost__none_t t) {
-    nixJNI.SampledDimension_offset__SWIG_2(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(t));
+  public void removeOffset() {
+    nixJNI.SampledDimension_removeOffset(swigCPtr, this);
   }
 
   public long indexOf(double position) {

@@ -168,6 +168,31 @@ typedef long long int ndssize_t;
 // fix required for std::string&
 %apply std::string& OUTPUT { std::string & value };
 
+// modifying functions that accept none_t argument
+// using following typemap, argument is omitted and automatically filled out with boost::none via an assignment before the function gets called.
+%typemap(in,numinputs=0) boost::none_t %{
+    $1 = boost::none;
+%}
+%import <nix/None.hpp>
+%rename (removeLabel)                nix::DataArray::label(const none_t);
+%rename (removeUnit)                 nix::DataArray::unit(const none_t);
+%rename (removeUnit)                 nix::DataArray::expansionOrigin(const none_t);
+%rename (removePolynomCoefficients)  nix::DataArray::polynomCoefficients(const none_t);
+%rename (removeLabel)                nix::RangeDimension::label(const none_t);
+%rename (removeUnit)                 nix::RangeDimension::unit(const none_t);
+%rename (removeLabel)                nix::SampledDimension::label(const none_t);
+%rename (removeUnit)                 nix::SampledDimension::unit(const none_t);
+%rename (removeOffset)               nix::SampledDimension::offset(const boost::none_t);
+%rename (removeLabels)               nix::SetDimension::labels(const boost::none_t);
+%rename (removeRepository)           nix::Section::repository(const boost::none_t);
+%rename (removeLink)                 nix::Section::link(const boost::none_t);
+%rename (removeMapping)              nix::Section::mapping(const boost::none_t);
+%rename (removeDefinition)           nix::Property::definition(const none_t);
+%rename (removeMapping)              nix::Property::mapping(const boost::none_t);
+%rename (removeUnit)                 nix::Property::unit(const boost::none_t);
+%rename (removeValues)               nix::Property::values(const boost::none_t);
+
+
 /*
 	Build bindings for following files
 */

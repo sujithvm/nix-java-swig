@@ -58,8 +58,8 @@ public class RangeDimension {
     nixJNI.RangeDimension_label__SWIG_1(swigCPtr, this, label);
   }
 
-  public void label(SWIGTYPE_p_none_t t) {
-    nixJNI.RangeDimension_label__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
+  public void removeLabel() {
+    nixJNI.RangeDimension_removeLabel(swigCPtr, this);
   }
 
   public SWIGTYPE_p_boost__optionalT_std__string_t unit() {
@@ -70,8 +70,8 @@ public class RangeDimension {
     nixJNI.RangeDimension_unit__SWIG_1(swigCPtr, this, unit);
   }
 
-  public void unit(SWIGTYPE_p_none_t t) {
-    nixJNI.RangeDimension_unit__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
+  public void removeUnit() {
+    nixJNI.RangeDimension_removeUnit(swigCPtr, this);
   }
 
   public DoubleVector ticks() {

@@ -54,8 +54,8 @@ public class Property {
     return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Property_definition__SWIG_1(swigCPtr, this), true);
   }
 
-  public void definition(SWIGTYPE_p_none_t t) {
-    nixJNI.Property_definition__SWIG_2(swigCPtr, this, SWIGTYPE_p_none_t.getCPtr(t));
+  public void removeDefinition() {
+    nixJNI.Property_removeDefinition(swigCPtr, this);
   }
 
   public void mapping(String mapping) {
@@ -66,8 +66,8 @@ public class Property {
     return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Property_mapping__SWIG_1(swigCPtr, this), true);
   }
 
-  public void mapping(SWIGTYPE_p_boost__none_t t) {
-    nixJNI.Property_mapping__SWIG_2(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(t));
+  public void removeMapping() {
+    nixJNI.Property_removeMapping(swigCPtr, this);
   }
 
   public DataType dataType() {
@@ -82,8 +82,8 @@ public class Property {
     return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Property_unit__SWIG_1(swigCPtr, this), true);
   }
 
-  public void unit(SWIGTYPE_p_boost__none_t t) {
-    nixJNI.Property_unit__SWIG_2(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(t));
+  public void removeUnit() {
+    nixJNI.Property_removeUnit(swigCPtr, this);
   }
 
   public void deleteValues() {
@@ -102,8 +102,8 @@ public class Property {
     return new ValueVector(nixJNI.Property_values__SWIG_1(swigCPtr, this), true);
   }
 
-  public void values(SWIGTYPE_p_boost__none_t t) {
-    nixJNI.Property_values__SWIG_2(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(t));
+  public void removeValues() {
+    nixJNI.Property_removeValues(swigCPtr, this);
   }
 
   public int compare(Property other) {

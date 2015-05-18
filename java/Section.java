@@ -50,8 +50,8 @@ public class Section {
     return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Section_repository__SWIG_1(swigCPtr, this), true);
   }
 
-  public void repository(SWIGTYPE_p_boost__none_t t) {
-    nixJNI.Section_repository__SWIG_2(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(t));
+  public void removeRepository() {
+    nixJNI.Section_removeRepository(swigCPtr, this);
   }
 
   public void link(String id) {
@@ -66,8 +66,8 @@ public class Section {
     return new Section(nixJNI.Section_link__SWIG_2(swigCPtr, this), true);
   }
 
-  public void link(SWIGTYPE_p_boost__none_t t) {
-    nixJNI.Section_link__SWIG_3(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(t));
+  public void removeLink() {
+    nixJNI.Section_removeLink(swigCPtr, this);
   }
 
   public void mapping(String mapping) {
@@ -78,8 +78,8 @@ public class Section {
     return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Section_mapping__SWIG_1(swigCPtr, this), true);
   }
 
-  public void mapping(SWIGTYPE_p_boost__none_t t) {
-    nixJNI.Section_mapping__SWIG_2(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(t));
+  public void removeMapping() {
+    nixJNI.Section_removeMapping(swigCPtr, this);
   }
 
   public Section parent() {

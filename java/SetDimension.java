@@ -58,8 +58,8 @@ public class SetDimension {
     nixJNI.SetDimension_labels__SWIG_1(swigCPtr, this, StringVector.getCPtr(labels), labels);
   }
 
-  public void labels(SWIGTYPE_p_boost__none_t t) {
-    nixJNI.SetDimension_labels__SWIG_2(swigCPtr, this, SWIGTYPE_p_boost__none_t.getCPtr(t));
+  public void removeLabels() {
+    nixJNI.SetDimension_removeLabels(swigCPtr, this);
   }
 
 }

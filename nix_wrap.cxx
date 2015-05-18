@@ -2322,21 +2322,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_SampledDimension_1label_1_1SWIG_11(JNIEnv *j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_SampledDimension_1label_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_SampledDimension_1removeLabel(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::SampledDimension *arg1 = (nix::SampledDimension *) 0 ;
-  none_t arg2 ;
-  none_t const *argp2 ;
+  nix::none_t arg2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::SampledDimension **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->label(arg2);
 }
 
@@ -2377,21 +2373,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_SampledDimension_1unit_1_1SWIG_11(JNIEnv *je
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_SampledDimension_1unit_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_SampledDimension_1removeUnit(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::SampledDimension *arg1 = (nix::SampledDimension *) 0 ;
-  none_t arg2 ;
-  none_t const *argp2 ;
+  nix::none_t arg2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::SampledDimension **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->unit(arg2);
 }
 
@@ -2452,21 +2444,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_SampledDimension_1offset_1_1SWIG_11(JNIEnv *
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_SampledDimension_1offset_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_SampledDimension_1removeOffset(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::SampledDimension *arg1 = (nix::SampledDimension *) 0 ;
   boost::none_t arg2 ;
-  boost::none_t const *argp2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::SampledDimension **)&jarg1; 
-  argp2 = *(boost::none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null boost::none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->offset(arg2);
 }
 
@@ -2645,21 +2633,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_SetDimension_1labels_1_1SWIG_11(JNIEnv *jenv
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_SetDimension_1labels_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_SetDimension_1removeLabels(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::SetDimension *arg1 = (nix::SetDimension *) 0 ;
   boost::none_t arg2 ;
-  boost::none_t const *argp2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::SetDimension **)&jarg1; 
-  argp2 = *(boost::none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null boost::none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->labels(arg2);
 }
 
@@ -2771,21 +2755,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_RangeDimension_1label_1_1SWIG_11(JNIEnv *jen
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_RangeDimension_1label_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_RangeDimension_1removeLabel(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::RangeDimension *arg1 = (nix::RangeDimension *) 0 ;
-  none_t arg2 ;
-  none_t const *argp2 ;
+  nix::none_t arg2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::RangeDimension **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->label(arg2);
 }
 
@@ -2826,21 +2806,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_RangeDimension_1unit_1_1SWIG_11(JNIEnv *jenv
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_RangeDimension_1unit_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_RangeDimension_1removeUnit(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::RangeDimension *arg1 = (nix::RangeDimension *) 0 ;
-  none_t arg2 ;
-  none_t const *argp2 ;
+  nix::none_t arg2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::RangeDimension **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->unit(arg2);
 }
 
@@ -3520,21 +3496,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1label_1_1SWIG_11(JNIEnv *jenv, jc
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1label_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1removeLabel(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
-  none_t arg2 ;
-  none_t const *argp2 ;
+  nix::none_t arg2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::DataArray **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->label(arg2);
 }
 
@@ -3554,26 +3526,22 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_DataArray_1unit_1_1SWIG_10(JNIEnv *jenv, jc
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1unit_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1removeUnit(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
-  none_t arg2 ;
-  none_t const *argp2 ;
+  nix::none_t arg2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::DataArray **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->unit(arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1unit_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1unit_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
   std::string *arg2 = 0 ;
   
@@ -3622,25 +3590,6 @@ SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1expansionOrigin_1_1SWIG_11(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1expansionOrigin_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  nix::DataArray *arg1 = (nix::DataArray *) 0 ;
-  none_t arg2 ;
-  none_t const *argp2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(nix::DataArray **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
-  (arg1)->expansionOrigin(arg2);
-}
-
-
 SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1polynomCoefficients_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
   std::vector< double > *arg2 = 0 ;
@@ -3674,21 +3623,17 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_DataArray_1polynomCoefficients_1_1SWIG_11(J
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1polynomCoefficients_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1removePolynomCoefficients(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
-  none_t arg2 ;
-  none_t const *argp2 ;
+  nix::none_t arg2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::DataArray **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->polynomCoefficients(arg2);
 }
 
@@ -4395,21 +4340,17 @@ SWIGEXPORT void JNICALL Java_nixJNI_delete_1Value(JNIEnv *jenv, jclass jcls, jlo
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::Value *arg1 = (nix::Value *) 0 ;
-  none_t arg2 ;
-  none_t *argp2 ;
+  nix::none_t arg2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->set(arg2);
 }
 
@@ -4524,15 +4465,15 @@ SWIGEXPORT void JNICALL Java_nixJNI_Value_1set_1_1SWIG_17(JNIEnv *jenv, jclass j
 
 SWIGEXPORT void JNICALL Java_nixJNI_Value_1get_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   nix::Value *arg1 = (nix::Value *) 0 ;
-  none_t *arg2 = 0 ;
+  nix::none_t *arg2 = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Value **)&jarg1; 
-  arg2 = *(none_t **)&jarg2;
+  arg2 = *(nix::none_t **)&jarg2;
   if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "none_t & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::none_t & reference is null");
     return ;
   } 
   ((nix::Value const *)arg1)->get(*arg2);
@@ -4870,21 +4811,17 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Property_1definition_1_1SWIG_11(JNIEnv *jen
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Property_1definition_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Property_1removeDefinition(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::Property *arg1 = (nix::Property *) 0 ;
-  none_t arg2 ;
-  none_t const *argp2 ;
+  nix::none_t arg2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::Property **)&jarg1; 
-  argp2 = *(none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->definition(arg2);
 }
 
@@ -4925,21 +4862,17 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Property_1mapping_1_1SWIG_11(JNIEnv *jenv, 
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Property_1mapping_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Property_1removeMapping(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::Property *arg1 = (nix::Property *) 0 ;
   boost::none_t arg2 ;
-  boost::none_t const *argp2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::Property **)&jarg1; 
-  argp2 = *(boost::none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null boost::none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->mapping(arg2);
 }
 
@@ -4995,21 +4928,17 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Property_1unit_1_1SWIG_11(JNIEnv *jenv, jcl
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Property_1unit_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Property_1removeUnit(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::Property *arg1 = (nix::Property *) 0 ;
   boost::none_t arg2 ;
-  boost::none_t const *argp2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::Property **)&jarg1; 
-  argp2 = *(boost::none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null boost::none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->unit(arg2);
 }
 
@@ -5073,21 +5002,17 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Property_1values_1_1SWIG_11(JNIEnv *jenv, j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Property_1values_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Property_1removeValues(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::Property *arg1 = (nix::Property *) 0 ;
   boost::none_t arg2 ;
-  boost::none_t const *argp2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::Property **)&jarg1; 
-  argp2 = *(boost::none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null boost::none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->values(arg2);
 }
 
@@ -5191,21 +5116,17 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1repository_1_1SWIG_11(JNIEnv *jenv
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Section_1repository_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Section_1removeRepository(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::Section *arg1 = (nix::Section *) 0 ;
   boost::none_t arg2 ;
-  boost::none_t const *argp2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::Section **)&jarg1; 
-  argp2 = *(boost::none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null boost::none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->repository(arg2);
 }
 
@@ -5264,21 +5185,17 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1link_1_1SWIG_12(JNIEnv *jenv, jcla
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Section_1link_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Section_1removeLink(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::Section *arg1 = (nix::Section *) 0 ;
   boost::none_t arg2 ;
-  boost::none_t const *argp2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::Section **)&jarg1; 
-  argp2 = *(boost::none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null boost::none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->link(arg2);
 }
 
@@ -5319,21 +5236,17 @@ SWIGEXPORT jlong JNICALL Java_nixJNI_Section_1mapping_1_1SWIG_11(JNIEnv *jenv, j
 }
 
 
-SWIGEXPORT void JNICALL Java_nixJNI_Section_1mapping_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_nixJNI_Section_1removeMapping(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   nix::Section *arg1 = (nix::Section *) 0 ;
   boost::none_t arg2 ;
-  boost::none_t const *argp2 ;
   
   (void)jenv;
   (void)jcls;
+  
+  arg2 = boost::none;
+  
   (void)jarg1_;
   arg1 = *(nix::Section **)&jarg1; 
-  argp2 = *(boost::none_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null boost::none_t const");
-    return ;
-  }
-  arg2 = *argp2; 
   (arg1)->mapping(arg2);
 }
 
