@@ -179,7 +179,7 @@ typedef long long int ndssize_t;
 %import <nix/None.hpp>
 %rename (removeLabel)                nix::DataArray::label(const none_t);
 %rename (removeUnit)                 nix::DataArray::unit(const none_t);
-%rename (removeUnit)                 nix::DataArray::expansionOrigin(const none_t);
+%rename (removeExpansionOrigin)      nix::DataArray::expansionOrigin(const none_t);
 %rename (removePolynomCoefficients)  nix::DataArray::polynomCoefficients(const none_t);
 %rename (removeLabel)                nix::RangeDimension::label(const none_t);
 %rename (removeUnit)                 nix::RangeDimension::unit(const none_t);

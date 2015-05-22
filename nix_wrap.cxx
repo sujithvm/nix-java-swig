@@ -3589,6 +3589,21 @@ SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1expansionOrigin_1_1SWIG_11(JNIEnv
 }
 
 
+SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1removeExpansionOrigin(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  nix::DataArray *arg1 = (nix::DataArray *) 0 ;
+  nix::none_t arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  
+  arg2 = boost::none;
+  
+  (void)jarg1_;
+  arg1 = *(nix::DataArray **)&jarg1; 
+  (arg1)->expansionOrigin(arg2);
+}
+
+
 SWIGEXPORT void JNICALL Java_nixJNI_DataArray_1polynomCoefficients_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
   std::vector< double > *arg2 = 0 ;

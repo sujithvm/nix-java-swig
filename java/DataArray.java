@@ -74,6 +74,10 @@ public class DataArray {
     nixJNI.DataArray_expansionOrigin__SWIG_1(swigCPtr, this, expansion_origin);
   }
 
+  public void removeExpansionOrigin() {
+    nixJNI.DataArray_removeExpansionOrigin(swigCPtr, this);
+  }
+
   public void polynomCoefficients(DoubleVector polynom_coefficients) {
     nixJNI.DataArray_polynomCoefficients__SWIG_0(swigCPtr, this, DoubleVector.getCPtr(polynom_coefficients), polynom_coefficients);
   }

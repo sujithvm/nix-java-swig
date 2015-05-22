@@ -211,6 +211,7 @@ public class nixJNI {
   public final static native void DataArray_unit__SWIG_1(long jarg1, DataArray jarg1_, String jarg2);
   public final static native long DataArray_expansionOrigin__SWIG_0(long jarg1, DataArray jarg1_);
   public final static native void DataArray_expansionOrigin__SWIG_1(long jarg1, DataArray jarg1_, double jarg2);
+  public final static native void DataArray_removeExpansionOrigin(long jarg1, DataArray jarg1_);
   public final static native void DataArray_polynomCoefficients__SWIG_0(long jarg1, DataArray jarg1_, long jarg2, DoubleVector jarg2_);
   public final static native long DataArray_polynomCoefficients__SWIG_1(long jarg1, DataArray jarg1_);
   public final static native void DataArray_removePolynomCoefficients(long jarg1, DataArray jarg1_);
