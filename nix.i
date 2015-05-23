@@ -140,16 +140,6 @@ namespace std {
 	%template(ValueVector)      vector<nix::Value>;
 }
 
-
-/*
-	Extensions
-*/
-namespace nix {	
-	%extend nix::DataView {
-		DataView();
-	}  
-}
-
 // wrap time_t to long
 typedef long long time_t;
 
