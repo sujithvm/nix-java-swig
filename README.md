@@ -1,4 +1,7 @@
 # nix-java-swig
+
+Travis master: [![Build Status](https://travis-ci.org/sujithvm/nix-java-swig.svg?branch=master)](https://travis-ci.org/sujithvm/nix-java-swig)
+
 NIX Java bindings using SWIG
 
 ### Compilation

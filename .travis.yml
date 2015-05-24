@@ -1,0 +1,67 @@
+sudo: required
+
+language: java
+
+jdk:
+  - openjdk7
+  - oraclejdk7
+
+compiler:
+  - gcc
+
+before_install:
+
+  - sudo add-apt-repository ppa:boost-latest/ppa -y
+  - sudo add-apt-repository ppa:gnode/pandora -y
+  - sudo apt-get update -qq -y
+  - sudo apt-get install -q libcppunit-dev libboost1.54-all-dev libhdf5-serial-dev libhdf5-dev libhdf5-7 valgrind cmake
+
+  # update gcc
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y;
+  - sudo apt-get update -qq -y;
+  - sudo apt-get install -q gcc-4.8 g++-4.8 libstdc++-4.8-dev;
+  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 100;
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 100;
+  - sudo update-alternatives --config gcc;
+  - sudo update-alternatives --config g++;
+  - g++ --version;
+
+  # build nix library
+  - mkdir nix-build
+  - cd nix-build
+  - git clone https://github.com/G-Node/nix
+  - cd nix
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make all
+  - sudo make install
+  - cd ..
+  - cd ..
+  - cd ..
+
+  # install swig
+  - mkdir swig-build
+  - cd swig-build
+  - wget http://prdownloads.sourceforge.net/swig/swig-3.0.5.tar.gz
+  - tar zxf swig-3.0.5.tar.gz
+  - cd swig-3.0.5
+  - ./configure
+  - sudo make
+  - sudo make install
+  - swig -version
+  - cd ..
+  - cd ..
+
+install: 
+  - swig -java -c++ -outdir java -I/usr/local/include nix.i 
+  - g++ -std=c++11 -fPIC -c nix_wrap.cxx -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux
+  - g++ -shared -o libnix_jni.so nix_wrap.o -L/usr/local/lib/ -Wl,-rpath,/usr/local/lib/ -lnix 
+
+  # run test
+  - cd test/
+  - javac -cp .:"../libs/*":"../java" TestFile.java
+  - java -cp .:"../libs/*":"../java" -Djava.library.path=.. org.junit.runner.JUnitCore TestFile
+
+script:
+  - true
