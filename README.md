@@ -7,7 +7,7 @@ NIX Java bindings using SWIG
 ### Compilation
 
 ```
-$ swig -java -c++ -outdir java -I/usr/local/include nix.i 
+$ swig -java -c++ -package org.gnode.nix -outdir java/org/gnode/nix -I/usr/local/include nix.i 
 $ g++ -std=c++11 -fPIC -c nix_wrap.cxx -I/usr/lib/jvm/java-7-oracle/include -I/usr/lib/jvm/java-7-oracle/include/linux 
 $ g++ -shared -o libnix_jni.so nix_wrap.o -lnix 
 ```
@@ -23,7 +23,7 @@ $ java -Djava.library.path=<path to libnix_jni.so> <ClassName>
 
 ```
 $ cd test/
-$ javac -cp .:"../libs/*":"../java" TestFile.java
-$ java -cp .:"../libs/*":"../java" -Djava.library.path=.. org.junit.runner.JUnitCore TestFile
+$ javac -cp .:"../libs/*":"../java" org/gnode/nix/TestFile.java
+$ java -cp .:"../libs/*":"../java" -Djava.library.path=.. org.junit.runner.JUnitCore org.gnode.nix.TestFile
 
 ```

@@ -54,14 +54,14 @@ before_install:
   - cd ..
 
 install: 
-  - swig -java -c++ -outdir java -I/usr/local/include nix.i 
+  - swig -java -c++ -package org.gnode.nix -outdir java/org/gnode/nix -I/usr/local/include nix.i 
   - g++ -std=c++11 -fPIC -c nix_wrap.cxx -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux
   - g++ -shared -o libnix_jni.so nix_wrap.o -L/usr/local/lib/ -Wl,-rpath,/usr/local/lib/ -lnix 
 
   # run test
   - cd test/
-  - javac -cp .:"../libs/*":"../java" TestFile.java
-  - java -cp .:"../libs/*":"../java" -Djava.library.path=.. org.junit.runner.JUnitCore TestFile
+  - javac -cp .:"../libs/*":"../java" org/gnode/nix/TestFile.java
+  - java -cp .:"../libs/*":"../java" -Djava.library.path=.. org.junit.runner.JUnitCore org.gnode.nix.TestFile
 
 script:
   - true
