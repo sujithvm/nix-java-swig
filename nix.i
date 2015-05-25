@@ -141,6 +141,7 @@ namespace std {
 	%template(BlockVector)      vector<nix::Block>;
 	%template(DataArrayVector)  vector<nix::DataArray>;
 	%template(DimensionVector)  vector<nix::Dimension>;
+	%template(FeatureVector)    vector<nix::Feature>;
 	%template(PropertyVector)   vector<nix::Property>;
 	%template(SectionVector)    vector<nix::Section>;
 	%template(SourceVector)     vector<nix::Source>;

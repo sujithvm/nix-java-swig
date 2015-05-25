@@ -80,6 +80,17 @@ public class nixJNI {
   public final static native long DimensionVector_get(long jarg1, DimensionVector jarg1_, int jarg2);
   public final static native void DimensionVector_set(long jarg1, DimensionVector jarg1_, int jarg2, long jarg3, Dimension jarg3_);
   public final static native void delete_DimensionVector(long jarg1);
+  public final static native long new_FeatureVector__SWIG_0();
+  public final static native long new_FeatureVector__SWIG_1(long jarg1);
+  public final static native long FeatureVector_size(long jarg1, FeatureVector jarg1_);
+  public final static native long FeatureVector_capacity(long jarg1, FeatureVector jarg1_);
+  public final static native void FeatureVector_reserve(long jarg1, FeatureVector jarg1_, long jarg2);
+  public final static native boolean FeatureVector_isEmpty(long jarg1, FeatureVector jarg1_);
+  public final static native void FeatureVector_clear(long jarg1, FeatureVector jarg1_);
+  public final static native void FeatureVector_add(long jarg1, FeatureVector jarg1_, long jarg2, Feature jarg2_);
+  public final static native long FeatureVector_get(long jarg1, FeatureVector jarg1_, int jarg2);
+  public final static native void FeatureVector_set(long jarg1, FeatureVector jarg1_, int jarg2, long jarg3, Feature jarg3_);
+  public final static native void delete_FeatureVector(long jarg1);
   public final static native long new_PropertyVector__SWIG_0();
   public final static native long new_PropertyVector__SWIG_1(long jarg1);
   public final static native long PropertyVector_size(long jarg1, PropertyVector jarg1_);

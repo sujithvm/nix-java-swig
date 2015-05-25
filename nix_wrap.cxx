@@ -343,6 +343,20 @@ SWIGINTERN void std_vector_Sl_nix_Dimension_Sg__set(std::vector< nix::Dimension 
                 else
                     throw std::out_of_range("vector index out of range");
             }
+SWIGINTERN std::vector< nix::Feature >::const_reference std_vector_Sl_nix_Feature_Sg__get(std::vector< nix::Feature > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_nix_Feature_Sg__set(std::vector< nix::Feature > *self,int i,std::vector< nix::Feature >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
 SWIGINTERN std::vector< nix::Property >::const_reference std_vector_Sl_nix_Property_Sg__get(std::vector< nix::Property > *self,int i){
                 int size = int(self->size());
                 if (i>=0 && i<size)
@@ -1452,6 +1466,180 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_delete_1DimensionVector(JNIEnv
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< nix::Dimension > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1FeatureVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< nix::Feature > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< nix::Feature > *)new std::vector< nix::Feature >();
+  *(std::vector< nix::Feature > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1FeatureVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< nix::Feature >::size_type arg1 ;
+  std::vector< nix::Feature > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< nix::Feature >::size_type)jarg1; 
+  result = (std::vector< nix::Feature > *)new std::vector< nix::Feature >(arg1);
+  *(std::vector< nix::Feature > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_FeatureVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Feature > *arg1 = (std::vector< nix::Feature > *) 0 ;
+  std::vector< nix::Feature >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Feature > **)&jarg1; 
+  result = ((std::vector< nix::Feature > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_FeatureVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Feature > *arg1 = (std::vector< nix::Feature > *) 0 ;
+  std::vector< nix::Feature >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Feature > **)&jarg1; 
+  result = ((std::vector< nix::Feature > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_FeatureVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< nix::Feature > *arg1 = (std::vector< nix::Feature > *) 0 ;
+  std::vector< nix::Feature >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Feature > **)&jarg1; 
+  arg2 = (std::vector< nix::Feature >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_FeatureVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< nix::Feature > *arg1 = (std::vector< nix::Feature > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Feature > **)&jarg1; 
+  result = (bool)((std::vector< nix::Feature > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_FeatureVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< nix::Feature > *arg1 = (std::vector< nix::Feature > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Feature > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_FeatureVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< nix::Feature > *arg1 = (std::vector< nix::Feature > *) 0 ;
+  std::vector< nix::Feature >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< nix::Feature > **)&jarg1; 
+  arg2 = *(std::vector< nix::Feature >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Feature >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< nix::Feature >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_FeatureVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< nix::Feature > *arg1 = (std::vector< nix::Feature > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Feature >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Feature > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< nix::Feature >::value_type *) &std_vector_Sl_nix_Feature_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< nix::Feature >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_FeatureVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< nix::Feature > *arg1 = (std::vector< nix::Feature > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Feature >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< nix::Feature > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< nix::Feature >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Feature >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_nix_Feature_Sg__set(arg1,arg2,(nix::Feature const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_delete_1FeatureVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< nix::Feature > *arg1 = (std::vector< nix::Feature > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< nix::Feature > **)&jarg1; 
   delete arg1;
 }
 
@@ -6570,7 +6758,7 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1features_1_1SWIG_10(JNIE
   jlong jresult = 0 ;
   nix::Tag *arg1 = (nix::Tag *) 0 ;
   util::Filter< nix::Feature >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< nix::Feature > > result;
+  std::vector< nix::Feature > result;
   
   (void)jenv;
   (void)jcls;
@@ -6590,7 +6778,7 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1features_1_1SWIG_10(JNIE
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1features_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Tag *arg1 = (nix::Tag *) 0 ;
-  SwigValueWrapper< std::vector< nix::Feature > > result;
+  std::vector< nix::Feature > result;
   
   (void)jenv;
   (void)jcls;

@@ -143,12 +143,12 @@ public class Tag {
     return new Feature(nixJNI.Tag_getFeature__SWIG_1(swigCPtr, this, index), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Feature_t features(SWIGTYPE_p_util__FilterT_nix__Feature_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_nix__Feature_t(nixJNI.Tag_features__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Feature_t__type.getCPtr(filter)), true);
+  public FeatureVector features(SWIGTYPE_p_util__FilterT_nix__Feature_t__type filter) {
+    return new FeatureVector(nixJNI.Tag_features__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Feature_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_nix__Feature_t features() {
-    return new SWIGTYPE_p_std__vectorT_nix__Feature_t(nixJNI.Tag_features__SWIG_1(swigCPtr, this), true);
+  public FeatureVector features() {
+    return new FeatureVector(nixJNI.Tag_features__SWIG_1(swigCPtr, this), true);
   }
 
   public Feature createFeature(DataArray data, LinkType link_type) {
