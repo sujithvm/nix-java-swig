@@ -87,6 +87,8 @@ namespace nix {
 	%ignore Source::Source(std::shared_ptr<base::ISource> &&);
 	%ignore Tag::Tag(const std::shared_ptr<base::ITag> &);
 	%ignore Tag::Tag(std::shared_ptr<base::ITag> &&);
+	%ignore MultiTag::MultiTag(const std::shared_ptr<base::IMultiTag> &);
+	%ignore MultiTag::MultiTag(std::shared_ptr<base::IMultiTag> &&);
 
 	// ignore overloaded null constructor
 	%ignore Section::Section(std::nullptr_t); 
@@ -114,11 +116,14 @@ namespace nix {
 	%ignore Section::operator= ;
 	%ignore Source::operator= ;
 	%ignore Tag::operator= ;
+	%ignore MultiTag::operator= ;
 	%ignore Value::operator= ;
 
-	// temporarily ignore Dataview for Tag
+	// temporarily ignore Dataview for Tag, MultiTag
 	%ignore Tag::retrieveData(size_t) const;
 	%ignore Tag::retrieveFeatureData(size_t) const;
+	%ignore MultiTag::retrieveData(size_t, size_t) const;
+	%ignore MultiTag::retrieveFeatureData(size_t, size_t) const;
 }
 
 // Ignore operators
@@ -142,6 +147,7 @@ namespace std {
 	%template(DataArrayVector)  vector<nix::DataArray>;
 	%template(DimensionVector)  vector<nix::Dimension>;
 	%template(FeatureVector)    vector<nix::Feature>;
+	%template(MultiTagVector)   vector<nix::MultiTag>;
 	%template(PropertyVector)   vector<nix::Property>;
 	%template(SectionVector)    vector<nix::Section>;
 	%template(SourceVector)     vector<nix::Source>;
@@ -195,6 +201,8 @@ typedef long long int ndssize_t;
 %rename (removeValues)               nix::Property::values(const boost::none_t);
 %rename (removeUnits)                nix::Tag::units(const boost::none_t);
 %rename (removeExtent)               nix::Tag::extent(const boost::none_t);
+%rename (removeUnits)                nix::MultiTag::units(const boost::none_t);
+%rename (removeExtents)              nix::MultiTag::extents(const boost::none_t);
 
 
 /*
@@ -225,5 +233,6 @@ typedef long long int ndssize_t;
 %include <nix/Property.hpp>
 %include <nix/Section.hpp>
 %include <nix/Tag.hpp>
+%include <nix/MultiTag.hpp>
 %include <nix/Block.hpp>
 %include <nix/File.hpp>

@@ -179,40 +179,40 @@ public class Block {
     return nixJNI.Block_hasMultiTag__SWIG_0(swigCPtr, this, name_or_id);
   }
 
-  public boolean hasMultiTag(SWIGTYPE_p_MultiTag multi_tag) {
-    return nixJNI.Block_hasMultiTag__SWIG_1(swigCPtr, this, SWIGTYPE_p_MultiTag.getCPtr(multi_tag));
+  public boolean hasMultiTag(MultiTag multi_tag) {
+    return nixJNI.Block_hasMultiTag__SWIG_1(swigCPtr, this, MultiTag.getCPtr(multi_tag), multi_tag);
   }
 
-  public SWIGTYPE_p_MultiTag getMultiTag(String name_or_id) {
-    return new SWIGTYPE_p_MultiTag(nixJNI.Block_getMultiTag__SWIG_0(swigCPtr, this, name_or_id), true);
+  public MultiTag getMultiTag(String name_or_id) {
+    return new MultiTag(nixJNI.Block_getMultiTag__SWIG_0(swigCPtr, this, name_or_id), true);
   }
 
-  public SWIGTYPE_p_MultiTag getMultiTag(long index) {
-    return new SWIGTYPE_p_MultiTag(nixJNI.Block_getMultiTag__SWIG_1(swigCPtr, this, index), true);
+  public MultiTag getMultiTag(long index) {
+    return new MultiTag(nixJNI.Block_getMultiTag__SWIG_1(swigCPtr, this, index), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_MultiTag_t multiTags(SWIGTYPE_p_util__AcceptAllT_MultiTag_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_MultiTag_t(nixJNI.Block_multiTags__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__AcceptAllT_MultiTag_t__type.getCPtr(filter)), true);
+  public MultiTagVector multiTags(SWIGTYPE_p_util__AcceptAllT_nix__MultiTag_t__type filter) {
+    return new MultiTagVector(nixJNI.Block_multiTags__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__AcceptAllT_nix__MultiTag_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_MultiTag_t multiTags() {
-    return new SWIGTYPE_p_std__vectorT_MultiTag_t(nixJNI.Block_multiTags__SWIG_1(swigCPtr, this), true);
+  public MultiTagVector multiTags() {
+    return new MultiTagVector(nixJNI.Block_multiTags__SWIG_1(swigCPtr, this), true);
   }
 
   public long multiTagCount() {
     return nixJNI.Block_multiTagCount(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_MultiTag createMultiTag(String name, String type, DataArray positions) {
-    return new SWIGTYPE_p_MultiTag(nixJNI.Block_createMultiTag(swigCPtr, this, name, type, DataArray.getCPtr(positions), positions), true);
+  public MultiTag createMultiTag(String name, String type, DataArray positions) {
+    return new MultiTag(nixJNI.Block_createMultiTag(swigCPtr, this, name, type, DataArray.getCPtr(positions), positions), true);
   }
 
   public boolean deleteMultiTag(String name_or_id) {
     return nixJNI.Block_deleteMultiTag__SWIG_0(swigCPtr, this, name_or_id);
   }
 
-  public boolean deleteMultiTag(SWIGTYPE_p_MultiTag multi_tag) {
-    return nixJNI.Block_deleteMultiTag__SWIG_1(swigCPtr, this, SWIGTYPE_p_MultiTag.getCPtr(multi_tag));
+  public boolean deleteMultiTag(MultiTag multi_tag) {
+    return nixJNI.Block_deleteMultiTag__SWIG_1(swigCPtr, this, MultiTag.getCPtr(multi_tag), multi_tag);
   }
 
 }
