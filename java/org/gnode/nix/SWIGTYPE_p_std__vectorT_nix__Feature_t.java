@@ -8,18 +8,18 @@
 
 package org.gnode.nix;
 
-public class SWIGTYPE_p_std__vectorT_Tag_t {
+public class SWIGTYPE_p_std__vectorT_nix__Feature_t {
   private long swigCPtr;
 
-  protected SWIGTYPE_p_std__vectorT_Tag_t(long cPtr, boolean futureUse) {
+  protected SWIGTYPE_p_std__vectorT_nix__Feature_t(long cPtr, boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_std__vectorT_Tag_t() {
+  protected SWIGTYPE_p_std__vectorT_nix__Feature_t() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_std__vectorT_Tag_t obj) {
+  protected static long getCPtr(SWIGTYPE_p_std__vectorT_nix__Feature_t obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

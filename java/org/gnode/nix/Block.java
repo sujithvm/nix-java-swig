@@ -139,40 +139,40 @@ public class Block {
     return nixJNI.Block_hasTag__SWIG_0(swigCPtr, this, name_or_id);
   }
 
-  public boolean hasTag(SWIGTYPE_p_Tag tag) {
-    return nixJNI.Block_hasTag__SWIG_1(swigCPtr, this, SWIGTYPE_p_Tag.getCPtr(tag));
+  public boolean hasTag(Tag tag) {
+    return nixJNI.Block_hasTag__SWIG_1(swigCPtr, this, Tag.getCPtr(tag), tag);
   }
 
-  public SWIGTYPE_p_Tag getTag(String name_or_id) {
-    return new SWIGTYPE_p_Tag(nixJNI.Block_getTag__SWIG_0(swigCPtr, this, name_or_id), true);
+  public Tag getTag(String name_or_id) {
+    return new Tag(nixJNI.Block_getTag__SWIG_0(swigCPtr, this, name_or_id), true);
   }
 
-  public SWIGTYPE_p_Tag getTag(long index) {
-    return new SWIGTYPE_p_Tag(nixJNI.Block_getTag__SWIG_1(swigCPtr, this, index), true);
+  public Tag getTag(long index) {
+    return new Tag(nixJNI.Block_getTag__SWIG_1(swigCPtr, this, index), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Tag_t tags(SWIGTYPE_p_util__FilterT_Tag_t__type filter) {
-    return new SWIGTYPE_p_std__vectorT_Tag_t(nixJNI.Block_tags__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_Tag_t__type.getCPtr(filter)), true);
+  public TagVector tags(SWIGTYPE_p_util__FilterT_nix__Tag_t__type filter) {
+    return new TagVector(nixJNI.Block_tags__SWIG_0(swigCPtr, this, SWIGTYPE_p_util__FilterT_nix__Tag_t__type.getCPtr(filter)), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Tag_t tags() {
-    return new SWIGTYPE_p_std__vectorT_Tag_t(nixJNI.Block_tags__SWIG_1(swigCPtr, this), true);
+  public TagVector tags() {
+    return new TagVector(nixJNI.Block_tags__SWIG_1(swigCPtr, this), true);
   }
 
   public long tagCount() {
     return nixJNI.Block_tagCount(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_Tag createTag(String name, String type, DoubleVector position) {
-    return new SWIGTYPE_p_Tag(nixJNI.Block_createTag(swigCPtr, this, name, type, DoubleVector.getCPtr(position), position), true);
+  public Tag createTag(String name, String type, DoubleVector position) {
+    return new Tag(nixJNI.Block_createTag(swigCPtr, this, name, type, DoubleVector.getCPtr(position), position), true);
   }
 
   public boolean deleteTag(String name_or_id) {
     return nixJNI.Block_deleteTag__SWIG_0(swigCPtr, this, name_or_id);
   }
 
-  public boolean deleteTag(SWIGTYPE_p_Tag tag) {
-    return nixJNI.Block_deleteTag__SWIG_1(swigCPtr, this, SWIGTYPE_p_Tag.getCPtr(tag));
+  public boolean deleteTag(Tag tag) {
+    return nixJNI.Block_deleteTag__SWIG_1(swigCPtr, this, Tag.getCPtr(tag), tag);
   }
 
   public boolean hasMultiTag(String name_or_id) {

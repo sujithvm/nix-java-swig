@@ -8,18 +8,18 @@
 
 package org.gnode.nix;
 
-public class SWIGTYPE_p_util__FilterT_Tag_t__type {
+public class SWIGTYPE_p_util__FilterT_nix__DataArray_t__type {
   private long swigCPtr;
 
-  protected SWIGTYPE_p_util__FilterT_Tag_t__type(long cPtr, boolean futureUse) {
+  protected SWIGTYPE_p_util__FilterT_nix__DataArray_t__type(long cPtr, boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_util__FilterT_Tag_t__type() {
+  protected SWIGTYPE_p_util__FilterT_nix__DataArray_t__type() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_util__FilterT_Tag_t__type obj) {
+  protected static long getCPtr(SWIGTYPE_p_util__FilterT_nix__DataArray_t__type obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

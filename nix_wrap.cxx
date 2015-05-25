@@ -399,6 +399,20 @@ SWIGINTERN void std_vector_Sl_nix_Value_Sg__set(std::vector< nix::Value > *self,
                 else
                     throw std::out_of_range("vector index out of range");
             }
+SWIGINTERN std::vector< nix::Tag >::const_reference std_vector_Sl_nix_Tag_Sg__get(std::vector< nix::Tag > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_nix_Tag_Sg__set(std::vector< nix::Tag > *self,int i,std::vector< nix::Tag >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
 
 #ifdef __cplusplus
 extern "C" {
@@ -2134,6 +2148,180 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_delete_1ValueVector(JNIEnv *je
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< nix::Value > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1TagVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< nix::Tag > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< nix::Tag > *)new std::vector< nix::Tag >();
+  *(std::vector< nix::Tag > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1TagVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< nix::Tag >::size_type arg1 ;
+  std::vector< nix::Tag > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< nix::Tag >::size_type)jarg1; 
+  result = (std::vector< nix::Tag > *)new std::vector< nix::Tag >(arg1);
+  *(std::vector< nix::Tag > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_TagVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Tag > *arg1 = (std::vector< nix::Tag > *) 0 ;
+  std::vector< nix::Tag >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Tag > **)&jarg1; 
+  result = ((std::vector< nix::Tag > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_TagVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< nix::Tag > *arg1 = (std::vector< nix::Tag > *) 0 ;
+  std::vector< nix::Tag >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Tag > **)&jarg1; 
+  result = ((std::vector< nix::Tag > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_TagVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< nix::Tag > *arg1 = (std::vector< nix::Tag > *) 0 ;
+  std::vector< nix::Tag >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Tag > **)&jarg1; 
+  arg2 = (std::vector< nix::Tag >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_TagVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< nix::Tag > *arg1 = (std::vector< nix::Tag > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Tag > **)&jarg1; 
+  result = (bool)((std::vector< nix::Tag > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_TagVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< nix::Tag > *arg1 = (std::vector< nix::Tag > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Tag > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_TagVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< nix::Tag > *arg1 = (std::vector< nix::Tag > *) 0 ;
+  std::vector< nix::Tag >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< nix::Tag > **)&jarg1; 
+  arg2 = *(std::vector< nix::Tag >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Tag >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< nix::Tag >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_TagVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< nix::Tag > *arg1 = (std::vector< nix::Tag > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Tag >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< nix::Tag > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< nix::Tag >::value_type *) &std_vector_Sl_nix_Tag_Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< nix::Tag >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_TagVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< nix::Tag > *arg1 = (std::vector< nix::Tag > *) 0 ;
+  int arg2 ;
+  std::vector< nix::Tag >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< nix::Tag > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< nix::Tag >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::Tag >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_nix_Tag_Sg__set(arg1,arg2,(nix::Tag const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_delete_1TagVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< nix::Tag > *arg1 = (std::vector< nix::Tag > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< nix::Tag > **)&jarg1; 
   delete arg1;
 }
 
@@ -5870,6 +6058,658 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_delete_1Section(JNIEnv *jenv, 
 }
 
 
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1Tag_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  nix::Tag *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (nix::Tag *)new nix::Tag();
+  *(nix::Tag **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1Tag_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = 0 ;
+  nix::Tag *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1;
+  if (!arg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::Tag const & reference is null");
+    return 0;
+  } 
+  result = (nix::Tag *)new nix::Tag((nix::Tag const &)*arg1);
+  *(nix::Tag **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1units_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::vector< std::string > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  result = ((nix::Tag const *)arg1)->units();
+  *(std::vector< std::string > **)&jresult = new std::vector< std::string >((const std::vector< std::string > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Tag_1units_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::vector< std::string > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(std::vector< std::string > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::string > const & reference is null");
+    return ;
+  } 
+  (arg1)->units((std::vector< std::string > const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Tag_1removeUnits(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  boost::none_t arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  
+  arg2 = boost::none;
+  
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  (arg1)->units(arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1position_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  result = ((nix::Tag const *)arg1)->position();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Tag_1position_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->position((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1extent_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::vector< double > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  result = ((nix::Tag const *)arg1)->extent();
+  *(std::vector< double > **)&jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Tag_1extent_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(std::vector< double > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< double > const & reference is null");
+    return ;
+  } 
+  (arg1)->extent((std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Tag_1removeExtent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  boost::none_t arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  
+  arg2 = boost::none;
+  
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  (arg1)->extent(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Tag_1hasReference_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  jboolean jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::string *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  result = (bool)((nix::Tag const *)arg1)->hasReference((std::string const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Tag_1hasReference_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  nix::DataArray *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(nix::DataArray **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::DataArray const & reference is null");
+    return 0;
+  } 
+  result = (bool)((nix::Tag const *)arg1)->hasReference((nix::DataArray const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1referenceCount(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  ndsize_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  result = (ndsize_t)((nix::Tag const *)arg1)->referenceCount();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1getReference_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::string *arg2 = 0 ;
+  nix::DataArray result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  result = ((nix::Tag const *)arg1)->getReference((std::string const &)*arg2);
+  *(nix::DataArray **)&jresult = new nix::DataArray((const nix::DataArray &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1getReference_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  size_t arg2 ;
+  nix::DataArray result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = (size_t)jarg2; 
+  result = ((nix::Tag const *)arg1)->getReference(arg2);
+  *(nix::DataArray **)&jresult = new nix::DataArray((const nix::DataArray &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Tag_1addReference_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  nix::DataArray *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(nix::DataArray **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::DataArray const & reference is null");
+    return ;
+  } 
+  (arg1)->addReference((nix::DataArray const &)*arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Tag_1addReference_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::string *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return ;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  (arg1)->addReference((std::string const &)*arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Tag_1removeReference_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  nix::DataArray *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(nix::DataArray **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::DataArray const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->removeReference((nix::DataArray const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Tag_1removeReference_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  jboolean jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::string *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  result = (bool)(arg1)->removeReference((std::string const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1references_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  util::Filter< nix::DataArray >::type *arg2 = 0 ;
+  std::vector< nix::DataArray > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(util::Filter< nix::DataArray >::type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "util::Filter< nix::DataArray >::type const & reference is null");
+    return 0;
+  } 
+  result = ((nix::Tag const *)arg1)->references((util::Filter< nix::DataArray >::type const &)*arg2);
+  *(std::vector< nix::DataArray > **)&jresult = new std::vector< nix::DataArray >((const std::vector< nix::DataArray > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1references_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::vector< nix::DataArray > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  result = ((nix::Tag const *)arg1)->references();
+  *(std::vector< nix::DataArray > **)&jresult = new std::vector< nix::DataArray >((const std::vector< nix::DataArray > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Tag_1references_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::vector< nix::DataArray > *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(std::vector< nix::DataArray > **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< nix::DataArray > const & reference is null");
+    return ;
+  } 
+  (arg1)->references((std::vector< nix::DataArray > const &)*arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Tag_1hasFeature_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  jboolean jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::string *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  result = (bool)((nix::Tag const *)arg1)->hasFeature((std::string const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Tag_1hasFeature_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  nix::Feature *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(nix::Feature **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::Feature const & reference is null");
+    return 0;
+  } 
+  result = (bool)((nix::Tag const *)arg1)->hasFeature((nix::Feature const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1featureCount(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  ndsize_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  result = (ndsize_t)((nix::Tag const *)arg1)->featureCount();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1getFeature_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::string *arg2 = 0 ;
+  nix::Feature result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  result = ((nix::Tag const *)arg1)->getFeature((std::string const &)*arg2);
+  *(nix::Feature **)&jresult = new nix::Feature((const nix::Feature &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1getFeature_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  size_t arg2 ;
+  nix::Feature result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = (size_t)jarg2; 
+  result = ((nix::Tag const *)arg1)->getFeature(arg2);
+  *(nix::Feature **)&jresult = new nix::Feature((const nix::Feature &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1features_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  util::Filter< nix::Feature >::type *arg2 = 0 ;
+  SwigValueWrapper< std::vector< nix::Feature > > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(util::Filter< nix::Feature >::type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "util::Filter< nix::Feature >::type const & reference is null");
+    return 0;
+  } 
+  result = ((nix::Tag const *)arg1)->features((util::Filter< nix::Feature >::type const &)*arg2);
+  *(std::vector< nix::Feature > **)&jresult = new std::vector< nix::Feature >((const std::vector< nix::Feature > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1features_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  SwigValueWrapper< std::vector< nix::Feature > > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  result = ((nix::Tag const *)arg1)->features();
+  *(std::vector< nix::Feature > **)&jresult = new std::vector< nix::Feature >((const std::vector< nix::Feature > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1createFeature_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jint jarg3) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  nix::DataArray *arg2 = 0 ;
+  nix::LinkType arg3 ;
+  nix::Feature result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(nix::DataArray **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::DataArray const & reference is null");
+    return 0;
+  } 
+  arg3 = (nix::LinkType)jarg3; 
+  result = (arg1)->createFeature((nix::DataArray const &)*arg2,arg3);
+  *(nix::Feature **)&jresult = new nix::Feature((const nix::Feature &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Tag_1createFeature_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3) {
+  jlong jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::string *arg2 = 0 ;
+  nix::LinkType arg3 ;
+  nix::Feature result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  arg3 = (nix::LinkType)jarg3; 
+  result = (arg1)->createFeature((std::string const &)*arg2,arg3);
+  *(nix::Feature **)&jresult = new nix::Feature((const nix::Feature &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Tag_1deleteFeature_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  jboolean jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  std::string *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  result = (bool)(arg1)->deleteFeature((std::string const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Tag_1deleteFeature_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  nix::Feature *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(nix::Tag **)&jarg1; 
+  arg2 = *(nix::Feature **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::Feature const & reference is null");
+    return 0;
+  } 
+  result = (bool)(arg1)->deleteFeature((nix::Feature const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_delete_1Tag(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  nix::Tag *arg1 = (nix::Tag *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(nix::Tag **)&jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1Block_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   nix::Block *result = 0 ;
@@ -6437,22 +7277,23 @@ SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Block_1hasTag_1_1SWIG_10(J
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Block_1hasTag_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Block_1hasTag_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
-  Tag *arg2 = 0 ;
+  nix::Tag *arg2 = 0 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
+  (void)jarg2_;
   arg1 = *(nix::Block **)&jarg1; 
-  arg2 = *(Tag **)&jarg2;
+  arg2 = *(nix::Tag **)&jarg2;
   if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Tag const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::Tag const & reference is null");
     return 0;
   } 
-  result = (bool)((nix::Block const *)arg1)->hasTag((Tag const &)*arg2);
+  result = (bool)((nix::Block const *)arg1)->hasTag((nix::Tag const &)*arg2);
   jresult = (jboolean)result; 
   return jresult;
 }
@@ -6462,7 +7303,7 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1getTag_1_1SWIG_10(JNIE
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
   std::string *arg2 = 0 ;
-  Tag result;
+  nix::Tag result;
   
   (void)jenv;
   (void)jcls;
@@ -6478,7 +7319,7 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1getTag_1_1SWIG_10(JNIE
   arg2 = &arg2_str;
   jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
   result = ((nix::Block const *)arg1)->getTag((std::string const &)*arg2);
-  *(Tag **)&jresult = new Tag((const Tag &)result); 
+  *(nix::Tag **)&jresult = new nix::Tag((const nix::Tag &)result); 
   return jresult;
 }
 
@@ -6487,7 +7328,7 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1getTag_1_1SWIG_11(JNIE
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
   size_t arg2 ;
-  Tag result;
+  nix::Tag result;
   
   (void)jenv;
   (void)jcls;
@@ -6495,7 +7336,7 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1getTag_1_1SWIG_11(JNIE
   arg1 = *(nix::Block **)&jarg1; 
   arg2 = (size_t)jarg2; 
   result = ((nix::Block const *)arg1)->getTag(arg2);
-  *(Tag **)&jresult = new Tag((const Tag &)result); 
+  *(nix::Tag **)&jresult = new nix::Tag((const nix::Tag &)result); 
   return jresult;
 }
 
@@ -6503,20 +7344,20 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1getTag_1_1SWIG_11(JNIE
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1tags_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
-  util::Filter< Tag >::type *arg2 = 0 ;
-  SwigValueWrapper< std::vector< Tag > > result;
+  util::Filter< nix::Tag >::type *arg2 = 0 ;
+  std::vector< nix::Tag > result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Block **)&jarg1; 
-  arg2 = *(util::Filter< Tag >::type **)&jarg2;
+  arg2 = *(util::Filter< nix::Tag >::type **)&jarg2;
   if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "util::Filter< Tag >::type const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "util::Filter< nix::Tag >::type const & reference is null");
     return 0;
   } 
-  result = ((nix::Block const *)arg1)->tags((util::Filter< Tag >::type const &)*arg2);
-  *(std::vector< Tag > **)&jresult = new std::vector< Tag >((const std::vector< Tag > &)result); 
+  result = ((nix::Block const *)arg1)->tags((util::Filter< nix::Tag >::type const &)*arg2);
+  *(std::vector< nix::Tag > **)&jresult = new std::vector< nix::Tag >((const std::vector< nix::Tag > &)result); 
   return jresult;
 }
 
@@ -6524,14 +7365,14 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1tags_1_1SWIG_10(JNIEnv
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1tags_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
-  SwigValueWrapper< std::vector< Tag > > result;
+  std::vector< nix::Tag > result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(nix::Block **)&jarg1; 
   result = ((nix::Block const *)arg1)->tags();
-  *(std::vector< Tag > **)&jresult = new std::vector< Tag >((const std::vector< Tag > &)result); 
+  *(std::vector< nix::Tag > **)&jresult = new std::vector< nix::Tag >((const std::vector< nix::Tag > &)result); 
   return jresult;
 }
 
@@ -6557,7 +7398,7 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1createTag(JNIEnv *jenv
   std::string *arg2 = 0 ;
   std::string *arg3 = 0 ;
   std::vector< double > *arg4 = 0 ;
-  Tag result;
+  nix::Tag result;
   
   (void)jenv;
   (void)jcls;
@@ -6588,7 +7429,7 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Block_1createTag(JNIEnv *jenv
     return 0;
   } 
   result = (arg1)->createTag((std::string const &)*arg2,(std::string const &)*arg3,(std::vector< double > const &)*arg4);
-  *(Tag **)&jresult = new Tag((const Tag &)result); 
+  *(nix::Tag **)&jresult = new nix::Tag((const nix::Tag &)result); 
   return jresult;
 }
 
@@ -6618,22 +7459,23 @@ SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Block_1deleteTag_1_1SWIG_1
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Block_1deleteTag_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_Block_1deleteTag_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   nix::Block *arg1 = (nix::Block *) 0 ;
-  Tag *arg2 = 0 ;
+  nix::Tag *arg2 = 0 ;
   bool result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
+  (void)jarg2_;
   arg1 = *(nix::Block **)&jarg1; 
-  arg2 = *(Tag **)&jarg2;
+  arg2 = *(nix::Tag **)&jarg2;
   if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Tag const & reference is null");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "nix::Tag const & reference is null");
     return 0;
   } 
-  result = (bool)(arg1)->deleteTag((Tag const &)*arg2);
+  result = (bool)(arg1)->deleteTag((nix::Tag const &)*arg2);
   jresult = (jboolean)result; 
   return jresult;
 }
