@@ -51,8 +51,8 @@ public class Property {
     nixJNI.Property_definition__SWIG_0(swigCPtr, this, definition);
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t definition() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Property_definition__SWIG_1(swigCPtr, this), true);
+  public OptionalString definition() {
+    return new OptionalString(nixJNI.Property_definition__SWIG_1(swigCPtr, this), true);
   }
 
   public void removeDefinition() {
@@ -63,8 +63,8 @@ public class Property {
     nixJNI.Property_mapping__SWIG_0(swigCPtr, this, mapping);
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t mapping() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Property_mapping__SWIG_1(swigCPtr, this), true);
+  public OptionalString mapping() {
+    return new OptionalString(nixJNI.Property_mapping__SWIG_1(swigCPtr, this), true);
   }
 
   public void removeMapping() {
@@ -79,8 +79,8 @@ public class Property {
     nixJNI.Property_unit__SWIG_0(swigCPtr, this, unit);
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t unit() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Property_unit__SWIG_1(swigCPtr, this), true);
+  public OptionalString unit() {
+    return new OptionalString(nixJNI.Property_unit__SWIG_1(swigCPtr, this), true);
   }
 
   public void removeUnit() {

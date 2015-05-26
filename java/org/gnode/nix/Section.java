@@ -47,8 +47,8 @@ public class Section {
     nixJNI.Section_repository__SWIG_0(swigCPtr, this, repository);
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t repository() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Section_repository__SWIG_1(swigCPtr, this), true);
+  public OptionalString repository() {
+    return new OptionalString(nixJNI.Section_repository__SWIG_1(swigCPtr, this), true);
   }
 
   public void removeRepository() {
@@ -75,8 +75,8 @@ public class Section {
     nixJNI.Section_mapping__SWIG_0(swigCPtr, this, mapping);
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t mapping() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.Section_mapping__SWIG_1(swigCPtr, this), true);
+  public OptionalString mapping() {
+    return new OptionalString(nixJNI.Section_mapping__SWIG_1(swigCPtr, this), true);
   }
 
   public void removeMapping() {

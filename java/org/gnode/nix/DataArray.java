@@ -43,8 +43,8 @@ public class DataArray {
     this(nixJNI.new_DataArray__SWIG_1(DataArray.getCPtr(other), other), true);
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t label() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.DataArray_label__SWIG_0(swigCPtr, this), true);
+  public OptionalString label() {
+    return new OptionalString(nixJNI.DataArray_label__SWIG_0(swigCPtr, this), true);
   }
 
   public void label(String label) {
@@ -55,8 +55,8 @@ public class DataArray {
     nixJNI.DataArray_removeLabel(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t unit() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.DataArray_unit__SWIG_0(swigCPtr, this), true);
+  public OptionalString unit() {
+    return new OptionalString(nixJNI.DataArray_unit__SWIG_0(swigCPtr, this), true);
   }
 
   public void removeUnit() {
@@ -67,8 +67,8 @@ public class DataArray {
     nixJNI.DataArray_unit__SWIG_1(swigCPtr, this, unit);
   }
 
-  public SWIGTYPE_p_boost__optionalT_double_t expansionOrigin() {
-    return new SWIGTYPE_p_boost__optionalT_double_t(nixJNI.DataArray_expansionOrigin__SWIG_0(swigCPtr, this), true);
+  public OptionalDouble expansionOrigin() {
+    return new OptionalDouble(nixJNI.DataArray_expansionOrigin__SWIG_0(swigCPtr, this), true);
   }
 
   public void expansionOrigin(double expansion_origin) {

@@ -51,8 +51,8 @@ public class RangeDimension {
     return DimensionType.swigToEnum(nixJNI.RangeDimension_dimensionType(swigCPtr, this));
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t label() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.RangeDimension_label__SWIG_0(swigCPtr, this), true);
+  public OptionalString label() {
+    return new OptionalString(nixJNI.RangeDimension_label__SWIG_0(swigCPtr, this), true);
   }
 
   public void label(String label) {
@@ -63,8 +63,8 @@ public class RangeDimension {
     nixJNI.RangeDimension_removeLabel(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t unit() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.RangeDimension_unit__SWIG_0(swigCPtr, this), true);
+  public OptionalString unit() {
+    return new OptionalString(nixJNI.RangeDimension_unit__SWIG_0(swigCPtr, this), true);
   }
 
   public void unit(String unit) {

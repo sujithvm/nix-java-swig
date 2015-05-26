@@ -442,6 +442,21 @@ SWIGINTERN void std_vector_Sl_nix_Tag_Sg__set(std::vector< nix::Tag > *self,int 
                     throw std::out_of_range("vector index out of range");
             }
 
+#include <boost/optional/optional.hpp>
+
+SWIGINTERN std::string boost_optional_Sl_std_string_Sg__get(boost::optional< std::string > const *self){
+        return (*self).get();
+      }
+SWIGINTERN bool boost_optional_Sl_std_string_Sg__isPresent(boost::optional< std::string > const *self){
+        return (*self).is_initialized();
+      }
+SWIGINTERN double boost_optional_Sl_double_Sg__get(boost::optional< double > const *self){
+        return (*self).get();
+      }
+SWIGINTERN bool boost_optional_Sl_double_Sg__isPresent(boost::optional< double > const *self){
+        return (*self).is_initialized();
+      }
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -2702,6 +2717,121 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_delete_1TagVector(JNIEnv *jenv
 }
 
 
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1OptionalString(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+  jlong jresult = 0 ;
+  std::string arg1 ;
+  boost::optional< std::string > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  if(!jarg1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return 0;
+  } 
+  const char *arg1_pstr = (const char *)jenv->GetStringUTFChars(jarg1, 0); 
+  if (!arg1_pstr) return 0;
+  (&arg1)->assign(arg1_pstr);
+  jenv->ReleaseStringUTFChars(jarg1, arg1_pstr); 
+  result = (boost::optional< std::string > *)new boost::optional< std::string >(arg1);
+  *(boost::optional< std::string > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_org_gnode_nix_nixJNI_OptionalString_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  boost::optional< std::string > *arg1 = (boost::optional< std::string > *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(boost::optional< std::string > **)&jarg1; 
+  result = boost_optional_Sl_std_string_Sg__get((boost::optional< std::string > const *)arg1);
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_OptionalString_1isPresent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  boost::optional< std::string > *arg1 = (boost::optional< std::string > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(boost::optional< std::string > **)&jarg1; 
+  result = (bool)boost_optional_Sl_std_string_Sg__isPresent((boost::optional< std::string > const *)arg1);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_delete_1OptionalString(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  boost::optional< std::string > *arg1 = (boost::optional< std::string > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(boost::optional< std::string > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1OptionalDouble(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
+  jlong jresult = 0 ;
+  double arg1 ;
+  boost::optional< double > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (double)jarg1; 
+  result = (boost::optional< double > *)new boost::optional< double >(arg1);
+  *(boost::optional< double > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_org_gnode_nix_nixJNI_OptionalDouble_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  boost::optional< double > *arg1 = (boost::optional< double > *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(boost::optional< double > **)&jarg1; 
+  result = (double)boost_optional_Sl_double_Sg__get((boost::optional< double > const *)arg1);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_org_gnode_nix_nixJNI_OptionalDouble_1isPresent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  boost::optional< double > *arg1 = (boost::optional< double > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(boost::optional< double > **)&jarg1; 
+  result = (bool)boost_optional_Sl_double_Sg__isPresent((boost::optional< double > const *)arg1);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_delete_1OptionalDouble(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  boost::optional< double > *arg1 = (boost::optional< double > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(boost::optional< double > **)&jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT jint JNICALL Java_org_gnode_nix_nixJNI_FileMode_1ReadOnly_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   nix::FileMode result;
@@ -2852,7 +2982,7 @@ SWIGEXPORT jint JNICALL Java_org_gnode_nix_nixJNI_SampledDimension_1dimensionTyp
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_SampledDimension_1label_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::SampledDimension *arg1 = (nix::SampledDimension *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -2903,7 +3033,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_SampledDimension_1removeLabel(
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_SampledDimension_1unit_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::SampledDimension *arg1 = (nix::SampledDimension *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -2982,7 +3112,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_SampledDimension_1samplingInte
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_SampledDimension_1offset_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::SampledDimension *arg1 = (nix::SampledDimension *) 0 ;
-  boost::optional< double > result;
+  SwigValueWrapper< boost::optional< double > > result;
   
   (void)jenv;
   (void)jcls;
@@ -3285,7 +3415,7 @@ SWIGEXPORT jint JNICALL Java_org_gnode_nix_nixJNI_RangeDimension_1dimensionType(
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_RangeDimension_1label_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::RangeDimension *arg1 = (nix::RangeDimension *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -3336,7 +3466,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_RangeDimension_1removeLabel(JN
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_RangeDimension_1unit_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::RangeDimension *arg1 = (nix::RangeDimension *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -4026,7 +4156,7 @@ SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_new_1DataArray_1_1SWIG_11(JNI
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_DataArray_1label_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -4077,7 +4207,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_DataArray_1removeLabel(JNIEnv 
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_DataArray_1unit_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -4128,7 +4258,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_DataArray_1unit_1_1SWIG_11(JNI
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_DataArray_1expansionOrigin_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::DataArray *arg1 = (nix::DataArray *) 0 ;
-  boost::optional< double > result;
+  SwigValueWrapper< boost::optional< double > > result;
   
   (void)jenv;
   (void)jcls;
@@ -5345,7 +5475,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Property_1definition_1_1SWIG_1
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Property_1definition_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Property *arg1 = (nix::Property *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -5396,7 +5526,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Property_1mapping_1_1SWIG_10(J
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Property_1mapping_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Property *arg1 = (nix::Property *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -5462,7 +5592,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Property_1unit_1_1SWIG_10(JNIE
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Property_1unit_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Property *arg1 = (nix::Property *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -5650,7 +5780,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Section_1repository_1_1SWIG_10
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Section_1repository_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;
@@ -5770,7 +5900,7 @@ SWIGEXPORT void JNICALL Java_org_gnode_nix_nixJNI_Section_1mapping_1_1SWIG_10(JN
 SWIGEXPORT jlong JNICALL Java_org_gnode_nix_nixJNI_Section_1mapping_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   nix::Section *arg1 = (nix::Section *) 0 ;
-  boost::optional< std::string > result;
+  SwigValueWrapper< boost::optional< std::string > > result;
   
   (void)jenv;
   (void)jcls;

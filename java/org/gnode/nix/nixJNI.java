@@ -157,6 +157,14 @@ public class nixJNI {
   public final static native long TagVector_get(long jarg1, TagVector jarg1_, int jarg2);
   public final static native void TagVector_set(long jarg1, TagVector jarg1_, int jarg2, long jarg3, Tag jarg3_);
   public final static native void delete_TagVector(long jarg1);
+  public final static native long new_OptionalString(String jarg1);
+  public final static native String OptionalString_get(long jarg1, OptionalString jarg1_);
+  public final static native boolean OptionalString_isPresent(long jarg1, OptionalString jarg1_);
+  public final static native void delete_OptionalString(long jarg1);
+  public final static native long new_OptionalDouble(double jarg1);
+  public final static native double OptionalDouble_get(long jarg1, OptionalDouble jarg1_);
+  public final static native boolean OptionalDouble_isPresent(long jarg1, OptionalDouble jarg1_);
+  public final static native void delete_OptionalDouble(long jarg1);
   public final static native int FileMode_ReadOnly_get();
   public final static native int Implementation_Hdf5_get();
   public final static native int DataType_Nothing_get();

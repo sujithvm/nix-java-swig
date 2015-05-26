@@ -51,8 +51,8 @@ public class SampledDimension {
     return DimensionType.swigToEnum(nixJNI.SampledDimension_dimensionType(swigCPtr, this));
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t label() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.SampledDimension_label__SWIG_0(swigCPtr, this), true);
+  public OptionalString label() {
+    return new OptionalString(nixJNI.SampledDimension_label__SWIG_0(swigCPtr, this), true);
   }
 
   public void label(String label) {
@@ -63,8 +63,8 @@ public class SampledDimension {
     nixJNI.SampledDimension_removeLabel(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_boost__optionalT_std__string_t unit() {
-    return new SWIGTYPE_p_boost__optionalT_std__string_t(nixJNI.SampledDimension_unit__SWIG_0(swigCPtr, this), true);
+  public OptionalString unit() {
+    return new OptionalString(nixJNI.SampledDimension_unit__SWIG_0(swigCPtr, this), true);
   }
 
   public void unit(String unit) {
@@ -83,8 +83,8 @@ public class SampledDimension {
     nixJNI.SampledDimension_samplingInterval__SWIG_1(swigCPtr, this, interval);
   }
 
-  public SWIGTYPE_p_boost__optionalT_double_t offset() {
-    return new SWIGTYPE_p_boost__optionalT_double_t(nixJNI.SampledDimension_offset__SWIG_0(swigCPtr, this), true);
+  public OptionalDouble offset() {
+    return new OptionalDouble(nixJNI.SampledDimension_offset__SWIG_0(swigCPtr, this), true);
   }
 
   public void offset(double offset) {

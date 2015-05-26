@@ -155,6 +155,32 @@ namespace std {
 	%template(TagVector)        vector<nix::Tag>;
 }
 
+// Wrap boost optional
+%{
+#include <boost/optional/optional.hpp>
+%}
+namespace boost {
+  template <typename T1=void> 
+  struct optional;
+ 
+  template <typename T1>
+  struct optional<T1> {
+    optional(T1);
+    %extend {
+      T1 get() const {
+        return (*$self).get();
+      }
+	  bool isPresent() const {
+        return (*$self).is_initialized();
+      }
+    }
+  };
+}
+
+%template(OptionalString) boost::optional<std::string>;
+%template(OptionalDouble) boost::optional<double>;
+
+
 // wrap time_t to long
 typedef long long time_t;
 
